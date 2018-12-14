@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Site (create)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="site-overview">
+      <div class="page-title">Create New Site</div>
+      <div class="page-subtitle">Cloud >
+        <a class="breadcrumb" href="accountsList.html">Accounts</a> >
+        <a class="breadcrumb" href="accountOverview-3-regularView.html">[Account Name]</a> > 
+        <a class="breadcrumb" href="tenantsList.html">Tenants</a> >
+        <a class="breadcrumb" href="tenantOverview-3-regularView.html">[Tenant Name]</a> >
+        <a class="breadcrumb" href="sitesList.html">Sites</a> > 
+        New Site
+      </div>
+      <div class="overview">
+        <section class="site-details">
+          <div class="section-header">Site Details</div>
+          <div class="section-content">
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Account *</label>
+                <span class="never-editable">[Account Name]</span>
+              </div>
+              <div class="row">
+                <label>Tenant *</label>
+                <span class="never-editable">[Tenant Name]</span>
+              </div>
+              <div class="row">
+                <label>Site Name *</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Contact Name</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Contact Email</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Contact Mobile</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Secondary Phone</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Address Line 1</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Address Line 2</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Address Line 3</label>
+                <input type="text">
+              </div>
+            </div>
+          </div>
+          <br>
+          <!--
+            ** IF VALIDATION FAILS WHEN "Create" BUTTON IS CLICKED,
+            ** SHOW <div class="caption form-error">.
+            ** ALSO NOTE, border-color OF INPUTS WITH ERRORS SHOULD CHANGE TO @alertOrange.
+          -->
+          <!--
+          <div class="caption form-error">
+            Please enter a Site Name.
+          </div>
+          -->
+          <div class="button-row-centered">
+            <a class="button-muted" href="sitesList.html">Cancel</a>
+            <a class="button" href="siteOverview-3-regularView.html">Create</a>
+          </div>
+        </section>
+      </div>
+    </div>    
+  </main>
+</body>
+</html>

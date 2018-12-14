@@ -1,0 +1,25 @@
+#user-dashboard {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .page-title,
+  .page-subtitle {
+    flex: 0;
+  }
+  
+  .dashboard {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+  
+    .alerts {
+      flex: 2 1 auto;
+      min-width: 425px;
+    }
+    
+    .events {
+      flex: 1 1 auto;
+      min-width: 425px;
+    }
+  }
+}

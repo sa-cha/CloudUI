@@ -1,0 +1,91 @@
+#tenant-overview {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .page-title,
+  .page-subtitle {
+    flex: 0;
+  }
+  
+  .delete-tenant {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+  
+  .overview {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    
+    .tenant-details {
+      flex: 0 0 auto;
+      position: relative;  //so that child .edit-tenant-details can be position:absolute
+      
+      .section-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-right: 60px;
+        
+        .label-and-input-list,
+        .label-and-value-list {
+          flex: 1 1 auto;
+          margin-right: 20px;
+          
+          label,
+          td:first-child {
+            width: 135px;
+          }
+          
+          .expired {
+            height: 19px;
+            width: 16px;
+            margin-left: 5px;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+      
+      .form-error {
+        color: @alertOrange;
+        text-align: center;
+      }
+      
+      .button-row-centered {
+        margin: 15px 0;
+      }
+      
+      .edit-tenant-details {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 42px;
+        right: 15px;
+      }
+    }
+
+    .status-sections-flex-container {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: row wrap;
+      
+      .counts {
+        flex: 0;
+        min-width: 200px;
+      }
+      
+      .alerts {
+        flex: 1 1 auto;
+        min-width: 400px;
+      }
+      
+      .events {
+        flex: 1 1 auto;
+        min-width: 400px;
+      }
+    }
+  }
+}

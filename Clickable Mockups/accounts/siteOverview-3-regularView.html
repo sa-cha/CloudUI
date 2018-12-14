@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Site (regular view)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="site-overview">
+      <div class="page-title">[Site Name]</div>
+      <div class="page-subtitle">Cloud >
+        <a class="breadcrumb" href="accountsList.html">Accounts</a> >
+        <a class="breadcrumb" href="accountOverview-3-regularView.html">[Account Name]</a> > 
+        <a class="breadcrumb" href="tenantsList.html">Tenants</a> >
+        <a class="breadcrumb" href="tenantOverview-3-regularView.html">[Tenant Name]</a> > 
+        <a class="breadcrumb" href="sitesList.html">Sites</a> > 
+        [Site Name]
+      </div>
+      <a href="../modals/deleteSafeguardsModal-site-1-confirmIntent.html" class="delete-site highlight-clickable-icon" title="Delete Site">
+        <img src="../img/icons/delete-pelcoBlue.svg">
+      </a>
+      <div class="overview">
+        <section class="site-details">
+          <div class="section-header">Site Details</div>
+          <div class="section-content">
+            <table class="label-and-value-list">
+              <tr>
+                <td>Account</td>
+                <td>[Account Name]</td>
+              </tr>
+              <tr>
+                <td>Tenant</td>
+                <td>[Tenant Name]</td>
+              </tr>
+              <tr>
+                <td>Site Name</td>
+                <td>[Site Name]</td>
+              </tr>
+            </table>
+            <table class="label-and-value-list">
+              <tr>
+                <td>Contact Name</td>
+                <td>[Contact Name]</td>
+              </tr>
+              <tr>
+                <td>Contact Email</td>
+                <td>[Contact Email]</td>
+              </tr>
+              <tr>
+                <td>Contact Mobile</td>
+                <td>[Contact Mobile]</td>
+              </tr>
+              <tr>
+                <td>Secondary Phone</td>
+                <td>[Secondary Phone]</td>
+              </tr>
+            </table>
+            <table class="label-and-value-list">
+              <tr>
+                <td>Address Line 1</td>
+                <td>[Address Line 1]</td>
+              </tr>
+              <tr>
+                <td>Address Line 2</td>
+                <td>[Address Line 2]</td>
+              </tr>
+              <tr>
+                <td>Address Line 3</td>
+                <td>[Address Line 3]</td>
+              </tr>
+            </table>            
+          </div>
+          <a href="siteOverview-4-editSiteDetails.html" class="edit-site-details highlight-clickable-icon" title="Edit Site Details">
+            <img src="../img/icons/edit-pelcoBlue.svg">
+          </a>
+        </section>
+        <div class="status-sections-flex-container">
+          <section class="counts">
+            <div class="section-header">Counts</div>
+            <div class="section-content">
+              <a class="highlight-clickable-text" href="#">[#] Cameras</a>
+            </div>
+          </section>
+          <section class="alerts">
+            <div class="section-header">Alerts</div>
+            <div class="section-content">
+              <em></em>
+            </div>
+          </section>
+          <section class="events">
+            <div class="section-header">Events</div>
+            <div class="section-content"></div>
+          </section>
+        </div>
+      </div>
+    </div>    
+  </main>
+</body>
+</html>

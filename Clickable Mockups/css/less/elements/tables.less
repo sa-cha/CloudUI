@@ -1,0 +1,286 @@
+table {
+  border-collapse: collapse;
+  font: @defaultFont;
+  margin: 0;
+  padding: 0;
+}
+
+/* .grid-group is based on existing pattern in VX.
+ * It's a complex table with table actions on left and details about current selection on right. */ 
+.grid-group {
+  border: 1px solid @gridGroupBorderColor;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 5px;
+  
+  .table-actions {
+    flex: 0;
+    min-width: 250px;
+    overflow: auto;
+    
+    .pane-header {
+      background: @gridTableHeaderCellBackgroundColor;
+      border-right: 1px solid @gridTableHeaderCellBorderColor;
+      color: @gridTableHeaderCellFontColor;
+      font-size: @smallFontSize;
+      margin-bottom: 15px;
+      padding: 5px 12px;
+      text-transform: uppercase;
+    }
+    
+    .action-group-header {
+      background: @gridTableHeaderCellBackgroundColor;
+      color: @gridTableHeaderCellFontColor;
+      font-size: @smallFontSize;
+      margin: 15px 15px 15px 0;
+      padding: 5px 12px;
+      text-transform: uppercase;
+      
+      .collapse-icon,
+      .expand-icon {
+        margin-left: 10px;
+        vertical-align: text-bottom;
+        height: 17px;
+        width: 12px;
+      }
+    }
+    
+    .filter-on {
+      color: @pelcoBlue;
+      padding: 0 15px 20px 15px;
+      position: relative;  // so that child .reset-filter can have position: absolute
+      
+      .reset-filter {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+      }
+    }
+    
+    .action-group {
+      padding: 0 15px 20px 15px;
+            
+      .filter-criteria {
+        
+        label {
+          color: @gridTableHeaderCellFontColor;
+          font-size: @smallFontSize;
+          text-transform: uppercase;
+        }
+        
+        .date {
+          input {
+            margin: 5px 0;
+            width: 135px;
+          }
+        }
+        
+        .enum {
+          select {
+            margin: 5px 0;
+          }
+        }
+        
+        .number {
+          input {
+            margin: 5px 0;
+            width: 100px;
+          }
+        }
+        
+        .string {
+          input {
+            margin: 5px 0;
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+  
+  .table-container {
+    flex: 3 1 auto;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: @gridGroupBorderColor;
+    min-width: 500px;
+    overflow: auto;
+    position: relative; // so that child .table-counts can have position:absolute
+    @media (max-width: 1200px) {
+      border-right: none;
+    } // because .current-selection panel disappears when window width < 1200px 
+        
+    .grid {
+      width: 100%;
+      
+      th {
+        background: @gridTableHeaderCellBackgroundColor;
+        border-right: 1px solid @gridTableHeaderCellBorderColor;
+        color: @gridTableHeaderCellFontColor;
+        font-size: @smallFontSize;
+        font-weight: normal;
+        padding: 5px 12px;
+        text-align: left;
+        text-transform: uppercase;
+        
+        &:last-of-type {
+          border-right: none;
+        }
+        
+        &.sort {
+          position: relative;
+          
+            .sort-order-icon {
+              height: 10px;
+              width: 10px;
+              position: absolute;
+              top: 8px;
+              right: 8px;
+            }
+        }
+      }
+      
+      tbody tr {
+        border-bottom: 1px solid @gridTableRowBorderColor;
+        
+        td {
+          padding: 4px 10px;
+          text-align: left;
+        }
+        
+        &:first-of-type td {
+          padding-top: 10px;
+        }
+        
+        &:hover {
+          background: @gridTableRowBackgroundColor-hover;
+          color: @gridTableRowFontColor-hover;
+        }
+        
+        &.selected {
+          background: @gridTableRowBackgroundColor-selected;
+          color: @gridTableRowFontColor-selected;
+        }
+      }
+    }
+    
+    .table-counts {
+      background: @gridTableHeaderCellBackgroundColor;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: @gridTableHeaderCellBorderColor;
+      color: @secondaryDarkOnLightFontColor;
+      padding: 2px 0 1px 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      
+      .row-count {
+        font-size: @smallFontSize;
+        position: absolute;
+        top: 4px;
+        left: 10px;
+      }
+      
+      .paging {
+        font-size: @smallFontSize;
+        text-align: center;
+        width: 100%;
+        
+        .previous-page,
+        .next-page {
+          cursor: pointer;
+          font-size: @defaultFontSize;
+          margin: 0 5px;
+          padding: 0 5px;
+          border-radius: 8px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+  
+  .current-selection {
+    flex: 1 1 auto;
+    max-width: 400px;
+    min-width: 250px;
+    overflow: auto;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    
+    .pane-header {
+      background: @gridTableHeaderCellBackgroundColor;
+      border-left: 1px solid @gridTableHeaderCellBorderColor;
+      color: @gridTableHeaderCellFontColor;
+      font-size: @smallFontSize;
+      margin-bottom: 15px;
+      padding: 5px 12px;
+      text-transform: uppercase;
+    }
+    
+    .selection-title-and-actions {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 0 15px;
+      
+      .selection-title {
+        flex: 0 0 auto;
+        font-weight: bold;
+      }
+      
+      .selection-actions {
+        flex: 1 1 auto;
+        padding-top: 2px;
+        text-align: right;
+        
+        .delete-selection {
+          height: 16px;
+          width: 16px;
+          margin-left: 12px;
+        }
+      }
+    }
+    
+    .details-group-header {
+      background: @gridTableHeaderCellBackgroundColor;
+      color: @gridTableHeaderCellFontColor;
+      font-size: @smallFontSize;
+      margin: 15px 0 15px 15px;
+      padding: 5px 12px;
+      text-transform: uppercase;
+      
+      .collapse-icon,
+      .expand-icon {
+        margin-left: 10px;
+        vertical-align: text-bottom;
+        height: 17px;
+        width: 12px;
+      }
+    }
+    
+    .details-group {
+      padding: 0 15px 20px 30px;
+    }
+  }
+}
+
+.label-and-value-list {
+  td {
+    padding: 5px;
+    
+    &:first-child {
+      color: @tertiaryDarkOnLightFontColor;
+      font-size: @smallFontSize;
+      text-transform: uppercase;
+      padding-top: 7px;
+    }    
+  }
+}
+

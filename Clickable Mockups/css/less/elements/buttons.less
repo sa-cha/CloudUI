@@ -1,0 +1,74 @@
+button,
+.button {
+  background: @buttonBackgroundColor;
+  color: @buttonFontColor;
+}
+
+.button-muted {
+  background: none;
+  color: @buttonBorderColor;
+}
+
+button,
+.button,
+.button-muted {
+  border: 1px solid @buttonBorderColor;
+  border-radius: 14px;
+  font: @defaultFont;
+  display: inline-block;
+  padding: 4px 12px;
+  text-decoration: none;
+  
+  &:focus {
+    border-color: @buttonBorderColor-hover;
+  }
+  
+  &:hover {
+    background: @buttonBackgroundColor-hover;
+    border-color: @buttonBorderColor-hover;
+    color: @buttonFontColor-hover;
+    cursor: pointer;
+  }
+  
+  &:active {
+    background: @buttonBackgroundColor-active;
+    border-color: @buttonBorderColor-active;
+    color: @buttonFontColor-active;
+    cursor: pointer;
+  }
+  
+  &:disabled,
+  &.disabled {
+    background: @buttonBackgroundColor-disabled;
+    border-color: @buttonBorderColor-disabled;
+    color: @buttonFontColor-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.button-row-centered {
+  text-align: center;
+  
+  button,
+  .button {
+    margin: 0 5px;
+  }
+}
+
+.button-row-left {
+  text-align: left;
+  
+  button,
+  .button {
+    margin-right: 10px;
+  }
+}
+
+.button-row-right {
+  text-align: left;
+  
+  button,
+  .button {
+    margin-left: 10px;
+  }
+}

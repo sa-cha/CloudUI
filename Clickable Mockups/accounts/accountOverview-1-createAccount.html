@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Account (create)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="account-overview">
+      <div class="page-title">Create New Account</div>
+      <div class="page-subtitle">Cloud >
+        <a class="breadcrumb" href="accountsList.html">Accounts</a> >
+        New Account
+      </div>
+      <div class="overview">
+        <section class="account-details">
+          <div class="section-header">Account Details</div>
+          <div class="section-content">
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Account Name *</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>License Limit *</label>
+                <input type="number">
+              </div>
+              <div class="row">
+                <label>License Expiration *</label>
+                <!--
+                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="date">,
+                  ** BUT THIS IS A SIMPLE HACK TO MOCKUP HOW
+                  ** THE DATE FORMAT SHOULD LOOK WITHOUT INJECTING JS
+                -->
+                <input type="text" placeholder="YYYY-MM-DD">
+              </div>
+              <div class="row">
+                <label>Support Level *</label>
+                <select>
+                  <option>Tier 1</option>
+                  <option>Tier 2</option>
+                  <option>Tier 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Contact Name *</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Contact Email *</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Contact Mobile *</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Secondary Phone</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="label-and-input-list">
+              <div class="row">
+                <label>Address Line 1</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Address Line 2</label>
+                <input type="text">
+              </div>
+              <div class="row">
+                <label>Address Line 3</label>
+                <input type="text">
+              </div>
+            </div>
+          </div>
+          <br>
+          <!--
+            ** IF VALIDATION FAILS WHEN "Create" BUTTON IS CLICKED,
+            ** SHOW <div class="caption form-error">.
+            ** ALSO NOTE, border-color OF INPUTS WITH ERRORS SHOULD CHANGE TO @alertOrange.
+          -->
+          <!--
+          <div class="caption form-error">
+            Please fill out all required fields.<br>
+            Please enter a valid email address.
+          </div>
+          -->
+          <div class="button-row-centered">
+            <a class="button-muted" href="accountsList.html">Cancel</a>
+            <a class="button" href="accountOverview-3-regularView.html">Create</a>
+          </div>
+        </section>
+      </div>
+    </div>    
+  </main>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Account (regular view)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="account-overview">
+      <div class="page-title">[Account Name]</div>
+      <div class="page-subtitle">Cloud >
+        <a class="breadcrumb" href="accountsList.html">Accounts</a> >
+        [Account Name]
+      </div>
+      <a href="../modals/deleteSafeguardsModal-account-1-confirmIntent.html" class="delete-account highlight-clickable-icon" title="Delete Account">
+        <img src="../img/icons/delete-pelcoBlue.svg">
+      </a>
+      <div class="overview">
+        <section class="account-details">
+          <div class="section-header">Account Details</div>
+          <div class="section-content">
+            <table class="label-and-value-list">
+              <tr>
+                <td>Account Name</td>
+                <td>[Account Name]</td>
+              </tr>
+              <tr>
+                <td>License Limit</td>
+                <td>[#####]</td>
+              </tr>
+              <tr>
+                <td>License Expiration</td>
+                <td>[YYYY-MM-DD]
+                  <!--
+                    ** SHOW class="expired" ICON IF TENANT EXPIRATION DATE HAS PAST
+                  -->                  
+                  <img class="expired" title="Expired" src="..\img\icons\expired-attentionOrange.svg">
+                </td>
+              </tr>
+              <tr>
+                <td>Support Level</td>
+                <td>Tier [#]</td>
+              </tr>
+            </table>
+            <table class="label-and-value-list">
+              <tr>
+                <td>Contact Name</td>
+                <td>[Contact Name]</td>
+              </tr>
+              <tr>
+                <td>Contact Email</td>
+                <td>[Contact Email]</td>
+              </tr>
+              <tr>
+                <td>Contact Mobile</td>
+                <td>[Contact Mobile]</td>
+              </tr>
+              <tr>
+                <td>Secondary Phone</td>
+                <td>[Secondary Phone]</td>
+              </tr>
+            </table>
+            <table class="label-and-value-list">
+              <tr>
+                <td>Address Line 1</td>
+                <td>[Address Line 1]</td>
+              </tr>
+              <tr>
+                <td>Address Line 2</td>
+                <td>[Address Line 2]</td>
+              </tr>
+              <tr>
+                <td>Address Line 3</td>
+                <td>[Address Line 3]</td>
+              </tr>
+            </table>            
+          </div>
+          <a href="accountOverview-4-editAccountDetails.html" class="edit-account-details highlight-clickable-icon" title="Edit Account Details">
+            <img src="../img/icons/edit-pelcoBlue.svg">
+          </a>
+        </section>
+        <div class="status-sections-flex-container">
+          <section class="counts">
+            <div class="section-header">Counts</div>
+            <div class="section-content">
+              <a class="highlight-clickable-text" href="tenantsList.html">[#] Tenants</a>
+              <br>
+              <br>
+             
+              <div class="has-no-tenants">
+                At least one cloud tenant must be created in order to add cameras and other devices.
+                <br>
+                <br>
+                <div class="create-tenant">
+                  <a class="button" href="tenantOverview-1-createTenant.html">Create Tenant</a>
+                </div>
+              </div>
+              
+              <em><br><br>
+                ** IF ACCOUNT HAS 0 TENANTS, ABOVE PROMPT IS SHOWN (div class="has-no-tenants").
+                ** IF ACCOUNT HAS 1 OR MORE TENANTS, COUNTS/LINKS FOR SITES AND CAMERAS IS SHOWN (div class="has-tenants").
+              </em>
+              
+              <!--
+              <div class="has-tenants">
+                [#] Sites
+                <br>
+                <br>
+                [#] Cameras
+              </div>
+              -->
+            </div>
+          </section>
+          <section class="alerts">
+            <div class="section-header">Alerts</div>
+            <div class="section-content">
+              <em></em>
+            </div>
+          </section>
+          <section class="events">
+            <div class="section-header">Events</div>
+            <div class="section-content"></div>
+          </section>
+        </div>
+      </div>
+    </div>    
+  </main>
+</body>
+</html>
