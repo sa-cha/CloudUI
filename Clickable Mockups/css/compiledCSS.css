@@ -289,6 +289,12 @@ select {
   text-align: center;
   width: 20px;
 }
+.inline-icon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 2px;
+}
 a {
   color: #007dc5;
   cursor: pointer;
@@ -442,6 +448,7 @@ table {
 .grid-group .table-actions .action-group .filter-criteria label {
   color: #666;
   font-size: 12.5px;
+  margin-right: 5px;
   text-transform: uppercase;
 }
 .grid-group .table-actions .action-group .filter-criteria .date input {
@@ -461,70 +468,69 @@ table {
 }
 .grid-group .table-container {
   flex: 3 1 auto;
-  border-width: 0 1px;
-  border-style: solid;
-  border-color: #e5e5e5;
+  display: flex;
+  flex-flow: column nowrap;
+  border-left: 1px solid #e5e5e5;
   min-width: 500px;
-  overflow: auto;
   position: relative;
 }
-@media (max-width: 1200px) {
-  .grid-group .table-container {
-    border-right: none;
-  }
+.grid-group .table-container .grid-flexbox {
+  flex: 1 1 auto;
+  overflow: auto;
 }
-.grid-group .table-container .grid {
+.grid-group .table-container .grid-flexbox .grid {
   width: 100%;
 }
-.grid-group .table-container .grid th {
+.grid-group .table-container .grid-flexbox .grid th {
   background: #f5f5f5;
   border-right: 1px solid #fff;
   color: #666;
   font-size: 12.5px;
   font-weight: normal;
-  padding: 5px 12px;
+  padding: 5px 10px;
   text-align: left;
   text-transform: uppercase;
 }
-.grid-group .table-container .grid th:last-of-type {
+.grid-group .table-container .grid-flexbox .grid th:last-of-type {
   border-right: none;
 }
-.grid-group .table-container .grid th.sort {
+.grid-group .table-container .grid-flexbox .grid th.sort {
   position: relative;
 }
-.grid-group .table-container .grid th.sort .sort-order-icon {
+.grid-group .table-container .grid-flexbox .grid th.sort .sort-order-icon {
   height: 10px;
   width: 10px;
   position: absolute;
   top: 8px;
   right: 8px;
 }
-.grid-group .table-container .grid tbody tr {
+.grid-group .table-container .grid-flexbox .grid tbody tr {
   border-bottom: 1px solid #e5e5e5;
 }
-.grid-group .table-container .grid tbody tr td {
+.grid-group .table-container .grid-flexbox .grid tbody tr td {
   padding: 4px 10px;
   text-align: left;
 }
-.grid-group .table-container .grid tbody tr:first-of-type td {
+.grid-group .table-container .grid-flexbox .grid tbody tr:first-of-type td {
   padding-top: 10px;
 }
-.grid-group .table-container .grid tbody tr:hover {
+.grid-group .table-container .grid-flexbox .grid tbody tr:hover {
   background: #fafafa;
   color: #111;
 }
-.grid-group .table-container .grid tbody tr.selected {
+.grid-group .table-container .grid-flexbox .grid tbody tr.selected {
   background: rgba(0, 125, 197, 0.14);
   color: #111;
 }
 .grid-group .table-container .table-counts {
+  flex: 0 0 auto;
   background: #f5f5f5;
   border-width: 0 1px;
   border-style: solid;
   border-color: #fff;
   color: #666;
   padding: 2px 0 1px 0;
-  position: absolute;
+  position: sticky;
   right: 0;
   bottom: 0;
   left: 0;
@@ -552,6 +558,7 @@ table {
 }
 .grid-group .current-selection {
   flex: 1 1 auto;
+  border-left: 1px solid #e5e5e5;
   max-width: 400px;
   min-width: 250px;
   overflow: auto;
@@ -583,7 +590,6 @@ table {
 }
 .grid-group .current-selection .selection-title-and-actions .selection-actions {
   flex: 1 1 auto;
-  padding-top: 2px;
   text-align: right;
 }
 .grid-group .current-selection .selection-title-and-actions .selection-actions .delete-selection {
@@ -611,6 +617,7 @@ table {
 }
 .label-and-value-list td {
   padding: 5px;
+  vertical-align: top;
 }
 .label-and-value-list td:first-child {
   color: #aaa;
@@ -723,26 +730,78 @@ table {
 #modal.delete-safeguards-modal .modal-body .site-contents {
   padding-left: 20px;
 }
-#user-dashboard {
+.entities-list {
   display: flex;
   flex-flow: column nowrap;
 }
-#user-dashboard .page-title,
-#user-dashboard .page-subtitle {
+.entities-list .page-title,
+.entities-list .page-subtitle {
   flex: 0;
 }
-#user-dashboard .dashboard {
+.entities-list .grid-group {
   flex: 1 1 auto;
+}
+.change-site {
+  margin-left: 25px;
+}
+.entity-overview {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.entity-overview .page-title,
+.entity-overview .page-subtitle {
+  flex: 0;
+}
+.entity-overview .delete-entity {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+.entity-overview .overview {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.entity-overview .overview .entity-details {
+  flex: 0 0 auto;
+  position: relative;
+}
+.entity-overview .overview .entity-details .collapse-icon,
+.entity-overview .overview .entity-details .expand-icon {
+  height: 17px;
+  width: 12px;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+.entity-overview .overview .entity-details .edit-entity-details {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 42px;
+  right: 15px;
+}
+.entity-overview .overview .entity-details .flex-container {
   display: flex;
   flex-flow: row wrap;
 }
-#user-dashboard .dashboard .alerts {
-  flex: 2 1 auto;
-  min-width: 425px;
-}
-#user-dashboard .dashboard .events {
+.entity-overview .overview .entity-dashboard {
   flex: 1 1 auto;
-  min-width: 425px;
+  display: flex;
+}
+#device-overview .entity-details .flex-container .label-and-value-list {
+  flex: 1 1 auto;
+  margin-right: 50px;
+}
+#device-overview .entity-details .flex-container .label-and-value-list td:first-child {
+  width: 80px;
+}
+#device-overview .entity-details .flex-container .label-and-value-list .change-site {
+  margin-left: 25px;
+}
+.vx-dashboard {
+  flex: 1 1 auto;
 }
 #login-page {
   background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
@@ -939,4 +998,25 @@ table {
 }
 #tenants-list .grid-group {
   flex: 1 1 auto;
+}
+#user-dashboard {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#user-dashboard .page-title,
+#user-dashboard .page-subtitle {
+  flex: 0;
+}
+#user-dashboard .dashboard {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+#user-dashboard .dashboard .alerts {
+  flex: 2 1 auto;
+  min-width: 425px;
+}
+#user-dashboard .dashboard .events {
+  flex: 1 1 auto;
+  min-width: 425px;
 }
