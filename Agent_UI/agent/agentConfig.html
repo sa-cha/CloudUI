@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Agent Config Form</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <!-- <div class="branding">
+        <img class="logo" src="img/branding/vx_like_cloud.svg">
+        <img class="name" src="img/branding/name_pelcoBlue.svg">
+      </div> -->
+      <div class="user"><a class="button" href="agentLogin.html">Log Out</a></div>
+  </header>
+
+  <!-- <nav>
+    <ul>
+      <li><a href="#" class="active">DASHBOARD</a></li>
+      <li><a href="accounts/accountsList.html">ACCOUNTS</a></li>
+      <li><a href="admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav> -->
+
+  <main>
+    <div id="agent-config-page">
+      <section class="cloud-connection">
+        <div class="section-header">Cloud Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Connection Status</td>
+              <td><img class="inline-icon" src="../img/icons/success-circle-goodGreen.svg"> Last connection 2019-01-16 12:00 MST
+                <!-- <br><img class="inline-icon" src="../img/icons/fail-circle-alarmRed.svg"> Invalid activation key -->
+                <!-- <br><img class="inline-icon" src="../img/icons/fail-circle-alarmRed.svg"> No internet access -->
+              </td>
+            </tr>
+            <tr>
+              <td>Account > Tenant</td>
+              <td>KGB > Vlad's Place</td>
+            </tr>
+            <tr>
+              <td>Agent Name</td>
+              <td>Philip Jennings</td>
+            </tr>
+          </table>
+          <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Activation Key</td>
+              <td>Current activation key stored on agent (How many characters is an activation key?)</td>
+            </tr>
+          </table>
+          <a href="editActivationKeyModal.html" class="edit-icon highlight-clickable-icon"><img src="../img/icons/edit-pelcoBlue.svg" title="Edit activation key"></a>
+        </div>
+      </section>
+
+      <section class="vx-connection">
+        <div class="section-header">VX Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Connection Status</td>
+              <td><img class="inline-icon" src="../img/icons/fail-circle-alarmRed.svg"> Password required</td>
+            </tr>
+            <tr>
+              <td>Core IP Address:Port</td>
+              <td>127.0.0.1 : 443</td>
+            </tr>
+            <tr>
+              <td>Username</td>
+              <td>cloud_agent</td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><a href="editVxSettingsModal.html" class="inline-icon highlight-clickable-icon"><img src="../img/icons/edit-pelcoBlue.svg" title="Edit VX connection settings"></a></td>
+            </tr>
+            <tr>
+              <td>Poll Interval</td>
+              <td>60 seconds</td>
+            </tr>
+          </table>
+          <a href="editVxSettingsModal.html" class="edit-icon highlight-clickable-icon"><img src="../img/icons/edit-pelcoBlue.svg" title="Edit VX connection settings"></a>
+        </div>
+      </section>
+    </div>    
+  </main>
+</body>
+</html>

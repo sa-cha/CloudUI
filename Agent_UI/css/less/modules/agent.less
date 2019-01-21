@@ -1,0 +1,91 @@
+// styles specific to agent UI
+
+#agent-setup-page {
+  .branding {
+    .placeholder-image {
+      display: block;
+      width: 350px;
+      margin: auto;
+    }
+  }
+
+  .agent-activation {
+    text-align: center;
+
+    .step-number {
+      background: @pelcoBlue;
+      border-radius: 10px;
+      color: @bodyBackgroundColor;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin-right: 5px;
+      text-align: center;
+    }
+
+    .label-and-input-list {
+      margin: 10px auto 50px auto;
+      
+      label {
+        text-align: right;
+      }
+    }
+
+    .activation-key {
+      width: 400px;
+    }
+  }
+}
+
+#agent-login-page {
+  .branding {
+    .placeholder-image {
+      display: block;
+      width: 350px;
+      margin: auto;
+    }
+  }
+
+  .credentials {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 350px;
+    
+    .login-error {
+      color: @alertOrange;
+    }
+  }
+}
+
+#agent-config-page {
+  display: flex;
+  flex-flow: column;
+
+  .cloud-connection,
+  .vx-connection {
+    .section-content {
+      position: relative;
+
+      .edit-icon {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+
+      .inline-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+#agent-config-page,
+.activation-key-test-result-modal,
+.vx-settings-test-result-modal {
+  .inline-icon {
+    margin-right: 5px;
+  }
+}
