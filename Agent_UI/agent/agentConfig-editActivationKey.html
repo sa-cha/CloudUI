@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Agent Config Form</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <!-- <div class="branding">
+        <img class="logo" src="img/branding/vx_like_cloud.svg">
+        <img class="name" src="img/branding/name_pelcoBlue.svg">
+      </div> -->
+      <div class="user"><a class="button" href="login.html">Log Out</a></div>
+  </header>
+
+  <!-- <nav>
+    <ul>
+      <li><a href="#" class="active">DASHBOARD</a></li>
+      <li><a href="accounts/accountsList.html">ACCOUNTS</a></li>
+      <li><a href="admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav> -->
+
+  <main>
+    <div class="agent-config-page">
+      <section class="cloud-connection">
+        <div class="section-header">Cloud Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Connection Status</td>
+              <td>icon + status message + timestamp of last attempt to connect</td>
+            </tr>
+            <tr>
+              <td>Account > Tenant</td>
+              <td>Account / Tenant path that agent lives under in cloud app</td>
+            </tr>
+            <tr>
+              <td>Agent Name</td>
+              <td>Agent's Friendly Name (in cloud app)</td>
+            </tr>
+          </table>
+          <div class="edit-activation-key">
+            <form class="label-and-input-list">
+              <div class="row">
+                <label style="width:165px;">Activation Key *</label>
+                <input type="text" style="width:300px;" value="value = current activation key">
+              </div>
+            </form>
+            <br>
+            <div class="button-row-centered">
+              <button class="button-muted" href="agentConfig.html">Cancel</button>
+              <button href="testActivationKeyModal.html">Test Key</button>
+              <button href="agentConfig.html">Save</button>
+            </div>
+          </div>
+          <!-- <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Activation Key</td>
+              <td>Current activation key stored on agent</td>
+            </tr>
+          </table> -->
+        </div>
+      </section>
+
+      <section class="vx-connection">
+        <div class="section-header">VX Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td style="width:165px;">Connection Status</td>
+              <td>icon + status message + timestamp of last attempt to connect</td>
+            </tr>
+            <tr>
+              <td>Core IP Address:Port</td>
+              <td>127.0.0.1 : 443</td>
+              
+            </tr>
+            <tr>
+              <td>Username</td>
+              <td>cloud_agent</td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><span style="color:red;">not set</span></td>
+            </tr>
+            <tr>
+              <td>Poll Interval</td>
+              <td>60 seconds</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>    
+  </main>
+</body>
+</html>
