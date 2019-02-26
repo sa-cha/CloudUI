@@ -1,0 +1,84 @@
+.entity-overview {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .page-title,
+  .page-subtitle {
+    flex: 0;
+  }
+
+  .delete-entity {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+  
+  .overview {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    
+    .entity-details {
+      flex: 0 0 auto;
+      position: relative;  //so that child .edit-entity-details can be position:absolute
+      
+      .collapse-icon,
+      .expand-icon {
+        height: 17px;
+        width: 12px;
+        margin-left: 10px;
+        vertical-align: text-bottom;
+      }
+
+      .edit-entity-details {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 42px;
+        right: 15px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-flow: row wrap;
+      }
+    }
+    
+    .entity-dashboard {
+      flex: 1 1 auto;
+      display: flex;
+    }
+  }
+}
+
+
+// THE FOLLOWING ARE COMPONENT-SPECIFIC STYLES (CONSIDER MOVING TO SPECIFIC component.less FILES)
+
+// specific to entity type = device
+#device-overview {
+  .entity-details {
+    .flex-container {
+      .label-and-value-list {
+        flex: 1 1 auto;
+        margin-right: 50px;
+        //might need max-width
+
+        td:first-child {
+          width: 80px;
+        }
+
+        .change-site {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+// specific to device type = VxCore
+.vx-dashboard {
+  flex: 1 1 auto;
+}
+

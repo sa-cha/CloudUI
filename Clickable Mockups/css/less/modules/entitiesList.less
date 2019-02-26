@@ -1,0 +1,20 @@
+.entities-list {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .page-title,
+  .page-subtitle {
+    flex: 0;
+  }
+  
+  .grid-group {
+    flex: 1 1 auto;
+  }
+}
+
+// THE FOLLOWING ARE COMPONENT-SPECIFIC STYLES (CONSIDER MOVING TO SPECIFIC component.less FILES)
+
+// specific to entity type = device
+.change-site {
+  margin-left: 25px;
+}

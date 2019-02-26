@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Device Overview (VxCore)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="../accounts/accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="entity-overview" id="device-overview">
+      <div class="page-title">Device Name</div>
+      <div class="page-subtitle">Cloud > 
+        <a class="breadcrumb" href="../accounts/accountsList.html">Accounts</a> > 
+        <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Account Name</a> > 
+        <a class="breadcrumb" href="../accounts/tenantsList.html">Tenants</a> >
+        <a class="breadcrumb" href="../accounts/tenantOverview-3-regularView.html">Tenant Name</a> > 
+        <a class="breadcrumb" href="devicesListForTenant.html">Devices</a> >
+        Device Name
+      </div>
+
+      <div class="overview">
+        <section class="entity-details">
+        <!-- NOTE: contents of .entity-details will be different per entity type (account, tenant, site, device, etc) -->
+          <div class="section-header">
+            <span class="click-to-collapse">
+              Device Details
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              Device Details
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+             -->
+          </div>
+          <div class="section-content">
+            <div class="flex-container">
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Site</td>
+                  <td><a class="highlight-clickable-text" href="../accounts/siteOverview-3-regularView.html">[Site Name]</a>
+                    <a class="change-site inline-icon highlight-clickable-icon" title="Change site" href="../modals/changeSiteModal.html"><img src="../img/icons/change-site-pelcoBlue.svg"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Device Type</td>
+                  <td>[Devicty Type]</td>
+                </tr>
+                <tr>
+                  <td>Vendor</td>
+                  <td>[Vendor]</td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Model</td>
+                  <td>[Model]</td>
+                </tr>
+                <tr>
+                  <td>Version</td>
+                  <td>[Version]</td>
+                </tr>
+                <tr>
+                  <td>Serial</td>
+                  <td>[Serial]</td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>State</td>
+                  <td>[Either <img class="inline-icon" title="Online" src="../img/icons/online-goodGreen.svg">
+                  or <img class="inline-icon" title="Offline" src="../img/icons/offline-alarmRed.svg">]
+                  </td>
+                </tr>
+                <tr>
+                  <td>IP Address</td>
+                  <td>[IP Address]</td>
+                </tr>
+                <tr>
+                  <td>Hostname</td>
+                  <td>[Hostname]</td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Agent</td>
+                  <td>[Agent Friendly Name]</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <div class="entity-dashboard">
+        <!-- NOTE: contents of .entity-dashboard will be different per device type; could be single or multiple sections -->
+          <section class="vx-dashboard">
+            <div class="section-header">( device dashboard stuff )</div>
+            <div class="section-content"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

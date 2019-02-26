@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Devices List for Tenant</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- remove this before packaging -->
+  <script src="scripts/devicesList-forTenant.js"></script>
+</head>
+<body>
+  <header>
+      <div class="branding">
+        <img class="logo" src="../img/branding/vx_like_cloud.svg">
+        <img class="name" src="../img/branding/name_pelcoBlue.svg">
+      </div>
+      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../userDashboard.html">DASHBOARD</a></li>
+      <li><a href="../accounts/accountsList.html" class="active">ACCOUNTS</a></li>
+      <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="entities-list">
+      <div class="page-title">Test Tenant's Devices</div>
+      <div class="page-subtitle">Cloud > 
+        <a class="breadcrumb" href="../accounts/accountsList.html">Accounts</a> > 
+        <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Test Account</a> > 
+        <a class="breadcrumb" href="../accounts/tenantsList.html">Tenants</a> >
+        <a class="breadcrumb" href="../accounts/tenantOverview-3-regularView.html">Test Tenant</a> > 
+        Devices
+      </div>
+
+      <div class="grid-group">
+        <div class="table-actions">
+          <div class="pane-header">Table Actions</div>
+            <div class="action-group">
+              <a class="button" href="../modals/addDevicesModal.html">Add Devices</a>
+            </div>
+          <div class="action-group-header">
+            <span class="click-to-collapse">
+              Filter
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="action-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              Filter
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <!--
+            ** DISPLAY OF <div class="filter-on"> IS NOT CONTROLLED BY <a class="collapsible"/"expandable">
+            ** RATHER, <div class="filter-on"> IS DISPLAYED WHEN THERE ARE ACTIVE FILTER CRITERIA
+            ** AND IT IS HIDDEN WHEN THERE ARE NO ACTIVE FILITER CRITERIA
+          -->
+          <!--
+          <div class="filter-on">
+            # found
+            <span class="reset-filter highlight-clickable-icon" title="Reset Filter">
+              <img src="..\img\icons\reset-pelcoBlue.svg">
+            </span>
+          </div>
+          -->
+          <div class="action-group">
+            <div class="filter-criteria">
+              <div class="enum">
+                <label>Site</label>
+                <select>
+                  <option></option>
+                  <option>Fort Collins</option>
+                  <option>Unassigned</option>
+                </select>
+              </div>
+              <br>
+              <div class="string">
+                <label>Device Name</label><br>
+                <input type="text">
+              </div>
+              <br>
+              <div class="enum">
+                <label>Device Type</label>
+                <select>
+                  <option></option>
+                  <option>Agent</option>
+                  <option>Camera</option>
+                  <option>Decoder</option>
+                  <option>Encoder</option>
+                  <option>Recorder</option>
+                  <option>Server</option>
+                  <option>VxCore</option>
+                  <option>Other</option>
+                </select>       
+              </div>
+              <br>
+              <div class="enum">
+                <label>State</label>
+                <select>
+                  <option></option>
+                  <option>Online</option>
+                  <option>Offline</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="action-group-header">
+            <span class="click-to-collapse">
+              Columns
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="action-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              Columns
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <div class="action-group">
+            <div class="label-and-input-list">
+              <div class="row">
+                <input type="checkbox" checked>
+                <label>Site</label>
+              </div>
+              <div class="row">
+                <input type="checkbox" checked>
+                <label>Device Type</label>
+              </div>
+              <div class="row">
+                <input type="checkbox" checked>
+                <label>IP Address</label>
+              </div>
+              <div class="row">
+                <input type="checkbox" checked>
+                <label>State</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="grid-flexbox">
+            <table class="grid">
+              <thead>
+                <tr>
+                  <th>Site</th>
+                  <th class="sort">
+                    Device Name 
+                    <img class="sort-order-icon" src="../img/icons/sort-ascending-pelcoBlue.svg">
+                  </th>
+                  <th>Device Type</th>
+                  <th>IP Address</th>
+                  <th>State</th>
+                </tr>
+              </thead>
+              <tbody>                
+                <tr>
+                  <td>Unassigned</td>                
+                  <td><a class="highlight-clickable-text" href="deviceOverview.html">Device 1</a></td>
+                  <td>Camera</td>
+                  <td>10.0.0.10</td>
+                  <td><img class="inline-icon" title="Offline" src="../img/icons/offline-alarmRed.svg"></td>
+                </tr>
+                <tr class="selected">
+                  <td>Unassigned</td>                
+                  <td><a class="highlight-clickable-text" href="deviceOverview.html">Device 2</a></td>
+                  <td>Recorder</td>
+                  <td>10.0.0.25</td>
+                  <td><img class="inline-icon" title="Online" src="../img/icons/online-goodGreen.svg"></td>
+                </tr>
+                <tr>
+                  <td>Unassigned</td>                
+                  <td><a class="highlight-clickable-text" href="deviceOverview.html">Device 3</a></td>
+                  <td>Media Gateway</td>
+                  <td>10.0.0.100</td>
+                  <td><img class="inline-icon" title="Online" src="../img/icons/online-goodGreen.svg"></td>
+                </tr>
+                <tr>
+                  <td>Fort Collins</td>                
+                  <td><a class="highlight-clickable-text" href="deviceOverview.html">VX System Name</a></td>
+                  <td>VxCore</td>
+                  <td>10.0.0.5</td>
+                  <td><img class="inline-icon" title="Online" src="../img/icons/online-goodGreen.svg"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-counts">
+            <div class="row-count">4 of 4 shown</div>
+            <div class="paging">
+              <span class="previous-page highlight-clickable-text"><</span>
+              page 
+              <span>1</span>
+              <!-- <input type="text" class="jump-to-page" value="1"> SERVER DOES NOT SUPPORT JUMP-TO-PAGE YET -->
+              of
+              <span>1</span>
+              <span class="next-page highlight-clickable-text">></span>
+            </div>
+          </div>
+        </div>
+        <div class="current-selection"> 
+          <div class="pane-header">Selection
+            <!-- The "Select All" idea below is just a placeholder for now. 
+            Pending user feedback, may do checkbox column in table intead. -->
+            <span style="font-size:12px; color:#007dc5; float:right; text-transform:none;">Select All</span>
+          </div>
+          <div class="selection-title-and-actions">
+            <span class="selection-title">[<a class="selection-title highlight-clickable-text" href="deviceOverview.html">Selected Device Name</a> or "# Selected" if #>1]</span>
+          </div>
+          <div class="details-group">
+            <table class="label-and-value-list">
+              <tr>
+                <td>Site</td>
+                <td>[<a class="highlight-clickable-text" href="../accounts/siteOverview-3-regularView.html">Site</a> or "Multiple"]
+                  <a class="change-site inline-icon highlight-clickable-icon" title="Change site" href="../modals/changeSiteModal.html"><img src="../img/icons/change-site-pelcoBlue.svg"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Device Type</td>
+                <td>[Device Type or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>Vendor</td>
+                <td>[Vendor or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+                <td>[Model or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>Version</td>
+                <td>[Version or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>Serial</td>
+                <td>[Serial or "Multiple"]</td>
+              </tr>
+            </table>
+          </div>
+          <div class="details-group-header">
+            <span class="click-to-collapse">
+              Network
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              Network
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <div class="details-group">
+            <table class="label-and-value-list">
+              <tr>
+                <td>IP Address</td>
+                <td>[IP Address or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>Hostname</td>
+                <td>[Hostname or "Multiple"]</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>[<img class="inline-icon" src="../img/icons/online-goodGreen.svg">/<img class="inline-icon" src="../img/icons/offline-alarmRed.svg">
+                 Online/Offline or "Multiple"]</td>
+              </tr>
+            </table>
+          </div>
+          <div class="details-group-header">
+            <span class="click-to-collapse">
+              System
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              System
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <div class="details-group">
+            <table class="label-and-value-list">
+              <tr>
+                <td>Agent</td>
+                <td>[agent friendly name]</td>
+              </tr>
+              <tr>
+                <td>VX System</td>
+                <td>[hide row if N/A]</td>
+              </tr>
+              <tr>
+                <td>VX Driver</td>
+                <td>[hide row if N/A]</td>
+              </tr>
+              <tr>
+                <td>VX License</td>
+                <td>["License Required/Not Required"]
+                  <br>
+                  ["Commissioned/Not Commissioned"]
+                  <br>
+                  [hide row if N/A]
+                </td>
+              </tr>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
