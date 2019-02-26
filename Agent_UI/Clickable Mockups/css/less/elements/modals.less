@@ -1,0 +1,50 @@
+#modal {
+  background: @modalBackgroundColor;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  
+  .modal-dialog {
+    background: @modalDialogBackgroundColor;
+    border: 3px solid @modalDialogBorderColor;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    top: 75px;
+    
+    &.small {
+      width: 350px;
+    }
+    
+    &.medium {
+      width: 600px;
+    }
+    
+    &.large {
+      width: 900px;
+    }
+    
+    .modal-title {
+      color: @modalTitleFontColor;
+      font-size: @largeFontSize;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .modal-body {
+      margin-bottom: 25px;
+    }
+    
+    .modal-buttons {
+      text-align: right;
+      
+      button,
+      .button {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,505 @@
+body {
+  background: #fff;
+  color: #333;
+  cursor: default;
+  font: 14px/1.36 'Open Sans', sans-serif;
+}
+header {
+  background: linear-gradient(to right, #fff, #007dc5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 51px;
+}
+header .branding {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+header .branding .logo {
+  width: 70px;
+}
+header .branding .name {
+  margin-left: 15px;
+  width: 140px;
+  opacity: 0.8;
+  position: relative;
+  top: -4px;
+}
+header .user {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+nav {
+  background: #f5f5f5;
+  position: fixed;
+  top: 51px;
+  right: 0;
+  left: 0;
+  height: 36px;
+}
+nav ul {
+  display: block;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: #666;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  padding: 7px 20px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background: #e5e5e5;
+  cursor: pointer;
+}
+nav ul li a:active {
+  background: #fff;
+  color: #007dc5;
+  cursor: pointer;
+}
+nav ul li a.active {
+  background: #fff;
+  color: #007dc5;
+}
+main {
+  background: #fff;
+  position: fixed;
+  top: 87px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  padding: 5px;
+}
+main > div {
+  height: 100%;
+  width: 100%;
+}
+section {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  margin: 5px;
+}
+section .section-header {
+  background: #f5f5f5;
+  color: #666;
+  font-size: 12.5px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+}
+section .section-content {
+  padding: 15px;
+}
+div {
+  font: 14px/1.36 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+p {
+  font: 14px/1.36 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.page-title {
+  color: #333;
+  font: 16px/1.36 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 5px 15px;
+}
+.page-subtitle {
+  color: #666;
+  font: 12.5px/1.36 'Open Sans', sans-serif;
+  margin: 5px 15px;
+}
+.caption {
+  font-size: 12.5px;
+  font-style: italic;
+}
+.caption.validation-error {
+  color: #eb6524;
+  text-align: center;
+}
+/***   GRAYS   ***/
+/***   COLORS   ***/
+/***   FONTS   ***/
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
+/***   BODY  ***/
+/***   HEADER   ***/
+/***   NAV   ***/
+/***   MAIN   ***/
+/***   SECTION   ***/
+/***   ELEMENTS (alphabetical)   ***/
+button,
+.button {
+  background: #007dc5;
+  color: #eee;
+}
+.button-muted {
+  background: none;
+  color: #007dc5;
+}
+button,
+.button,
+.button-muted {
+  border: 1px solid #007dc5;
+  border-radius: 14px;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  display: inline-block;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+button:focus,
+.button:focus,
+.button-muted:focus {
+  border-color: #007dc5;
+}
+button:hover,
+.button:hover,
+.button-muted:hover {
+  background: #00629c;
+  border-color: #007dc5;
+  color: #fff;
+  cursor: pointer;
+}
+button:active,
+.button:active,
+.button-muted:active {
+  background: #0c5480;
+  border-color: rgba(0, 125, 197, 0.14);
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled,
+.button:disabled,
+.button-muted:disabled,
+button.disabled,
+.button.disabled,
+.button-muted.disabled {
+  background: none;
+  border-color: #aaa;
+  color: #aaa;
+  cursor: not-allowed;
+}
+.button-row-centered {
+  text-align: center;
+}
+.button-row-centered button,
+.button-row-centered .button {
+  margin: 0 5px;
+}
+.button-row-left {
+  text-align: left;
+}
+.button-row-left button,
+.button-row-left .button {
+  margin-right: 10px;
+}
+.button-row-right {
+  text-align: left;
+}
+.button-row-right button,
+.button-row-right .button {
+  margin-left: 10px;
+}
+input[type=date] {
+  background: #fbfdfe;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  padding: 2px 8px;
+  width: 200px;
+}
+input[type=number],
+input[type=password],
+input[type=text],
+textarea {
+  background: #fbfdfe;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  padding: 3px 8px;
+  width: 200px;
+}
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=text]::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+input[type=number]:-ms-input-placeholder,
+input[type=password]:-ms-input-placeholder,
+input[type=text]:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+input[type=number]::-ms-input-placeholder,
+input[type=password]::-ms-input-placeholder,
+input[type=text]::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+select {
+  background: #fbfdfe;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  padding: 2px 6px;
+}
+.label-and-input-list {
+  display: table;
+}
+.label-and-input-list .row {
+  display: table-row;
+}
+.label-and-input-list .row label {
+  display: table-cell;
+  font-size: 12.5px;
+  padding: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.label-and-input-list .row input,
+.label-and-input-list .row select {
+  display: table-cell;
+  margin: 5px;
+}
+.label-and-input-list .row input[type=checkbox],
+.label-and-input-list .row input[type=radio] {
+  position: relative;
+  top: 2px;
+}
+.label-and-input-list .row .never-editable {
+  display: table-cell;
+  padding: 9px 5px;
+  text-align: left;
+}
+.inline-icon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 2px;
+}
+.inline-icon.after-text {
+  margin-left: 5px;
+}
+.inline-icon.before-text {
+  margin-right: 5px;
+}
+.inline-icon.info-icon {
+  height: 14px;
+  width: 14px;
+}
+a {
+  color: #007dc5;
+  cursor: pointer;
+  display: inline-block;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  color: #00629c;
+}
+a:active {
+  color: #0c5480;
+}
+.highlight-clickable-text {
+  cursor: pointer;
+  margin: -1px -5px;
+  padding: 1px 5px;
+  border-radius: 8px;
+}
+.highlight-clickable-text:hover {
+  background: rgba(0, 125, 197, 0.07);
+}
+.highlight-clickable-text:active {
+  background: rgba(0, 125, 197, 0.14);
+}
+.highlight-clickable-icon {
+  cursor: pointer;
+  margin: -6px;
+  padding: 6px;
+  border-radius: 14px;
+}
+.highlight-clickable-icon:hover {
+  background: rgba(0, 125, 197, 0.07);
+}
+.highlight-clickable-icon:hover img {
+  filter: brightness(79%);
+}
+.highlight-clickable-icon:active {
+  background: rgba(0, 125, 197, 0.14);
+}
+.highlight-clickable-icon:active img {
+  filter: hue-rotate(1deg) saturate(83%) brightness(69%);
+}
+#modal {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+#modal .modal-dialog {
+  background: #fff;
+  border: 3px solid #007dc5;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 75px;
+}
+#modal .modal-dialog.small {
+  width: 350px;
+}
+#modal .modal-dialog.medium {
+  width: 600px;
+}
+#modal .modal-dialog.large {
+  width: 900px;
+}
+#modal .modal-dialog .modal-title {
+  color: #007dc5;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#modal .modal-dialog .modal-body {
+  margin-bottom: 25px;
+}
+#modal .modal-dialog .modal-buttons {
+  text-align: right;
+}
+#modal .modal-dialog .modal-buttons button,
+#modal .modal-dialog .modal-buttons .button {
+  margin: 0 0 0 10px;
+}
+table {
+  border-collapse: collapse;
+  font: 14px/1.36 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.label-and-value-list td {
+  padding: 5px;
+  vertical-align: top;
+}
+.label-and-value-list td:first-child {
+  color: #aaa;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  padding-top: 7px;
+}
+#activation .branding .placeholder-image {
+  display: block;
+  width: 350px;
+  margin: auto;
+}
+#activation .activation-form {
+  text-align: center;
+}
+#activation .activation-form .step-number {
+  background: #3bf;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px 10px 0;
+  text-align: center;
+}
+#activation .activation-form .label-and-input-list {
+  margin: auto;
+}
+#activation .activation-form .label-and-input-list label {
+  text-align: right;
+}
+#activation .activation-form .activation-key {
+  margin: 40px 0;
+}
+#activation .activation-form .activation-key .activation-key-info-icon {
+  top: 3px;
+}
+#activation .activation-form .activation-key .activation-key-info-text {
+  margin-bottom: 10px;
+}
+#activation .activation-form .activation-key textarea {
+  display: block;
+  margin: 5px auto 0 auto;
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 580px;
+  max-width: 580px;
+}
+#config {
+  display: flex;
+  flex-flow: column;
+}
+#config .cloud-connection .section-content,
+#config .vx-connection .section-content {
+  position: relative;
+}
+#config .cloud-connection .section-content .edit-icon,
+#config .vx-connection .section-content .edit-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#config .cloud-connection .section-content .label-and-value-list td:first-child,
+#config .vx-connection .section-content .label-and-value-list td:first-child {
+  width: 165px;
+}
+.edit-activation-key-modal .enable-editing label {
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+.edit-activation-key-modal .enable-editing textarea {
+  display: block;
+  margin-top: 5px;
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 580px;
+  max-width: 580px;
+}
+.edit-activation-key-modal .show-test-results .label-and-value-list td:first-child {
+  width: 135px;
+}
+.edit-vx-settings-modal .enable-editing .label-and-input-list label {
+  width: 170px;
+}
+.edit-vx-settings-modal .enable-editing .label-and-input-list input[type=number] {
+  width: 50px;
+}
+.edit-vx-settings-modal .enable-editing .label-and-input-list .caption {
+  padding-left: 5px;
+}
+.edit-vx-settings-modal .show-test-results .label-and-value-list td:first-child {
+  width: 180px;
+}
+#login .branding .placeholder-image {
+  display: block;
+  width: 350px;
+  margin: auto;
+}
+#login .credentials {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 350px;
+}
+#login .credentials .login-error {
+  color: #eb6524;
+}

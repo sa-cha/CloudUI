@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Agent Config</title>
+  <link rel="stylesheet" href="css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+
+  <header>
+      <div class="user"><a class="button" href="login.html">Log Out</a></div>
+  </header>
+
+  <main>
+    <div id="config">
+      <section class="cloud-connection">
+        <div class="section-header">Cloud Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td>Connection Status</td>
+              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Successful"> Last connection 2019-01-16 12:00 MST</td>
+            </tr>
+            <tr>
+              <td>Account > Tenant</td>
+              <td>KGB > Vlad's Place</td>
+            </tr>
+            <tr>
+              <td>Agent Name</td>
+              <td>Philip Jennings</td>
+            </tr>
+          </table>
+          <table class="label-and-value-list">
+            <tr>
+              <td>Activation Key</td>
+              <td>Current activation key stored on agent</td>
+            </tr>
+          </table>
+          <a href="editActivationKeyModal.html" class="edit-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit activation key"></a>
+        </div>
+      </section>
+
+      <section class="vx-connection">
+        <div class="section-header">VX Connection</div>
+        <div class="section-content">
+          <table class="label-and-value-list">
+            <tr>
+              <td>Connection Status</td>
+              <td><img class="inline-icon before-text" src="img/icons/fail-circle-alarmRed.svg" title="Failed"> Password required</td>
+            </tr>
+            <tr>
+              <td>Core IP Address:Port</td>
+              <td>127.0.0.1:443</td>
+            </tr>
+            <tr>
+              <td>Username</td>
+              <td>cloud_agent</td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><a href="editVxSettingsModal.html" class="inline-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit VX password"></a></td>
+            </tr>
+            <tr>
+              <td>Poll Interval</td>
+              <td>60 seconds</td>
+            </tr>
+          </table>
+          <a href="editVxSettingsModal.html" class="edit-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit VX connection settings"></a>
+        </div>
+      </section>
+    </div>    
+  </main>
+</body>
+</html>

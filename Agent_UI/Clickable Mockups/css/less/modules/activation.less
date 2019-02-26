@@ -1,0 +1,54 @@
+#activation {
+  .branding {
+    .placeholder-image {
+      display: block;
+      width: 350px;
+      margin: auto;
+    }
+  }
+
+  .activation-form {
+    text-align: center;
+
+    .step-number {
+      background: @lightBlue;
+      border-radius: 10px;
+      color: @bodyBackgroundColor;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 5px 10px 0;
+      text-align: center;
+    }
+
+    .label-and-input-list {
+      margin: auto;
+      
+      label {
+        text-align: right;
+      }
+    }
+    
+    .activation-key {
+      margin: 40px 0;
+
+      .activation-key-info-icon {
+        top: 3px;
+      }
+
+      .activation-key-info-text {
+        margin-bottom: 10px;
+      }
+      
+      textarea {
+        display: block;
+        margin: 5px auto 0 auto;
+        // final size TBD, based on activation key length
+        min-height: 150px;
+        max-height: 150px;
+        min-width: 580px;
+        max-width: 580px;
+      }
+    }
+  }
+}

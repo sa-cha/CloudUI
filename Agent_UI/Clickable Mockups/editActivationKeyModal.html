@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Edit Activation Key Modal</title>
+  <link rel="stylesheet" href="css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+  <div id="modal" class="edit-activation-key-modal">
+    <div class="modal-dialog medium">
+
+      <div class="enable-editing">
+        <div class="modal-title">Edit Activation Key</div>
+        <div class="modal-body">
+          <form>
+            <label>Activation Key *</label><br>
+            <textarea placeholder="Activation Key">default value = current activation key</textarea>
+          </form>
+          <!--
+          <div class="caption validation-error">
+            <br>
+            Activation key cannot be blank.
+          </div>
+          -->
+        </div>
+        <div class="modal-buttons">
+          <a class="button-muted" href="config.html">Cancel</a>
+          <a class="button" href="#">Test Key</a>
+          <a class="button" href="config.html">Save</a>
+        </div>
+      </div>
+      <!--
+        ** CLICKING "Test Key" AND "OK" BUTTONS TOGGLES BETWEEN
+        ** HIDE <div class="enable-editing"> WHILE SHOW <div class="show-test-results"> AND
+        ** SHOW <div class="enable-editing"> WHILE HIDE <div class="show-test-results">
+      -->
+      
+      <!-- 
+      <div class="show-test-results">
+        <div class="modal-title">Activation Key Test Result</div>
+        <div class="modal-body">
+          <table class="label-and-value-list">
+            <tr>
+              <td>Key Tested</td>
+              <td>show Activation Key that was tested</td>
+            </tr>
+            <tr>
+              <td>Cloud Connection</td>
+              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Successful"> Connection successful</td>
+            </tr>
+            <tr>
+              <td>Account > Tenant</td>
+              <td>KGB > Vlad's Place</td>
+            </tr>
+            <tr>
+              <td>Agent Name</td>
+              <td>Philip Jennings</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-buttons">
+          <a class="button" href="#">OK</a>
+        </div>
+      </div> 
+      -->
+
+    </div>
+  </div>
+</body>
+</html>

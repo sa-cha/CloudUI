@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Edit VX Settings Modal</title>
+  <link rel="stylesheet" href="css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+  <div id="modal" class="edit-vx-settings-modal">
+    <div class="modal-dialog medium">
+
+      <div class="enable-editing">
+        <div class="modal-title">Edit VX Connection Settings</div>
+        <div class="modal-body">
+          <form class="label-and-input-list">
+            <div class="row">
+              <label>Core IP Address : Port *</label>
+              <input type="text" value="127.0.0.1"> : <input type="number" value="443">
+            </div>
+            <br>
+            <div class="row">
+              <label>Username *</label>
+              <span class="never-editable">cloud_agent</span>
+            </div>
+            <div class="row">
+              <label>Password *</label>
+              <input type="password" placeholder="Password"><br><span class="caption">Must match password set for "cloud_agent" user within VX.</span>
+            </div> 
+            <br>
+            <div class="row">
+              <label>Poll Interval *</label>
+              <input type="number" value="60"> seconds
+            </div>
+          </form>
+          <!--
+          <div class="caption validation-error">
+            <br>
+            Password is required.
+          </div>
+          -->
+        </div>
+        <div class="modal-buttons">
+          <a class="button-muted" href="config.html">Cancel</a>
+          <a class="button" href="#">Test Settings</a>
+          <a class="button" href="config.html">Save</a>
+        </div>   
+      </div>
+      <!--
+        ** CLICKING "Test Key" AND "OK" BUTTONS TOGGLES BETWEEN
+        ** HIDE <div class="enable-editing"> WHILE SHOW <div class="show-test-results"> AND
+        ** SHOW <div class="enable-editing"> WHILE HIDE <div class="show-test-results">
+      -->
+
+      <!-- 
+      <div class="show-test-results">
+        <div class="modal-title">Vx Connection Settings Test Result</div>
+        <div class="modal-body">
+          <table class="label-and-value-list">
+            <tr>
+              <td>IP Address : Port Tested</td>
+              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Successful"> VxCore found at 127.0.0.1:443</td>
+            </tr>
+            <tr>
+              <td>Login as cloud_agent</td>
+              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Successful"> Login successful</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-buttons">
+          <a class="button" href="#">OK</a>
+        </div>      
+      </div>
+      -->
+
+    </div>
+  </div>
+</body>
+</html>

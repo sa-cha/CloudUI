@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Agent Activation</title>
+  <link rel="stylesheet" href="css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="img/branding/favicon.ico" />
+</head>
+<body>
+  <main>
+    <div id="activation">
+      
+      <div class="branding">
+        <img class="placeholder-image" src="img/branding/pelco_cloud_agent.svg">
+      </div>
+
+      <form class="activation-form">
+        <span class="step-number">1</span>
+        <span>Create admin account to secure agent configuration.</span>
+        <div class="label-and-input-list">
+          <div class="row">
+            <label>Username *</label>
+            <input type="text" placeholder="Username">
+          </div>
+          <div class="row">
+            <label>Password *</label>
+            <input type="password" placeholder="Password">
+          </div>
+          <div class="row">
+            <label>Verify Password *</label>
+            <input type="password" placeholder="Verify Password">
+          </div>
+        </div>
+        <div class="activation-key">
+          <span class="step-number">2</span>
+          <span>Enter agent activation key.</span>
+          <span class="activation-key-info-icon inline-icon after-text info-icon" title="Click for more info"><img src="img/icons/info-circle-lightGray.svg"></span>
+          <!-- 
+            ** WHEN <span class="activation-key-info-icon"> IS CLICKED,
+            ** SHOW <div class="activation-key-info-text"> BELOW.
+          -->
+          <!--
+          <div class="activation-key-info-text">
+            To get an activation key, create an agent under a Pelco Cloud tenant at 
+            <a href="https://cloud.pelco.com" class="highlight-clickable-text" target="_blank">cloud.pelco.com</a>.
+          </div>
+          -->
+          <textarea placeholder="Activation Key"></textarea>
+        </div>
+        <!--
+        <div class="caption validation-error">
+          Passwords entered do not match.<br>
+          All fields are required.<br>
+          <br>
+        </div>
+        -->
+        <a class="button" href="config.html">Activate Agent</a>
+      </form>
+
+    </div>
+  </main>
+</body>
+</html>
