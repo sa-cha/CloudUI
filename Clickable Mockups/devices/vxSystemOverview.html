@@ -3,13 +3,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>MOCKUP - Device Overview (VxCore)</title>
+  <title>MOCKUP - VX System Overview</title>
   <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
   <link rel="icon" href="../img/branding/favicon.ico" />
-  <!-- REMOVE SCRIPT BEFORE PACKAGING -->
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
   <script src="scripts/vxSystemOverview.js"></script>
 </head>
-<body>
+<body onload="drillIntoArea0()">
   <header>
       <div class="branding">
         <img class="logo" src="../img/branding/vx_like_cloud.svg">
@@ -27,14 +27,13 @@
   </nav>
 
   <main>
-    <div class="entity-overview" id="device-overview">
+    <div class="entity-overview vx-system-overview">
       <div class="page-title">FC VX System</div>
       <div class="page-subtitle">Cloud > 
         <a class="breadcrumb" href="../accounts/accountsList.html">Accounts</a> > 
         <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Account Name</a> > 
         <a class="breadcrumb" href="../accounts/tenantsList.html">Tenants</a> >
         <a class="breadcrumb" href="../accounts/tenantOverview-3-regularView.html">Tenant Name</a> > 
-        <a class="breadcrumb" href="devicesListForTenant.html">Devices</a> >
         FC VX System
       </div>
 
@@ -42,8 +41,8 @@
         <section class="entity-details">
         <!-- NOTE: contents of .entity-details will be different per entity type (account, tenant, site, device, etc) -->
           <div class="section-header">
-            <span class="click-to-collapse" id="collapse" onclick="collapseDetails()">
-              Device Details
+            <span class="click-to-collapse">
+              VX System Details
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
             <!--
@@ -51,56 +50,24 @@
               ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
             -->
             <!--
-            <span class="click-to-expand" id="expand" onclick="expandDetails()">
-              Device Details
+            <span class="click-to-expand"">
+              System Details
               <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
             </span>
              -->
           </div>
-          <div class="section-content" id="details">
+          <div class="section-content">
             <div class="flex-container">
-              <table class="label-and-value-list">
+              <table class="label-and-value-list">                
                 <tr>
-                  <td>Site</td>
-                  <td><a class="highlight-clickable-text" href="../accounts/siteOverview-3-regularView.html">Fort Collins</a>
-                    <a class="change-site inline-icon highlight-clickable-icon" title="Change site" href="#change-site-vx-system"><img src="../img/icons/change-site-pelcoBlue.svg"></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Device Type</td>
-                  <td>VxCore</td>
-                </tr>
-                <tr>
-                  <td>Vendor</td>
-                  <td>Pelco</td>
+                  <td>System Type</td>
+                  <td>VxProfessional</td>
                 </tr>
               </table>
               <table class="label-and-value-list">
-                <tr>
-                  <td>Model</td>
-                  <td>VideoExpert Professional</td>
-                </tr>
                 <tr>
                   <td>Version</td>
                   <td>3.0.0</td>
-                </tr>
-                <tr>
-                  <td>Serial</td>
-                  <td></td>
-                </tr>
-              </table>
-              <table class="label-and-value-list">
-                <tr>
-                  <td>State</td>
-                  <td><img class="inline-icon" src="../img/icons/online-goodGreen.svg"></td>
-                </tr>
-                <tr>
-                  <td>IP Address</td>
-                  <td>10.0.0.5</td>
-                </tr>
-                <tr>
-                  <td>Hostname</td>
-                  <td></td>
                 </tr>
               </table>
               <table class="label-and-value-list">
@@ -113,31 +80,198 @@
           </div>
         </section>
         <div class="entity-dashboard">
-        <!-- NOTE: contents of .entity-dashboard will be different per device type -->
-          <section class="vx-dashboard">
+        <!-- NOTE: contents of .entity-dashboard will be different per entity type -->
+          <section class="vx-system-health">
             <div class="section-header">VX System Health</div>
-            <div class="section-content"></div>
+            <div class="section-content">
+              <div class="health-area-summaries">
+                <div class="area-header" onclick="drillIntoArea0()">
+                  Licenses
+                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                </div>
+                <div class="area-summary">
+                  <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
+                  <div class="summary-metrics">
+                    80% (8/10) channels in use
+                    <br>
+                    0 license alerts in last 30 days
+                  </div>
+                </div>
+                <div class="area-header" onclick="drillIntoArea1()">
+                  Cameras
+                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                </div>
+                <div class="area-summary">
+                  <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
+                  <div class="summary-metrics">
+                    5 cameras online, 0 offline
+                    <br>
+                    0 camera alerts in last 30 days
+                  </div>
+                </div>
+                <div class="area-header" onclick="drillIntoArea2()">
+                  Storage
+                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                </div>
+                <div class="area-summary">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
+                    <div class="summary-metrics">
+                      2 storage nodes online, 0 offline
+                      <br>
+                      0 storage alerts in last 30 days
+                    </div>
+                </div>
+              </div>
+              <div class="selected-health-area-drill-in">
+                <div class="area-drill-in">
+                  <div class="chart-label">License</div>
+                    <select class="licenses-chart-selector" onchange="changeLicensesChartType()">
+                      <option value="licensesSummary">summary</option>
+                      <option value="licensesAlerts">alerts in last 30 days</option>
+                    </select>
+                  <div class="chart">
+                    <br>
+                    <table class="compact-list licenses-summary-table">
+                      <tbody class="sup-license">
+                        <tr class="look-like-thead">
+                          <td colspan="2">Software Upgrade Plan</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Expiration</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>1 year</td>
+                          <td>Upgrades Enabled</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>2021-08-31 15:00 MST
+                            <a href="supExpirationInfoModal.html" title="How is expiration calculated?"><img class="inline-icon info-link after-text highlight-clickable-icon" src="../img/icons/info-circle-pelcoBlue.svg"></a>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                      <tbody class="feature-licenses">
+                        <tr class="look-like-thead">
+                          <td colspan="2">Licensed Features</td>
+                          <td>Licensed Count</td>
+                          <td>In Use</td>
+                          <td>Remaining</td>
+                          <td>Expiration</td>
+                          <td>Activation</td>
+                          <td>Activation ID</td>
+                        </tr>
+                        <tr>
+                          <td>P2-1C-ADD</td>
+                          <td>VxPro Channels</td>                            
+                          <td>10</td>
+                          <td>8</td>
+                          <td>2</td>
+                          <td>no expiration</td>
+                          <td>2018-01-15 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d04</td>
+                        </tr>
+                        <tr>
+                          <td>P2-PRO-SW</td>
+                          <td>VxPro Software</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2018-01-15 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d03</td>
+                        </tr>
+                        <tr>
+                          <td>P2-PRO-SVR</td>
+                          <td>VxPro Hardware</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2018-01-15 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d02</td>
+                        </tr>
+                      </tbody>
+                      <tbody class="free-licenses">
+                        <tr class="look-like-thead">
+                          <td colspan="2">Free Features</td>
+                          <td>Channels</td>
+                          <td>In Use</td>
+                          <td>Remaining</td>
+                          <td>Expiration</td>
+                          <td>Installation</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>P2-LITE</td>
+                          <td>VxPro 4 channels, 1 year</td>                      
+                          <td>expired</td>
+                          <td>-</td>
+                          <td>-</td>                        
+                          <td>2018-12-01 23:00 MST</td>
+                          <td>2017-12-01 23:00 MST</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>P2-EVAL</td>
+                          <td>VxPro unlimited, 60 days</td>                            
+                          <td>expired</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>2018-01-30 23:00 MST</td>
+                          <td>2017-12-01 23:00 MST</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="compact-list licenses-alerts-table">
+                      <!--TEMP FILLER CONTENT-->
+                      <thead>
+                        <tr>
+                          <th>Timestamp</th>
+                          <th>Severity</th>
+                          <th>Cause</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <br>
+                  <br>
+                  <a class="highlight-clickable-text" href="http://support.pelco.com" target="_blank">Get VX licensing guide at support.pelco.com</a>
+                </div>
+                <div class="area-drill-in">
+                  <!--TEMP FILLER CONTENT-->
+                  <em>
+                    SHOW CAMERA DEETS ... PROBABLY A SIMILAR SELECT LIKE FOR LICENSES:
+                    <select>
+                      <option>summary</option>
+                      <option>alerts in last 30 days</option>
+                    </select>
+                    THAT CONTROLS WHAT TYPE OF TABLE TO SHOW
+                  </em>
+                </div>
+                <div class="area-drill-in">
+                    <!--TEMP FILLER CONTENT-->
+                    <em>
+                      SHOW STORAGE DEETS ... PROBABLY A SIMILAR SELECT LIKE FOR LICENSES:
+                      <select>
+                        <option>summary</option>
+                        <option>alerts in last 30 days</option>
+                      </select>
+                      THAT CONTROLS WHAT TYPE OF TABLE TO SHOW
+                    </em>
+                  </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
     </div>
   </main>
-  
-<div id="change-site-vx-system">
-  <div class="modal-dialog small">
-    <div class="modal-title">FC VX System</div>
-    <div class="modal-body">
-      Move to site
-      <select style="margin-left:5px;">
-        <option>Fort Collins</option>
-        <option>Unassigned</option>
-      </select>
-    </div>
-    <div class="modal-buttons">
-      <a class="button-muted" href="#">Cancel</a>
-      <a href="#" class="button">Move</a>
-    </div>      
-  </div>
-</div>
 </body>
 </html>

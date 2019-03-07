@@ -288,3 +288,40 @@ table {
   }
 }
 
+.compact-list {
+  width: 100%;
+
+  thead {
+    tr {
+      border: none;
+      
+      th {
+        color: @pelcoBlue;
+        opacity: .7;
+        font-size: @smallFontSize;
+        font-weight: 400;
+        padding: 3px 15px 3px 5px;
+        text-align: left;
+        vertical-align: top; 
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border: 1px solid #f5f5f5;
+      
+      td {
+        font-size: @smallFontSize;
+        padding: 3px 15px 3px 5px;
+        text-align: left;
+        vertical-align: top;
+        
+        // original, but doesn't seem right
+        // &:last-child {
+        //   padding-right: 5px;
+        // }
+      }
+    }
+  }
+}
