@@ -1,1 +1,20 @@
-#modal.delete-result-modal {}
+#modal.delete-result-modal {
+  .result-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+  }
+
+  .result-text {
+    color: @goodGreen;
+    // note that actual color is determined by actual result
+    // "SUCCESS" = @goodGreen = #37b57e
+    // "FAILED" = @alarmRed = #d83237
+    // mixed batch result - don't think we have these yet, but would be:
+    // "ERROR" = @alertOrange = #eb6524
+    //
+    // mockups tend to illustrate the successful case
+  }
+}

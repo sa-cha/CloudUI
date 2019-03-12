@@ -1,0 +1,84 @@
+#modal.create-agent-and-key-modal {
+  .modal-body {
+    .agent-name-input {
+      margin-left: 5px;
+    }
+
+    .label-and-value-list {
+      td:first-child {
+        width: 100px;
+      }
+
+      .key {
+        font-size: @smallFontSize;
+        word-break: break-all;
+      }
+    }
+
+    .diagram {
+      border: 1px solid @veryLightBlue;
+      border-radius: 8px;
+      height: 165px;
+      width: 800px;
+      margin: 40px auto 20px auto;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+
+      .background-image {
+        height: 165px;
+        width: 90px;
+      }
+
+      .step-1-prefix,
+      .step-2-prefix {
+        margin-right: 5px;
+
+        .completed-icon {
+          vertical-align: top;
+        }
+      }
+
+      .step-1 {
+        color: @secondaryDarkOnLightFontColor;
+        display: inline-block;
+        position: absolute;
+        top: 50px;
+        right: 460px;
+        text-align: right;
+
+        &.active {
+          font-size: @defaultFontSize;
+          font-weight: 600;
+        }
+      }
+
+      .step-2 {
+        color: @secondaryDarkOnLightFontColor;
+        display: inline-block;
+        position: absolute;
+        top: 170px;
+        right: 435px;
+        text-align: right;
+
+        &.active {
+          font-size: @defaultFontSize;
+          font-weight: 600;
+        }
+      }
+
+      .step-3 {
+        color: @secondaryDarkOnLightFontColor;
+        display: inline-block;
+        position: absolute;
+        top: 110px;
+        left: 410px;
+        text-align: left;
+      }
+    }
+
+    .help-link {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Agent Delete Result</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+</head>
+<body>
+  <div id="modal" class="delete-result-modal">
+    <div class="modal-dialog medium">
+      <div class="modal-title">Agent Delete</div>
+      <div class="modal-body">
+        <img class="result-icon" src="../img/icons/result-success-goodGreen.svg">
+        <span class="result-text">SUCCESS</span>
+        <br>
+        <br>
+        Agent "Agent Name" successfully deleted.
+      </div>
+      <!--
+        ** ACTUAL ICON AND TEXT TO DISPLAY IN .modal-body DEPENDS ON ACTUAL RESULT.
+        ** IF DELETE SUCCEEDED: 
+              - .result-icon src="result-success-goodGreen.svg"
+              - .result-text = "SUCCESS"
+              - .modal-body message = 'Agent "Agent Name" successfully deleted.'
+        ** IF DELETE FAILED:
+              - .result-icon src="result-failed-alarmRed.svg"
+              - .result-text = "FAILED"
+              - .modal-body message = show error message from server
+      -->
+    <div class="modal-buttons">
+        <a href="../accounts/tenantOverview-3-regularView.html" class="button">OK</a>
+      </div>         
+    </div>
+  </div>
+</body>
+</html>

@@ -302,7 +302,7 @@ table {
         font-weight: 400;
         padding: 3px 15px 3px 5px;
         text-align: left;
-        vertical-align: top; 
+        vertical-align: bottom;  // may cause conflict w Andrew's license stuff; this one should win
       }
     }
   }
@@ -316,12 +316,31 @@ table {
         padding: 3px 15px 3px 5px;
         text-align: left;
         vertical-align: top;
-        
-        // original, but doesn't seem right
-        // &:last-child {
-        //   padding-right: 5px;
-        // }
       }
     }
+  }
+}
+
+.loose-list {
+  width: 100%;
+
+  th {
+    color: @tertiaryDarkOnLightFontColor;
+    font-size: @smallFontSize;
+    font-weight: 400;
+    padding: 0 10px 7px;
+    text-align: left;
+    text-transform: uppercase;
+    vertical-align: bottom;
+  }
+
+  td {
+    padding: 4px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .explain-blank-cell {
+    color: @tertiaryDarkOnLightFontColor;
   }
 }

@@ -25,106 +25,168 @@
   </nav>
 
   <main>
-    <div id="tenant-overview">
-      <div class="page-title">[Tenant Name]</div>
+    <div class="entity-overview tenant-overview">
+      <div class="page-title">Test Tenant</div>
       <div class="page-subtitle">Cloud >
         <a class="breadcrumb" href="accountsList.html">Accounts</a> >
-        <a class="breadcrumb" href="accountOverview-3-regularView.html">[Account Name]</a> > 
+        <a class="breadcrumb" href="accountOverview-3-regularView.html">Test Account</a> > 
         <a class="breadcrumb" href="tenantsList.html">Tenants</a> >
-        [Tenant Name]
+        Test Tenant
       </div>
-      <a href="../modals/deleteSafeguardsModal-tenant-1-confirmIntent.html" class="delete-tenant highlight-clickable-icon" title="Delete Tenant">
+      <a href="../modals/deleteSafeguardsModal-tenant-1-confirmIntent.html" class="delete-entity highlight-clickable-icon" title="Delete Tenant">
         <img src="../img/icons/delete-pelcoBlue.svg">
       </a>
       <div class="overview">
-        <section class="tenant-details">
-          <div class="section-header">Tenant Details</div>
-          <div class="section-content">
-            <table class="label-and-value-list">
-              <tr>
-                <td>Account</td>
-                <td>[Account Name]</td>
-              </tr>
-              <tr>
-                <td>Tenant Name</td>
-                <td>[Tenant Name]</td>
-              </tr>
-              <tr>
-                <td>Camera Limit</td>
-                <td>[#####]</td>
-              </tr>
-              <tr>
-                <td>Tenant Expiration</td>
-                <td>[YYYY-MM-DD]
-                  <!--
-                    ** SHOW class="expired" ICON IF TENANT EXPIRATION DATE HAS PAST
-                  -->
-                  <img class="expired" title="Expired" src="..\img\icons\expired-attentionOrange.svg">
-                </td>
-              </tr>
-            </table>
-            <table class="label-and-value-list">
-              <tr>
-                <td>Contact Name</td>
-                <td>[Contact Name]</td>
-              </tr>
-              <tr>
-                <td>Contact Email</td>
-                <td>[Contact Email]</td>
-              </tr>
-              <tr>
-                <td>Contact Mobile</td>
-                <td>[Contact Mobile]</td>
-              </tr>
-              <tr>
-                <td>Secondary Phone</td>
-                <td>[Secondary Phone]</td>
-              </tr>
-            </table>
-            <table class="label-and-value-list">
-              <tr>
-                <td>Address Line 1</td>
-                <td>[Address Line 1]</td>
-              </tr>
-              <tr>
-                <td>Address Line 2</td>
-                <td>[Address Line 2]</td>
-              </tr>
-              <tr>
-                <td>Address Line 3</td>
-                <td>[Address Line 3]</td>
-              </tr>
-            </table>            
+        <section class="entity-details">
+          <div class="section-header">
+            <span class="click-to-collapse">
+                Tenant Details
+                <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+              </span>
+              <!--
+                ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+                ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
+              -->
+              <!--
+              <span class="click-to-expand"">
+                Tenant Details
+                <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+              </span>
+                -->
           </div>
-          <a href="tenantOverview-4-editTenantDetails.html" class="edit-tenant-details highlight-clickable-icon" title="Edit Tenant Details">
+          <div class="section-content">
+            <div class="flex-container">
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Account</td>
+                  <td><a href="accountOverview-3-regularView.html" class="highlight-clickable-text">Test Account</a></td>
+                </tr>
+                <tr>
+                  <td>Tenant Name</td>
+                  <td>Test Tenant</td>
+                </tr>
+                <tr>
+                  <td>Camera Limit</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Tenant Expiration</td>
+                  <td></td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Contact Name</td>
+                  <td>Jack Black</td>
+                </tr>
+                <tr>
+                  <td>Contact Email</td>
+                  <td>jb@nacholibre.com</td>
+                </tr>
+                <tr>
+                  <td>Contact Mobile</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Secondary Phone</td>
+                  <td></td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Address Line 1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Address Line 2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Address Line 3</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>          
+          </div>
+          <a href="tenantOverview-4-editTenantDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Tenant Details">
             <img src="../img/icons/edit-pelcoBlue.svg">
           </a>
         </section>
-        <div class="status-sections-flex-container">
-          <section class="counts">
-            <div class="section-header">Counts</div>
-            <div class="section-content">
-              <a class="highlight-clickable-text" href="sitesList.html">[#] Sites</a>
-              <br>
-              <br>
-              <a class="highlight-clickable-text" href="#">[#] Cameras</a>
-              <br>
-              <br>
-              <em>
-                WILL HAVE BUTTON OR LINKS TO ADD DEVICES/STUFF HERE, WORKFLOW TBD
-              </em>
-            </div>
-          </section>
-          <section class="alerts">
-            <div class="section-header">Alerts</div>
-            <div class="section-content">
-              <em></em>
-            </div>
-          </section>
-          <section class="events">
-            <div class="section-header">Events</div>
-            <div class="section-content"></div>
-          </section>
+        <div class="entity-dashboard">
+        <!-- NOTE: contents of .entity-dashboard will be different per entity type -->
+          <div class="tenant-dashboard">
+            <section class="alerts">
+              <div class="section-header">Alerts</div>
+              <div class="section-content">
+                <!--TEMP PLACEHOLDER IDEAS-->
+                <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
+                <br>
+                <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:0 15px;">
+                  2
+                  <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
+                </div>
+                <div style="display:inline-block;">
+                    VX Systems with active health alarms:<br>
+                    <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">FC VX System</a><br>
+                    <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Another VX System</a> 
+                </div>
+                <!--END OF TEMP PLACEHOLDER CONTENT-->            
+              </div>              
+            </section>
+            <section class="agents">
+              <div class="section-header">VX Systems / Agents</div>
+              <div class="section-content">
+                <table class="loose-list">
+                  <thead>
+                    <tr>
+                      <th>VX System</th>
+                      <th>Agent</th>
+                      <th>Last Connection</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="caption explain-blank-cell">none connected</span></td>
+                      <td>My New Agent</td>
+                      <td><span class="caption explain-blank-cell">not yet activated</span></td>
+                      <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">Another VX System</a></td>
+                      <td>X Agent</td>
+                      <td>2019-01-30 08:41 MST</td>
+                      <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">FC VX System</a></td>
+                      <td>Test Agent</td>
+                      <td>2019-01-30 08:40 MST</td>
+                      <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">Third VX System</a></td>
+                      <td>Agent 123</td>
+                      <td>2019-01-30 08:38 MST</td>
+                      <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <div class="button-row-right">
+                  <a class="button-muted" href="../modals/createAgentAndKeyModal.html">Add VX System</a>
+                </div>
+              </div>
+            </section>
+            <section class="admin-links">
+              <div class="section-header">Tenant Admin Links</div>
+              <div class="section-content">
+                  <a class="highlight-clickable-text" href="#">1 Tenant User</a>
+                  <br><br>
+                  <a class="highlight-clickable-text" href="#">View Audit Log</a>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>    

@@ -1,91 +1,51 @@
-#tenant-overview {
-  display: flex;
-  flex-flow: column nowrap;
-  
-  .page-title,
-  .page-subtitle {
-    flex: 0;
-  }
-  
-  .delete-tenant {
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    top: 12px;
-    right: 10px;
-  }
-  
-  .overview {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    
-    .tenant-details {
-      flex: 0 0 auto;
-      position: relative;  //so that child .edit-tenant-details can be position:absolute
-      
-      .section-content {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-right: 60px;
-        
-        .label-and-input-list,
-        .label-and-value-list {
-          flex: 1 1 auto;
-          margin-right: 20px;
-          
-          label,
-          td:first-child {
-            width: 135px;
-          }
-          
-          .expired {
-            height: 19px;
-            width: 16px;
-            margin-left: 5px;
-            vertical-align: text-bottom;
-          }
+// THE tenantOverview.html PAGE USES entityOverview.less FOR ITS GENERAL LAYOUT
+// THE FOLLOWING STYLES ARE SPECIFIC TO A TENANT OVERVIEW
+.entity-overview.tenant-overview {
+  .entity-details {
+    .flex-container {
+      .label-and-input-list,
+      .label-and-value-list {
+        flex: 1 1 auto;
+        margin-right: 20px;
+
+        label,
+        td:first-child {
+          width: 135px;
         }
-      }
-      
-      .form-error {
-        color: @alertOrange;
-        text-align: center;
-      }
-      
-      .button-row-centered {
-        margin: 15px 0;
-      }
-      
-      .edit-tenant-details {
-        height: 16px;
-        width: 16px;
-        position: absolute;
-        top: 42px;
-        right: 15px;
       }
     }
 
-    .status-sections-flex-container {
+    .form-error {
+      color: @alertOrange;
+      text-align: center;
+    }
+    
+    .button-row-centered {
+      margin: 15px 0;
+    }
+  }
+
+  .tenant-dashboard {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    .alerts {
       flex: 1 1 auto;
-      display: flex;
-      flex-flow: row wrap;
-      
-      .counts {
-        flex: 0;
-        min-width: 200px;
-      }
-      
-      .alerts {
-        flex: 1 1 auto;
-        min-width: 400px;
-      }
-      
-      .events {
-        flex: 1 1 auto;
-        min-width: 400px;
-      }
+      min-width: 420px;
+      // may need max height and auto overflow for .section-content inside this flexbox
+    }
+
+    .agents {
+      flex: 1 1 auto;
+      min-width: 550px;
+      // may need max height and auto overflow for .section-content inside this flexbox
+    }
+
+    .admin-links {
+      flex: 1 1 auto;
+      min-width: 250px;
+      // this section still highly tentative
     }
   }
 }

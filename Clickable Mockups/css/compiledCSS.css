@@ -202,7 +202,7 @@ button.disabled,
   margin-right: 10px;
 }
 .button-row-right {
-  text-align: left;
+  text-align: right;
 }
 .button-row-right button,
 .button-row-right .button {
@@ -662,7 +662,7 @@ table {
   font-weight: 400;
   padding: 3px 15px 3px 5px;
   text-align: left;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 .compact-list tbody tr {
   border: 1px solid #f5f5f5;
@@ -672,6 +672,26 @@ table {
   padding: 3px 15px 3px 5px;
   text-align: left;
   vertical-align: top;
+}
+.loose-list {
+  width: 100%;
+}
+.loose-list th {
+  color: #aaa;
+  font-size: 12.5px;
+  font-weight: 400;
+  padding: 0 10px 7px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.loose-list td {
+  padding: 4px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.loose-list .explain-blank-cell {
+  color: #aaa;
 }
 #account-overview {
   display: flex;
@@ -769,6 +789,83 @@ table {
 }
 #accounts-list .grid-group {
   flex: 1 1 auto;
+}
+#modal.create-agent-and-key-modal .modal-body .agent-name-input {
+  margin-left: 5px;
+}
+#modal.create-agent-and-key-modal .modal-body .label-and-value-list td:first-child {
+  width: 100px;
+}
+#modal.create-agent-and-key-modal .modal-body .label-and-value-list .key {
+  font-size: 12.5px;
+  word-break: break-all;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram {
+  border: 1px solid #ade;
+  border-radius: 8px;
+  height: 165px;
+  width: 800px;
+  margin: 40px auto 20px auto;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .background-image {
+  height: 165px;
+  width: 90px;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-1-prefix,
+#modal.create-agent-and-key-modal .modal-body .diagram .step-2-prefix {
+  margin-right: 5px;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-1-prefix .completed-icon,
+#modal.create-agent-and-key-modal .modal-body .diagram .step-2-prefix .completed-icon {
+  vertical-align: top;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-1 {
+  color: #666;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  right: 460px;
+  text-align: right;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-1.active {
+  font-size: 14px;
+  font-weight: 600;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-2 {
+  color: #666;
+  display: inline-block;
+  position: absolute;
+  top: 170px;
+  right: 435px;
+  text-align: right;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-2.active {
+  font-size: 14px;
+  font-weight: 600;
+}
+#modal.create-agent-and-key-modal .modal-body .diagram .step-3 {
+  color: #666;
+  display: inline-block;
+  position: absolute;
+  top: 110px;
+  left: 410px;
+  text-align: left;
+}
+#modal.create-agent-and-key-modal .modal-body .help-link {
+  text-align: center;
+}
+#modal.delete-result-modal .result-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+}
+#modal.delete-result-modal .result-text {
+  color: #37b57e;
 }
 #modal.delete-safeguards-modal .modal-body {
   color: #333;
@@ -954,84 +1051,40 @@ table {
 #sites-list .grid-group {
   flex: 1 1 auto;
 }
-#tenant-overview {
-  display: flex;
-  flex-flow: column nowrap;
-}
-#tenant-overview .page-title,
-#tenant-overview .page-subtitle {
-  flex: 0;
-}
-#tenant-overview .delete-tenant {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 12px;
-  right: 10px;
-}
-#tenant-overview .overview {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: column nowrap;
-}
-#tenant-overview .overview .tenant-details {
-  flex: 0 0 auto;
-  position: relative;
-}
-#tenant-overview .overview .tenant-details .section-content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding-right: 60px;
-}
-#tenant-overview .overview .tenant-details .section-content .label-and-input-list,
-#tenant-overview .overview .tenant-details .section-content .label-and-value-list {
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-input-list,
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-value-list {
   flex: 1 1 auto;
   margin-right: 20px;
 }
-#tenant-overview .overview .tenant-details .section-content .label-and-input-list label,
-#tenant-overview .overview .tenant-details .section-content .label-and-value-list label,
-#tenant-overview .overview .tenant-details .section-content .label-and-input-list td:first-child,
-#tenant-overview .overview .tenant-details .section-content .label-and-value-list td:first-child {
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-input-list label,
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-value-list label,
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-input-list td:first-child,
+.entity-overview.tenant-overview .entity-details .flex-container .label-and-value-list td:first-child {
   width: 135px;
 }
-#tenant-overview .overview .tenant-details .section-content .label-and-input-list .expired,
-#tenant-overview .overview .tenant-details .section-content .label-and-value-list .expired {
-  height: 19px;
-  width: 16px;
-  margin-left: 5px;
-  vertical-align: text-bottom;
-}
-#tenant-overview .overview .tenant-details .form-error {
+.entity-overview.tenant-overview .entity-details .form-error {
   color: #eb6524;
   text-align: center;
 }
-#tenant-overview .overview .tenant-details .button-row-centered {
+.entity-overview.tenant-overview .entity-details .button-row-centered {
   margin: 15px 0;
 }
-#tenant-overview .overview .tenant-details .edit-tenant-details {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 42px;
-  right: 15px;
-}
-#tenant-overview .overview .status-sections-flex-container {
+.entity-overview.tenant-overview .tenant-dashboard {
   flex: 1 1 auto;
   display: flex;
   flex-flow: row wrap;
 }
-#tenant-overview .overview .status-sections-flex-container .counts {
-  flex: 0;
-  min-width: 200px;
-}
-#tenant-overview .overview .status-sections-flex-container .alerts {
+.entity-overview.tenant-overview .tenant-dashboard .alerts {
   flex: 1 1 auto;
-  min-width: 400px;
+  min-width: 420px;
 }
-#tenant-overview .overview .status-sections-flex-container .events {
+.entity-overview.tenant-overview .tenant-dashboard .agents {
   flex: 1 1 auto;
-  min-width: 400px;
+  min-width: 550px;
+}
+.entity-overview.tenant-overview .tenant-dashboard .admin-links {
+  flex: 1 1 auto;
+  min-width: 250px;
 }
 #tenants-list {
   display: flex;

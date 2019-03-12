@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Create Agent and Key Modal</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
+  <script src="scripts/createAgentAndKeyModal.js"></script>
+</head>
+<body onload="step1()">
+  <div id="modal" class="create-agent-and-key-modal">
+    <div class="modal-dialog large">
+      <div class="modal-title">Connect a VX System to Blue Sky with a Pelco Cloud Agent</div>
+      <div class="modal-body">
+        <div class="enter-agent-name">
+          Enter a new agent name to generate an activation key:
+          <input class="agent-name-input" type="text" oninput="enableGenerateKeyButton()">
+        </div>
+        <div class="activation-key">
+          <table class="label-and-value-list">
+            <tr>
+              <td>Agent Name</td>
+              <td>New Agent's Name</td>
+            </tr>
+            <tr>
+              <td>Activation Key</td>
+              <td class="key">            
+                fx2UhTnZU6JVlSIitniDHdXpReNP3ha2OjUSid0dzl04ASwiJSXFUMGdiZmKkSjpSQVrmJswuzwKYjtgxEV7KLmZjEl2ZYRHMs1SJ7FqUPLpb3ilKiPb9USwmTfiWTLWFqQzEThGTGhy75Iu196qrMRkPuKyRqLItQrGXkyw9aHxPdjgpz6TZzWwe4DnZLl05GblEnSZIu8OZDkAyrjGXphrBQXjKh9P6dgebF0VOaAHmer9rFXevaDTQ0E8KSXbqRMYRxybfiEWoX3GbU8Xi44Y4LWEZ2rAWJA21Odil2EG6oaa9yXQrn0J5smCJowj0NmpkwATCYYeYVBj48sU0NfghS173AXo7s7NI4svpMtSeiDzzN18Lk0sMsRN0viIRu8jy1PxC09qNfQuk34tIgoG8RIB4gLLPiMXtsG9YAw3oe4b5wK1O9qEdOwbeIYps9AV7RoMbjZ5FFr0dzFOWxyE1MJ2gbbcZFhhgWjjUNZk8iQkd2ggJxlifegwU0mSidilKdRkFpW2xBh5HIpEzCTgPIsMyTvxuRI3JyDiYIEHDm499GXUIxcenGRtXbZQ3CDTWw1EGC5Ii3XSC3IM0Nqr5Rbya2zsMwIKwYc0VmwAkvK87nXXdCcRUUJAoQ2mOo5xRf672nRkASkYu1RYv5RxrWTB6JIxsMLXmZDVKUjh9V1pFysAuUrBJr9kAciSy5JNSzsD3agbYGD1JlGziubMUzHMDvBsvp7DTIxYXbORxhkxQmyEBmkFYGpdFlWV8j6Yi8iNNs8BHEazhXVHAHKvHsNfymBQFZPk3EcyV5I0UFxgWIODVICfqyZ1ruXyftyKVo0xYbPmVhrvEfA42J6l3XnXg4RCjixqbEb7vGSv8Kjiqt6BhkMepQtq3I1GgaiVkpWlCyq66QmJM79TAQBwJSEBLC2bjxhXOW9TazFHGSN5rCCuCPInEDEvY1ePaTBRgSQkO9z4HcSTs8U7-END
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="diagram">
+          <img class="background-image" src="../img/agent-diagram.svg">
+          <div class="step-1 caption">
+            <span class="step-1-prefix">1.</span>
+            Generate agent activation key
+          </div>
+          <div class="step-2 caption">
+            <span class="step-2-prefix">2.</span>
+            Install agent on VX network, activate with key
+          </div>
+          <div class="step-3 caption">
+            Agent uses key to connect securely to cloud
+          </div>
+        </div>
+        <div class="help-link">
+          <a class="highlight-clickable-text" target="_blank" href="http://support.pelco.com">Get agent installer and detailed setup guide at support.pelco.com</a>
+        </div>
+        <br>
+      </div>
+      <div class="modal-buttons">
+        <div class="step-1-buttons">
+          <a class="button-muted" href="../accounts/tenantOverview-3-regularView.html">Cancel</a>
+          <a class="button generate-key" href="#" onclick="step2()"> Generate Activation Key</a>
+        </div>
+        <div class="step-2-buttons">
+          <a class="button copy-key" href="#" onclick="copyKey()">Copy Key to Clipboard</a>
+          <a class="button" href="../accounts/tenantOverview-3-regularView.html">Close</a>
+        </div>
+      </div>      
+    </div>
+  </div>
+</body>
+</html>
