@@ -1,31 +1,46 @@
 body {
   background: #fff;
-  color: #333;
+  color: #aaa;
   cursor: default;
   font: 14px/1.36 'Open Sans', sans-serif;
 }
 header {
-  background: linear-gradient(to right, #fff, #007dc5);
+  background: #2b2b2b;
+  border-bottom: 1px solid #111;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  height: 51px;
+  height: 50px;
+}
+header .triangles {
+  height: 70px;
+  position: absolute;
+  top: -10px;
+  left: 55px;
 }
 header .branding {
   position: absolute;
   top: 8px;
   left: 20px;
 }
-header .branding .logo {
-  width: 70px;
+header .branding .pelco-wordmark {
+  height: 26px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
 }
-header .branding .name {
-  margin-left: 15px;
-  width: 140px;
-  opacity: 0.8;
-  position: relative;
-  top: -4px;
+header .branding .cloud-logo {
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  left: 135px;
+}
+header .branding .cloud-name {
+  height: 28px;
+  position: absolute;
+  top: 4px;
+  left: 220px;
 }
 header .user {
   position: absolute;
@@ -34,9 +49,8 @@ header .user {
   right: 20px;
 }
 nav {
-  background: #f5f5f5;
+  background: #333;
   position: fixed;
-  top: 51px;
   right: 0;
   left: 0;
   height: 36px;
@@ -57,22 +71,22 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  background: #e5e5e5;
+  background: #222;
   cursor: pointer;
 }
 nav ul li a:active {
-  background: #fff;
+  background: #444;
   color: #007dc5;
   cursor: pointer;
 }
 nav ul li a.active {
-  background: #fff;
+  background: #444;
   color: #007dc5;
 }
 main {
-  background: #fff;
+  background: #444;
   position: fixed;
-  top: 87px;
+  top: 51px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -84,13 +98,13 @@ main > div {
   width: 100%;
 }
 section {
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: #3c3c3c;
+  border: 1px solid #222;
   margin: 5px;
 }
 section .section-header {
-  background: #f5f5f5;
-  color: #666;
+  background: #333;
+  color: #909090;
   font-size: 12.5px;
   padding: 5px 12px;
   text-transform: uppercase;
@@ -109,13 +123,13 @@ p {
   padding: 0;
 }
 .page-title {
-  color: #333;
+  color: #aaa;
   font: 16px/1.36 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 5px 15px;
 }
 .page-subtitle {
-  color: #666;
+  color: #aaa;
   font: 12.5px/1.36 'Open Sans', sans-serif;
   margin: 5px 15px;
 }
@@ -139,7 +153,7 @@ p {
 button,
 .button {
   background: #007dc5;
-  color: #eee;
+  color: #ddd;
 }
 .button-muted {
   background: none;
@@ -191,30 +205,27 @@ button.disabled,
   text-align: center;
 }
 .button-row-centered button,
-.button-row-centered .button,
-.button-row-centered .button-muted {
+.button-row-centered .button {
   margin: 0 5px;
 }
 .button-row-left {
   text-align: left;
 }
 .button-row-left button,
-.button-row-left .button,
-.button-row-left .button-muted {
+.button-row-left .button {
   margin-right: 10px;
 }
 .button-row-right {
   text-align: right;
 }
 .button-row-right button,
-.button-row-right .button,
-.button-row-right .button-muted {
+.button-row-right .button {
   margin-left: 10px;
 }
 input[type=date] {
-  background: #fbfdfe;
-  border: 1px solid #e5e5e5;
-  color: #333;
+  background: #333;
+  border: 1px solid #222;
+  color: #aaa;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 2px 8px;
   width: 200px;
@@ -223,9 +234,9 @@ input[type=number],
 input[type=password],
 input[type=text],
 textarea {
-  background: #fbfdfe;
-  border: 1px solid #e5e5e5;
-  color: #333;
+  background: #333;
+  border: 1px solid #222;
+  color: #aaa;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 3px 8px;
   width: 200px;
@@ -249,9 +260,9 @@ textarea::-ms-input-placeholder {
   font-style: italic;
 }
 select {
-  background: #fbfdfe;
-  border: 1px solid #e5e5e5;
-  color: #333;
+  background: #333;
+  border: 1px solid #222;
+  color: #aaa;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 2px 6px;
 }
@@ -284,7 +295,7 @@ select {
   text-align: left;
 }
 .paging .jump-to-page {
-  background: #fff;
+  background: #444;
   border: none;
   color: inherit;
   font-size: 12.5px;
@@ -311,7 +322,7 @@ select {
   vertical-align: inherit;
 }
 a {
-  color: #007dc5;
+  color: rgba(51, 187, 255, 0.8);
   cursor: pointer;
   display: inline-block;
   font: 14px/1.36 'Open Sans', sans-serif;
@@ -321,7 +332,7 @@ a:hover {
   color: #00629c;
 }
 a:active {
-  color: #0c5480;
+  color: #ade;
 }
 .breadcrumb {
   color: inherit;
@@ -387,7 +398,7 @@ a:active {
   z-index: 100;
 }
 #modal .modal-dialog {
-  background: #fff;
+  background: #444;
   border: 3px solid #007dc5;
   margin: auto;
   padding: 20px;
@@ -443,7 +454,7 @@ table {
 /* .grid-group is based on existing pattern in VX.
  * It's a complex table with table actions on left and details about current selection on right. */
 .grid-group {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #222;
   display: flex;
   flex-flow: row nowrap;
   margin: 5px;
@@ -454,17 +465,17 @@ table {
   overflow: auto;
 }
 .grid-group .table-actions .pane-header {
-  background: #f5f5f5;
-  border-right: 1px solid #fff;
-  color: #666;
+  background: #333;
+  border-right: 1px solid #444;
+  color: #909090;
   font-size: 12.5px;
   margin-bottom: 15px;
   padding: 5px 12px;
   text-transform: uppercase;
 }
 .grid-group .table-actions .action-group-header {
-  background: #f5f5f5;
-  color: #666;
+  background: #333;
+  color: #909090;
   font-size: 12.5px;
   margin: 15px 15px 15px 0;
   padding: 5px 12px;
@@ -493,7 +504,7 @@ table {
   padding: 0 15px 20px 15px;
 }
 .grid-group .table-actions .action-group .filter-criteria label {
-  color: #666;
+  color: #909090;
   font-size: 12.5px;
   margin-right: 5px;
   text-transform: uppercase;
@@ -517,7 +528,7 @@ table {
   flex: 3 1 auto;
   display: flex;
   flex-flow: column nowrap;
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid #222;
   min-width: 500px;
   position: relative;
 }
@@ -529,9 +540,9 @@ table {
   width: 100%;
 }
 .grid-group .table-container .grid-flexbox .grid th {
-  background: #f5f5f5;
-  border-right: 1px solid #fff;
-  color: #666;
+  background: #333;
+  border-right: 1px solid #444;
+  color: #909090;
   font-size: 12.5px;
   font-weight: normal;
   padding: 5px 10px;
@@ -552,7 +563,7 @@ table {
   right: 8px;
 }
 .grid-group .table-container .grid-flexbox .grid tbody tr {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #222;
 }
 .grid-group .table-container .grid-flexbox .grid tbody tr td {
   padding: 4px 10px;
@@ -571,10 +582,10 @@ table {
 }
 .grid-group .table-container .table-counts {
   flex: 0 0 auto;
-  background: #f5f5f5;
+  background: #333;
   border-width: 0 1px;
   border-style: solid;
-  border-color: #fff;
+  border-color: #444;
   color: #666;
   padding: 2px 0 3px 0;
   position: sticky;
@@ -605,7 +616,7 @@ table {
 }
 .grid-group .current-selection {
   flex: 1 1 auto;
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid #222;
   max-width: 400px;
   min-width: 250px;
   overflow: auto;
@@ -616,9 +627,9 @@ table {
   }
 }
 .grid-group .current-selection .pane-header {
-  background: #f5f5f5;
-  border-left: 1px solid #fff;
-  color: #666;
+  background: #333;
+  border-left: 1px solid #444;
+  color: #909090;
   font-size: 12.5px;
   margin-bottom: 15px;
   padding: 5px 12px;
@@ -645,8 +656,8 @@ table {
   margin-left: 12px;
 }
 .grid-group .current-selection .details-group-header {
-  background: #f5f5f5;
-  color: #666;
+  background: #333;
+  color: #909090;
   font-size: 12.5px;
   margin: 15px 0 15px 15px;
   padding: 5px 12px;
@@ -667,7 +678,7 @@ table {
   vertical-align: top;
 }
 .label-and-value-list td:first-child {
-  color: #aaa;
+  color: #777;
   font-size: 12.5px;
   text-transform: uppercase;
   padding-top: 7px;
@@ -679,7 +690,7 @@ table {
   border: none;
 }
 .compact-list thead tr th {
-  color: rgba(0, 125, 197, 0.5);
+  color: rgba(170, 221, 238, 0.25);
   font-size: 12.5px;
   font-weight: 400;
   padding: 3px 15px 3px 5px;
@@ -687,7 +698,7 @@ table {
   vertical-align: bottom;
 }
 .compact-list tbody tr {
-  border: 1px solid #f5f5f5;
+  border: 1px solid #2b2b2b;
 }
 .compact-list tbody tr td {
   font-size: 12.5px;
@@ -967,19 +978,41 @@ table {
 #device-overview .entity-details .flex-container .label-and-value-list .change-site {
   margin-left: 25px;
 }
-#login-page {
-  background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
-  background-size: 820px;
+#login-page .background {
+  z-index: -10;
+  width: 100%;
+  text-align: center;
+  margin-top: 130px;
+}
+#login-page .background img {
+  width: 1000px;
+  margin: 0 auto;
+}
+#login-page .branding {
+  position: fixed;
+  top: 115px;
+  text-align: center;
+  width: 100%;
 }
 #login-page .branding .logo {
   display: block;
-  width: 400px;
+  width: 370px;
   margin: auto;
 }
 #login-page .branding .name {
   display: block;
-  width: 350px;
-  margin: 50px auto;
+  text-align: center;
+  margin-top: 60px;
+}
+#login-page .branding .name .pelco {
+  height: 40px;
+  margin-right: 10px;
+}
+#login-page .branding .name .cloud {
+  height: 40px;
+}
+#login-page main {
+  overflow: hidden;
 }
 #login-page .credentials {
   text-align: center;
@@ -1171,11 +1204,11 @@ table {
   cursor: pointer;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-header {
-  border-color: transparent transparent #e5e5e5 transparent;
+  border-color: transparent transparent #222 transparent;
   border-style: solid;
   border-width: 1px;
   display: block;
-  color: #007dc5;
+  color: rgba(51, 187, 255, 0.8);
   font-size: 12.5px;
   margin-top: 15px;
   padding: 2px 10px;
@@ -1212,15 +1245,15 @@ table {
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area:active .area-header {
   background: rgba(0, 125, 197, 0.14);
-  color: #0c5480;
+  color: #ade;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area.selected {
   cursor: default;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area.selected .area-header {
   background: rgba(0, 125, 197, 0.14);
-  border-color: #fff #fff #fff transparent;
-  color: #0c5480;
+  border-color: #3c3c3c #3c3c3c #3c3c3c transparent;
+  color: #ade;
   width: 334px;
   transition: width 0.3s linear;
 }
@@ -1250,7 +1283,7 @@ table {
   border: none;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .look-like-thead td {
-  color: rgba(0, 125, 197, 0.5);
+  color: rgba(170, 221, 238, 0.25);
   font-size: 12.5px;
   font-weight: 400;
   padding: 20px 15px 3px 5px;
@@ -1276,48 +1309,16 @@ table {
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .sample-alerts-table td:nth-of-type(3) {
   white-space: nowrap;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail {
-  display: inline-block;
-  height: 250px;
-  width: 350px;
-  margin: 0 30px 30px 0;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail img {
-  max-width: 350px;
-  margin-bottom: 5px;
-  vertical-align: text-bottom;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff {
-  display: flex;
-  flex-flow: column nowrap;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .report-templates {
-  flex: 0 0 auto;
-  width: 250px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container {
-  flex: 1 1 auto;
-  min-width: 500px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container .past-reports-table td:last-child {
-  width: 14px;
-}
-.cameras-summary-tab .cameras-list-grid-toggle {
-  display: none;
-}
-.cameras-summary-tab.selected .cameras-list-grid-toggle {
-  display: inline;
-}
-.tab-row {
-  border-bottom: 1px solid rgba(0, 125, 197, 0.25);
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row {
+  border-bottom: 1px solid rgba(170, 221, 238, 0.5);
   margin-left: -4px;
 }
-.tab-row .tab {
-  border-color: #e5e5e5;
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab {
+  border-color: #777;
   border-radius: 8px 8px 4px 4px;
   border-style: solid;
   border-width: 1px 1px 0 1px;
-  color: #aaa;
+  color: #777;
   cursor: pointer;
   display: inline-block;
   font-size: 12.5px;
@@ -1325,22 +1326,41 @@ table {
   margin: 0 10px 2px 0;
   text-transform: uppercase;
 }
-.tab-row .tab:hover {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:hover {
   background: rgba(0, 125, 197, 0.07);
   border-color: #00629c;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:hover .tab-text {
   color: #00629c;
 }
-.tab-row .tab:active {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:active {
   background: rgba(0, 125, 197, 0.14);
-  border-color: #0c5480;
-  color: #0c5480;
+  border-color: #ade;
 }
-.tab-row .tab.selected {
-  background: #fff;
-  border-color: rgba(0, 125, 197, 0.25);
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:active .tab-text {
+  color: #ade;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab.selected {
+  background: #3c3c3c;
+  border-color: rgba(170, 221, 238, 0.5);
   border-radius: 8px 8px 4px 4px;
-  color: #00629c;
   cursor: default;
   margin-bottom: -1px;
   padding-bottom: 6px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab.selected .tab-text {
+  background: #3c3c3c;
+  color: #ade;
+}
+.list-thumbnails-toggle {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
+  margin-top: -4px;
+  margin-right: 0;
+}
+.list-thumbnails-toggle img {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
 }

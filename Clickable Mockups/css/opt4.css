@@ -5,7 +5,7 @@ body {
   font: 14px/1.36 'Open Sans', sans-serif;
 }
 header {
-  background: linear-gradient(to right, #fff, #007dc5);
+  background: #007dc5;
   position: fixed;
   top: 0;
   right: 0;
@@ -17,15 +17,23 @@ header .branding {
   top: 8px;
   left: 20px;
 }
-header .branding .logo {
-  width: 70px;
+header .branding .pelco-wordmark {
+  height: 26px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
 }
-header .branding .name {
-  margin-left: 15px;
-  width: 140px;
-  opacity: 0.8;
-  position: relative;
-  top: -4px;
+header .branding .cloud-logo {
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  left: 135px;
+}
+header .branding .cloud-name {
+  height: 28px;
+  position: absolute;
+  top: 4px;
+  left: 220px;
 }
 header .user {
   position: absolute;
@@ -36,7 +44,6 @@ header .user {
 nav {
   background: #f5f5f5;
   position: fixed;
-  top: 51px;
   right: 0;
   left: 0;
   height: 36px;
@@ -72,7 +79,7 @@ nav ul li a.active {
 main {
   background: #fff;
   position: fixed;
-  top: 87px;
+  top: 51px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -377,7 +384,8 @@ a:active {
   width: 14px;
   vertical-align: top;
 }
-#modal {
+#modal,
+#firmware-alert {
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
@@ -386,7 +394,8 @@ a:active {
   left: 0;
   z-index: 100;
 }
-#modal .modal-dialog {
+#modal .modal-dialog,
+#firmware-alert .modal-dialog {
   background: #fff;
   border: 3px solid #007dc5;
   margin: auto;
@@ -394,30 +403,39 @@ a:active {
   position: relative;
   top: 75px;
 }
-#modal .modal-dialog.small {
+#modal .modal-dialog.small,
+#firmware-alert .modal-dialog.small {
   width: 350px;
 }
-#modal .modal-dialog.medium {
+#modal .modal-dialog.medium,
+#firmware-alert .modal-dialog.medium {
   width: 600px;
 }
-#modal .modal-dialog.large {
+#modal .modal-dialog.large,
+#firmware-alert .modal-dialog.large {
   width: 900px;
 }
-#modal .modal-dialog .modal-title {
+#modal .modal-dialog .modal-title,
+#firmware-alert .modal-dialog .modal-title {
   color: #007dc5;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-#modal .modal-dialog .modal-body {
+#modal .modal-dialog .modal-body,
+#firmware-alert .modal-dialog .modal-body {
   margin-bottom: 25px;
 }
-#modal .modal-dialog .modal-buttons {
+#modal .modal-dialog .modal-buttons,
+#firmware-alert .modal-dialog .modal-buttons {
   text-align: right;
 }
 #modal .modal-dialog .modal-buttons button,
+#firmware-alert .modal-dialog .modal-buttons button,
 #modal .modal-dialog .modal-buttons .button,
-#modal .modal-dialog .modal-buttons .button-muted {
+#firmware-alert .modal-dialog .modal-buttons .button,
+#modal .modal-dialog .modal-buttons .button-muted,
+#firmware-alert .modal-dialog .modal-buttons .button-muted {
   margin: 0 0 0 10px;
 }
 ::-webkit-scrollbar {
@@ -967,19 +985,41 @@ table {
 #device-overview .entity-details .flex-container .label-and-value-list .change-site {
   margin-left: 25px;
 }
-#login-page {
-  background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
-  background-size: 820px;
+#login-page .background {
+  z-index: -10;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+#login-page .background img {
+  width: 1000px;
+  margin: 0 auto;
+}
+#login-page .branding {
+  position: fixed;
+  top: 115px;
+  text-align: center;
+  width: 100%;
 }
 #login-page .branding .logo {
   display: block;
-  width: 400px;
+  width: 380px;
   margin: auto;
 }
 #login-page .branding .name {
   display: block;
-  width: 350px;
-  margin: 50px auto;
+  text-align: center;
+  margin-top: 60px;
+}
+#login-page .branding .name .pelco {
+  height: 40px;
+  margin-right: 10px;
+}
+#login-page .branding .name .cloud {
+  height: 40px;
+}
+#login-page main {
+  overflow: hidden;
 }
 #login-page .credentials {
   text-align: center;
@@ -1278,12 +1318,12 @@ table {
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail {
   display: inline-block;
-  height: 250px;
-  width: 350px;
+  height: 220px;
+  width: 300px;
   margin: 0 30px 30px 0;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail img {
-  max-width: 350px;
+  max-width: 300px;
   margin-bottom: 5px;
   vertical-align: text-bottom;
 }
@@ -1291,9 +1331,56 @@ table {
   display: flex;
   flex-flow: column nowrap;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .report-templates {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container {
   flex: 0 0 auto;
-  width: 250px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates {
+  flex: 0 0 auto;
+  padding-left: 20px;
+  width: 200px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template {
+  border-bottom: 1px solid #fff;
+  color: #007dc5;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 2px 10px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template:hover {
+  color: #00629c;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template:active {
+  color: #0c5480;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template.selected {
+  background: rgba(0, 125, 197, 0.14);
+  border-color: rgba(0, 125, 197, 0.14);
+  color: #0c5480;
+  cursor: default;
+  font-style: italic;
+  padding: 2px 10px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template.selected .highlight-clickable-text:hover,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .report-templates .template.selected .highlight-clickable-text:active {
+  background: none;
+  cursor: default;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .template-options {
+  flex: 1 1 auto;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .template-options .options-block {
+  border-color: #fff #fff rgba(0, 125, 197, 0.14) rgba(0, 125, 197, 0.14);
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 20px;
+  padding: 0 0 20px 20px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .run-report-container .template-options .options-block .options-column {
+  display: inline-block;
+  margin-right: 50px;
+  vertical-align: top;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container {
   flex: 1 1 auto;
@@ -1302,11 +1389,20 @@ table {
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container .past-reports-table td:last-child {
   width: 14px;
 }
-.cameras-summary-tab .cameras-list-grid-toggle {
-  display: none;
+.cameras-thumbnails-icon img,
+.cameras-table-icon img {
+  width: 16px;
+  margin: 0 0 -3px 5px;
+  cursor: pointer;
 }
-.cameras-summary-tab.selected .cameras-list-grid-toggle {
-  display: inline;
+.thumbnail .highlight-clickable-icon {
+  height: 14px;
+  width: 14px;
+  position: relative;
+  top: 3px;
+}
+.thumbnail .highlight-clickable-icon img {
+  width: 14px;
 }
 .tab-row {
   border-bottom: 1px solid rgba(0, 125, 197, 0.25);
@@ -1343,4 +1439,18 @@ table {
   cursor: default;
   margin-bottom: -1px;
   padding-bottom: 6px;
+}
+#firmware-alert {
+  position: fixed;
+  top: -1000px;
+  height: 0%;
+}
+#firmware-alert:target {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  transition: top 0.4s ease-out;
+}
+li.active {
+  color: red;
 }

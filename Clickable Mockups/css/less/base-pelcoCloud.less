@@ -1,0 +1,168 @@
+body {
+  background: @bodyBackgroundColor;
+  color: @defaultDarkOnLightFontColor;
+  cursor: default;
+  font: @defaultFont;
+}
+
+header {
+  background: @headerBackgroundColor; //@headerBackgroundImage;
+  border-bottom: 1px solid #222;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+
+  .triangles {
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    right: 55px;
+    //left: 55px;
+    //opacity: 0.5;
+    transform: rotate(180deg);
+  }
+  
+  .branding {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+
+    .pelco-wordmark {
+      height: 26px;
+      position: absolute;
+      top: 6px;
+      left: 0px;
+    }
+    
+    .cloud-logo {
+      width: 70px;
+      position: absolute;
+      top: 0px;
+      left: 135px;
+    }
+    
+    .cloud-name {
+      height: 28px;
+      position: absolute;
+      top: 4px;
+      left: 220px;
+    }
+  }
+  
+  .user {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}
+
+nav {
+  background: @navBackgroundColor;
+  position: fixed;
+  //top: 51px;
+  right: 0;
+  left: 0;
+  height: 36px;
+  
+  ul {
+    display: block;
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      
+      a {
+        color: @navFontColor;
+        font: @defaultFont;
+        padding: 7px 20px;
+        text-decoration: none;
+        
+        &:hover {
+          background: @navLinkBackgroundColor-hover;
+          cursor: pointer;
+        }
+        
+        &:active {
+          background: @navLinkBackgroundColor-active;
+          color: @navLinkFontColor-active;
+          cursor: pointer;
+        }
+        
+        &.active {
+          background: @mainBackgroundColor;
+          color: @navLinkFontColor-active;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background: @mainBackgroundColor;
+  position: fixed;
+  top: 51px; //87px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  padding: 5px;
+  
+  // in case we want to have a single <main> with contents determined by inner div#id
+  & > div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+section {
+  background: @sectionBackgroundColor;
+  border: 1px solid @sectionBorderColor;
+  margin: 5px;
+  
+  .section-header {
+    background: @sectionHeaderBackgroundColor;
+    color: @sectionHeaderFontColor;
+    font-size: @smallFontSize;
+    padding: 5px 12px;
+    text-transform: uppercase;
+  }
+  
+  .section-content {
+    padding: 15px;
+  }
+}
+
+div {
+  font: @defaultFont;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font: @defaultFont;
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  color: @defaultDarkOnLightFontColor;
+  font: @largeFontSize/@defaultLineHeight @defaultFontFamily;
+  font-weight: 600;
+  margin: 5px 15px;
+}
+
+.page-subtitle {
+  color: @secondaryDarkOnLightFontColor;
+  font: @smallFontSize/@defaultLineHeight @defaultFontFamily;
+  margin: 5px 15px; 
+}
+
+.caption {
+  font-size: @smallFontSize;
+  font-style: italic;
+}

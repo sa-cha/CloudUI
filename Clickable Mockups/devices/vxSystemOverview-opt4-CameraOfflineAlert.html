@@ -4,31 +4,39 @@
 <head>
   <meta charset="utf-8">
   <title>MOCKUP - VX System Overview</title>
-  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/opt4.css" charset="utf-8" />
   <link rel="icon" href="../img/branding/favicon.ico" />
   <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
   <script src="scripts/vxSystemOverview.js"></script>
 </head>
 <body onload="drillIntoArea0()">
   <header>
+    <div class="branding">
+      <img class="pelco-wordmark" src="../img/branding/pelco-wordmark-white.svg">
+      <img class="cloud-logo" src="../img/branding/cloud-rounded-sizes-whites.svg">
+      <img class="cloud-name" src="../img/branding/cloud-word-white.svg">
+    </div>
+    <div class="user"><a class="button" href="login.html">Log Out</a></div>
+  </header>
+  <!-- <header>
       <div class="branding">
         <img class="logo" src="../img/branding/vx_like_cloud.svg">
         <img class="name" src="../img/branding/name_pelcoBlue.svg">
       </div>
       <div class="user"><a class="button" href="../login.html">Log Out</a></div>
-  </header>
+  </header> -->
 
-  <nav>
+  <!-- <nav>
     <ul>
       <li><a href="../userDashboard.html">DASHBOARD</a></li>
       <li><a href="../accounts/accountsList.html" class="active">ACCOUNTS</a></li>
       <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <main>
     <div class="entity-overview vx-system-overview">
-      <div class="page-title">FC VX System</div>
+      <div style="margin-top:10px;" class="page-title">FC VX System</div>
       <div class="page-subtitle">Cloud > 
         <a class="breadcrumb" href="../accounts/accountsList.html">Accounts</a> > 
         <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Account Name</a> > 
@@ -91,11 +99,11 @@
                     <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
                   </span>
                   <div class="area-summary">
-                    <img class="summary-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
                     <div class="summary-metrics">
                       8% (5/64) video channels in use
                       <br>
-                      3 new alerts from last 30 days
+                      0 new alerts from last 30 days
                     </div>
                   </div>
                 </div>
@@ -105,11 +113,11 @@
                     <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
                   </span>
                   <div class="area-summary">
-                    <img class="summary-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
                     <div class="summary-metrics">
                       5 cameras online, 0 offline
                       <br>
-                      2 new alerts from last 30 days
+                      0 new alerts from last 30 days
                     </div>
                   </div>
                 </div>
@@ -119,11 +127,11 @@
                     <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
                   </span>
                   <div class="area-summary">
-                    <img class="summary-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
                     <div class="summary-metrics">
                       2 recorders online, 0 offline
                       <br>
-                      4 new alerts from last 30 days
+                      0 new alerts from last 30 days
                     </div>
                   </div>
                 </div>
@@ -133,11 +141,11 @@
                     <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
                   </span>
                   <div class="area-summary">
-                    <img class="summary-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
                     <div class="summary-metrics">
                       2 VX servers online, 0 offline
                       <br>
-                      5 new alerts from last 30 days
+                      0 new alerts from last 30 days
                     </div>
                   </div>
                 </div>
@@ -149,15 +157,11 @@
                   <div class="area-summary">
                     <img class="summary-icon" src="../img/icons/tools-pelcoBlue.svg">
                     <div class="summary-metrics">
-                      Get reports and logs
-                      <br>
-                      Run firmware updates
-                      <!--                  
-                      <br>
-                      Configure variables, alert rules, 
-                      <br>
-                      etc
-                      -->
+                      Reports
+                      <br>                  
+                      Firmware updates
+                      <!-- <br>
+                      Alert rules -->
                     </div>
                   </div>
                 </div>
@@ -166,10 +170,10 @@
                 <div class="area-drill-in">
                   <div class="tab-row">
                     <div class="tab licenses-summary-tab" onclick="showLicensesSummaryTable()">
-                      <span class="tab-text">License Summary</span>
+                      License Summary
                     </div>
                     <div class="tab licenses-alerts-tab" onclick="showLicensesAlertsTable()">
-                      <span class="tab-text">License Alerts in Last 30 Days</span>
+                      License Alerts in Last 30 Days
                     </div>
                   </div>                  
                   <div class="chart">
@@ -360,22 +364,29 @@
                 <div class="area-drill-in">
                   <div class="tab-row">                  
                     <div class="tab cameras-summary-tab" onclick="showCamerasSummaryTable()">
-                      <span class="tab-text">Camera Summary</span>           
-                      <!--     
-                      <a class="list-thumbnails-toggle highlight-clickable-icon after-text">
-                        <img src="../img/icons/thumbnails-view-pelcoBlue_NEW.svg" onclick="showThumbnails()" title="Show list view">
-                      </a>
-                    -->
-                    </div>                    
+                      Camera Summary 
+                    </div> 
+                    <div class="tab cameras-summary-tab-and-toggle selected">
+                      Camera Summary
+                        <span class="cameras-thumbnails-icon" title="Switch to thumbnail view" onclick="showCamerasThumbnails()">
+                          <img src="../img/icons/thumbnails-view-pelcoBlue_NEW-01.svg">
+                        </span>
+                        <span class="cameras-table-icon" title="Switch to table view" onclick="showCamerasTable()">
+                          <img src="../img/icons/list-view-pelcoBlue_NEW-01.svg">
+                        </span> 
+                    </div>                      
                     <div class="tab cameras-alerts-tab" onclick="showCamerasAlertsTable()">
-                      <span class="tab-text">Camera Alerts in Last 30 Days</span>
-                    </div>
-                    <div class="tab cameras-thumbnails-tab">
-                      <span class="tab-text">Camera Thumbnails</span>
+                      Camera Alerts in Last 30 Days
                     </div>
                   </div>
                   <div class="chart">
                     <br>
+
+                    <!-- <div class="temp-toggle">
+                      <span class="cameras-thumbnails-icon" onclick="showCamerasThumbnails()">Show Thumbnails</span>
+                      <span class="cameras-table-icon" onclick="showCamerasTable()">Show List</span>
+                    </div> -->
+
                     <table class="compact-list cameras-summary-table">
                       <thead>
                         <tr>
@@ -389,7 +400,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Camera 1</td>
+                          <td>Camera 1
+                              <!-- <a title="Camera offline" class="highlight-clickable-icon after-text" href="../modals/cameraOfflineAlertModal.html"><img class="not-blue" src="../img/icons/alarm-alarmRed.svg"></a> -->
+                          </td>
                           <td>Pelco</td>
                           <td>IME219</td>
                           <td>2.2.3.0</td>
@@ -416,12 +429,14 @@
                           <td>Camera 4</td>
                           <td>Pelco</td>
                           <td>IME219</td>
-                          <td>2.2.0.0<a title="Newer fimrware available" class="highlight-clickable-icon after-text" href="../modals/alertWorkflow.html"><img class="not-blue" src="../img/icons/note-attentionOrange.svg"></a></td>
+                          <td>2.2.0.0
+                            <!-- <a title="Newer firmware available" class="highlight-clickable-icon after-text" href="#firmware-alert"><img class="not-blue" src="../img/icons/note-attentionOrange.svg"></a> -->
+                          </td>
                           <td>10.0.0.14</td>
                           <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
                         </tr>
                         <tr>
-                          <td>Camera 5<a title="Camera offline" class="highlight-clickable-icon after-text" href="../modals/alertWorkflow.html"><img class="not-blue" src="../img/icons/alarm-alarmRed.svg"></a></td>
+                          <td>Camera 5</td>
                           <td>Pelco</td>
                           <td>IME219</td>
                           <td>2.2.3.0</td>
@@ -430,6 +445,34 @@
                         </tr>
                       </tbody>
                     </table>
+                    <div class="cameras-thumbnails-grid">
+                      <div class="thumbnail">
+                        <img src="../img/thumbnails/1.png">
+                        <br>
+                        Camera 1
+                        <!-- <a title="Camera offline" class="highlight-clickable-icon after-text" href="../modals/cameraOfflineAlertModal.html"><img class="not-blue" src="../img/icons/alarm-alarmRed.svg"></a> -->
+                      </div>
+                      <div class="thumbnail">
+                        <img src="../img/thumbnails/2.png">
+                        <br>
+                        Camera 2
+                      </div>
+                      <div class="thumbnail">
+                        <img src="../img/thumbnails/3.png">
+                        <br>
+                        Camera 3
+                      </div>
+                      <div class="thumbnail" style="margin-bottom:0;">
+                        <img src="../img/thumbnails/4.png">
+                        <br>
+                        Camera 4<!--<a title="Newer firmware available" class="highlight-clickable-icon after-text" href="../modals/alertWorkflow.html"><img class="not-blue" src="../img/icons/note-attentionOrange.svg"></a> -->
+                      </div>
+                      <div class="thumbnail" style="margin-bottom:0;">
+                        <img src="../img/thumbnails/5.png">
+                        <br>
+                        Camera 5
+                      </div>
+                    </div>
                     <table class="compact-list cameras-alerts-table">
                       <thead>
                         <tr>
@@ -443,21 +486,24 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td><a title="Pop out alert details" href="../modals/alertWorkflow.html" class="highlight-clickable-icon"><img src="../img/icons/popout-small-pelcoBlue.svg"></a></td>
-                          <td>2019-03-14 14:23 MST</td>
-                          <td><img title="Note" class="inline-icon before-text" src="../img/icons/note-attentionOrange.svg">Note</td>
-                          <td>New</td>
-                          <td>Newer firmware available</td>
-                          <td>Newer firmware available for (camera's device name).<a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
+                          <td><a title="Pop out alert details" href="../modals/cameraOfflineAlertModal.html" class="highlight-clickable-icon"><img src="../img/icons/popout-small-pelcoBlue.svg"></a></td>
+                          <td>2019-03-28 10:05 MST</td>
+                          <td><img title="Alarm" class="inline-icon before-text" src="../img/icons/alarm-acknowledged.svg">Alarm</td>
+                          <td>Acknowledged</td>
+                          <td>Camera offline</td>
+                          <td>Camera 5 offline. 
+                            [Back online 2019-03-28 10:15 MST.]
+                            <a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
                         </tr>
                         <tr>
-                          <td><a title="Pop out alert details" href="../modals/alertWorkflow.html" class="highlight-clickable-icon"><img src="../img/icons/popout-small-pelcoBlue.svg"></a></td>
-                          <td>2019-03-12 11:35 MST</td>
-                          <td><img title="Alarm" class="inline-icon before-text" src="../img/icons/alarm-alarmRed.svg">Alarm</td>
-                          <td>New</td>
-                          <td>Camera offline</td>
-                          <td>(Camera's device name) offline. [Back online (timestamp).]<a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
+                          <td><a title="Pop out alert details" href="#firmware-alert" class="highlight-clickable-icon"><img src="../img/icons/popout-small-pelcoBlue.svg"></a></td>
+                          <td>2019-03-14 14:23 MST</td>
+                          <td><img title="Note" class="inline-icon before-text" src="../img/icons/note-acknowledged.svg">Note</td>
+                          <td>Acknowledged</td>
+                          <td>Newer firmware available</td>
+                          <td>Newer firmware available for Camera 4.<a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
                         </tr>
+                        
                         <!--
                         <tr>
                           <td><a title="Pop out alert details" href="../modals/alertWorkflow.html" class="highlight-clickable-icon"><img src="../img/icons/popout-small-pelcoBlue.svg"></a></td>
@@ -476,10 +522,10 @@
                 <div class="area-drill-in">
                   <div class="tab-row">
                     <div class="tab storage-summary-tab" onclick="showStorageSummaryTable()">
-                      <span class="tab-text">Storage Summary</span>
+                      Storage Summary
                     </div>
                     <div class="tab storage-alerts-tab" onclick="showStorageAlertsTable()">
-                      <span class="tab-text">Storage Alerts in Last 30 Days</span>
+                      Storage Alerts in Last 30 Days
                     </div>
                   </div>
                   <div class="chart">
@@ -607,15 +653,15 @@
                 <div class="area-drill-in">
                   <div class="tab-row">
                     <div class="tab servers-summary-tab selected" onclick="showServersSummaryTable()">
-                      <span class="tab-text">VX Servers Summary</span>
+                      VX Servers Summary
                     </div>
                     <!--
                     <div class="tab network-summary-tab" onclick="showNetworkSummary()">
-                      <span class="tab-text">Network Stats</span>
+                      Network Stats
                     </div>
                     -->
                     <div class="tab system-alerts-tab" onclick="showSystemAlertsTable()">
-                      <span class="tab-text">System Alerts in Last 30 Days</span>
+                      System Alerts in Last 30 Days
                     </div>
                   </div>
                   <div class="chart">
@@ -730,7 +776,210 @@
                   </div>
                 </div>
                 <div class="area-drill-in">
+                  <div class="tab-row">
+                    <div class="tab reports-tab selected" onclick="showReports()">
+                      Reports
+                    </div>
+                    <div class="tab firmware-updater-tab" onclick="showFirmwareUpdater()">
+                      Firmware Updater
+                    </div>
+                  </div> 
                   <div class="chart">
+                    <br>
+                    <div class="reports-stuff">
+                      <br>
+                      <div class="run-report-container">
+                        <div class="report-templates">
+                          <div class="template" onclick="cameraReport()"><span class="highlight-clickable-text">Camera Report</span></div>
+                          <div class="template" onclick="deviceReport()"><span class="highlight-clickable-text">Device Report</span></div>
+                          <div class="template"><span class="highlight-clickable-text">Event Report</span></div>
+                          <div class="template"><span class="highlight-clickable-text">Recording Gap Report</span></div>
+                          <div class="template"><span class="highlight-clickable-text">Storage Report</span></div>
+                          <div class="template"><span class="highlight-clickable-text">Quick Logs</span></div>
+                          <div class="template" onclick="healthAlertsReport()"><span class="highlight-clickable-text">Health Alerts Report</span></div>
+                        </div>
+                        <br>
+                        <div class="template-options">
+                          <div class="options-block">
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Camera Name<br>
+                              <input type="checkbox" checked> Camera ID<br>  
+                              <input type="checkbox" checked> Host Device Name<br>
+                              <input type="checkbox" checked> Host Device ID<br>  
+                              <input type="checkbox" checked> Camera IP Address<br> 
+                              <input type="checkbox" checked> Camera State<br>
+                              <input type="checkbox" checked> Camera Number<br>
+                              <input type="checkbox" checked> Camera Recording<br>
+                            </div>
+                            <div class="options-column">
+                              <div style="margin-bottom:5px;">Stream Configuration</div>
+                              <input type="checkbox" checked> Encoding ID<br>
+                              <input type="checkbox" checked> Bitrate<br>
+                              <input type="checkbox" checked> Compression Standard<br>
+                              <input type="checkbox" checked> Frame Rate<br>
+                              <input type="checkbox" checked> Resolution<br>
+                            </div>
+                            <div class="options-column">
+                              <div style="margin-bottom:5px;">Storage Assignments</div>
+                              <input type="checkbox" checked> Storage Name<br>
+                              <input type="checkbox" checked> Storage IP Address<br>
+                              <input type="checkbox" checked> Storage State<br>
+                              <input type="checkbox" checked> Storage Type<br>
+                              <input type="checkbox" checked> Storage ID<br>
+                            </div>
+                            <div style="margin-top:30px; margin-bottom:-10px;">            
+                              <form style="display:inline-block; margin-right:30px;" class="label-and-input-list">
+                                <div class="row">
+                                  <label>Report Name</label>
+                                  <input type="text" value="Camera Report">
+                                </div>
+                              </form>
+                              <button style="display:inline-block; position:relative; top:-13px;">Run Camera Report</button>
+                            </div>
+                          </div>
+                          <div class="options-block" style="margin-top:38px;">
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Device Type<br>
+                              <input type="checkbox" checked> Device Name<br> 
+                              <input type="checkbox" checked> Device ID<br> 
+                              <input type="checkbox" checked> Device IP Address<br>
+                              <input type="checkbox" checked> Device Port<br>  
+                            </div>
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Device Vendor<br>
+                              <input type="checkbox" checked> Device Model<br> 
+                              <input type="checkbox" checked> Device Serial<br> 
+                              <input type="checkbox" checked> Device Commissioned<br>
+                            </div>
+                            <div style="margin-top:30px; margin-bottom:-10px;">            
+                              <form style="display:inline-block; margin-right:30px;" class="label-and-input-list">
+                                <div class="row">
+                                  <label>Report Name</label>
+                                  <input type="text" value="Device Report">
+                                </div>
+                              </form>
+                              <button style="display:inline-block; position:relative; top:-13px;">Run Device Report</button>
+                            </div>
+                          </div>
+                          <div class="options-block"></div>
+                          <div class="options-block"></div>
+                          <div class="options-block"></div>
+                          <div class="options-block"></div>
+                          <div class="options-block" style="margin-top:65px;">
+                            Create list of all system heath alerts
+                            <div class="options-column">                              
+                              <input type="checkbox"> Daily<br>
+                              <input type="checkbox"> Weekly<br>
+                            </div>
+                              <br><br><br>
+                              <span style="font-size:12.5px; padding-left:5px;">EMAIL TO</span>
+                              <input type="text" placeholder="comma-separated list" style="width:600px; margin-left:35px;">
+                            <div style="margin-top:30px; margin-bottom:-10px;">            
+                              <form style="display:inline-block; margin-right:30px;" class="label-and-input-list">
+                                <div class="row">
+                                  <label>Report Name</label>
+                                  <input type="text" value="Health Alerts Report">
+                                </div>
+                              </form>
+                              <button style="display:inline-block; position:relative; top:-13px;">Save Health Alerts Report Settings</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="past-reports-container">
+                        <table class="compact-list past-reports-table">
+                          <thead>
+                            <tr>
+                              <th>Past Reports</th>
+                              <th>Time Completed</th>
+                              <th>Run By</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Camera Report</td>
+                              <td>In Progress</td>
+                              <td>sara.chan@se.com</td>
+                              <td><a class="highlight-clickable-icon" title="Cancel report"><img src="../img/icons/cancel-note-01.svg"></a></td>
+                            </tr>
+                            <tr>
+                              <td>Event Report</td>
+                              <td>2019-03-11 15:01 MST</td>
+                              <td>sara.chan@se.com</td>
+                              <td><a class="highlight-clickable-icon" title="Download copy"><img src="../img/icons/download-pelcoBlue.svg"></a></td>
+                            </tr>
+                            <tr>
+                              <td>Device Report</td>
+                              <td>2019-03-10 10:33 MST</td>
+                              <td>sara.chan@se.com</td>
+                              <td><a class="highlight-clickable-icon" title="Download copy"><img src="../img/icons/download-pelcoBlue.svg"></a></td>
+                            </tr>
+                            <tr>
+                              <td>Get Quick Logs</td>
+                              <td>2019-03-34 11:28 MST</td>
+                              <td>sara.chan@se.com</td>
+                              <td><a class="highlight-clickable-icon" title="Download copy"><img src="../img/icons/download-pelcoBlue.svg"></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>                    
+                    </div>
+
+                    <div class="firmware-updater-stuff">
+                      <span>Firmware updates are available only for supported models of Pelco cameras.</span>
+                        <a class="highlight-clickable-icon inline-icon" title="More info" href="#"><img src="../img/icons/info-circle-pelcoBlue.svg"></a> 
+                      <br><br>
+                      <table class="compact-list">
+                        <thead>
+                          <tr>
+                            <th>Camera Name</th>
+                            <th>Model</th>
+                            <th>Current Version</th>
+                            <th>Available Update</th>
+                            <th>Last Update</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Camera 1</td>
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:27 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 2</td>                     
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:22 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 3</td>                    
+                            <td>IME219</td>
+                            <td>2.2.0.0</td>
+                            <td>2.2.3.0<a title="Terminate update" class="highlight-clickable-icon after-text" href="../modals/alertWorkflow.html"><img class="not-blue" src="../img/icons/stop-update-01.svg"></a></td>
+                            <td><img title="In progress" class="inline-icon before-text" src="../img/icons/play-01.svg">In Progress</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 4</td>                           
+                            <td>IME219</td>
+                            <td>2.2.0.0</td>
+                            <td>2.2.3.0<a title="Run update" class="highlight-clickable-icon after-text" href="../modals/alertWorkflow.html"><img src="../img/icons/run-update-01.svg"></a></td>
+                            <td><img title="Failed" class="inline-icon before-text" src="../img/icons/cancel-note-01.svg">2019-03-21 13:21 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 5</td>                           
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:26 MST</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <!-- <table class="compact-list sample-alerts-table">
                       <thead>
                         <tr>
@@ -793,6 +1042,7 @@
                         </tr>
                       </tbody>
                     </table> -->
+                    <!--
                     <table class="compact-list sample-alerts-table">
                       <thead>
                         <tr>
@@ -839,6 +1089,7 @@
                         </tr>
                       </tbody>
                     </table>
+                    -->
                   </div>
                 </div>
               </div>
@@ -848,5 +1099,52 @@
       </div>
     </div>
   </main>
+
+<div id="firmware-alert">
+  <div class="modal-dialog medium">
+    <div class="modal-title">
+      <img style="width:24px; position:relative; top:5px; margin-right:6px;" src="../img/icons/summary-note-attentionOrange.svg">
+      Note: Newer Firmware Available
+    </div>
+    <div class="modal-body">
+      <div>
+          Newer firmware available for [Camera 5] <img src="../img/icons/info-circle-pelcoBlue.svg" class="info-link highlight-clickable-icon" title="Additional info at support.pelco.com" style="position:relative; left:5px; top:2px; height:14px; width:14px;">
+      </div>
+      <br>
+      <table class="compact-list">
+        <thead>
+          <tr>
+            <th colspan="2">History</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="firmware-alert-acknowledged" style="display:none;">
+            <td>2019-02-15 09:30 MST</td>
+            <td>Acknowledged by sara@se.com</td>
+          </tr>
+          <tr>
+            <td style="width:150px;">2019-02-14 14:26 MST</td>
+            <td>Alert created</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div class="button-row-left">
+        <button class="button-muted" id="acknowledge-firmware-alert-button" onclick="acknowledgeFirmwareAlert()">Acknowledge</button>
+        <button class="button-muted" id="silence-firmware-alerts-button" onclick="silenceFirmwareAlerts()">Run Firmware Update</button>
+        <!-- <button class="button-muted" id="unsilence-firmware-alerts-button" onclick="unsilenceFirmwareAlerts()" style="display:none;">Unsilence Alerts of this Type</button>  -->
+      </div>
+      <div id="firmware-alerts-silenced" style="display:none;">
+        <br>
+        <strong>Firmware alerts are silenced: popups, emails, and texts suppressed.</strong>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <a href="#" class="button">OK</a>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>

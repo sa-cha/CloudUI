@@ -1,0 +1,62 @@
+#login-page {
+  //background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
+  //background-size: 820px;
+
+
+  .background {
+    z-index: -10;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+
+    img {
+      width: 1000px;
+      //opacity: 0.8;
+      margin: 0 auto;
+    }
+  }
+
+  .branding {
+    position: fixed;
+    top: 115px;
+    text-align: center;
+    width: 100%;
+
+    .logo {
+      display: block;
+      width: 380px;
+      margin: auto;
+    }
+    
+    .name {
+      display: block;
+      text-align: center;
+      margin-top: 60px; 
+
+      .pelco {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .cloud {
+        height: 40px;
+      }
+      
+    }
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  .credentials {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 450px;
+    
+    .login-error {
+      color: @alertOrange;
+    }
+  }
+}

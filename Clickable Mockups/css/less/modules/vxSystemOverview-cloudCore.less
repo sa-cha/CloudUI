@@ -139,7 +139,7 @@
           border: none;
 
           td {
-            color: @pelcoBlue-50percent;
+            color: fade(@veryLightBlue, 25%); //@pelcoBlue-50percent;
             //opacity: .7;
             font-size: @smallFontSize;
             font-weight: 400;
@@ -164,93 +164,59 @@
           }
         }
 
-        .thumbnail {
-          display: inline-block;
-          height: 220px;
-          width: 300px;
-          margin: 0 30px 30px 0;
+        // probably move the tabs stuff to elements/tabs.less
+        .tab-row {
+          border-bottom: 1px solid fade(@veryLightBlue, 50%); //@pelcoBlue-25percent;
+          margin-left: -4px;
 
-          img {
-            //max-height: 200px;
-            max-width: 300px;
-            margin-bottom: 5px;
-            vertical-align: text-bottom;
-          }
-        }
+          .tab {
+            border-color: @tertiaryLightOnDarkFontColor; //@sectionBorderColor;
+            border-radius: 8px 8px 4px 4px;
+            border-style: solid;
+            border-width: 1px 1px 0 1px;
+            color: @tertiaryLightOnDarkFontColor;
+            cursor: pointer;
+            display: inline-block;
+            font-size: @smallFontSize;
+            padding: 6px 8px 3px 8px;
+            margin: 0 10px 2px 0;
+            text-transform: uppercase;
 
-        .reports-stuff {
-          display: flex; 
-          flex-flow: column nowrap;
+            &:hover {
+              background: @highlightClickableBackgroundColor-hover;
+              border-color: @linkFontColor-hover;
 
-          .run-report-container {
-            flex: 0 0 auto;
-            display: flex;
-            flex-flow: row nowrap;
-
-            .report-templates {
-              flex: 0 0 auto;
-              padding-left: 20px;
-              width: 200px;
-
-              .template {
-                border-bottom: 1px solid @sectionBackgroundColor;
-                color: @linkFontColor;
-                cursor: pointer;
-                margin-bottom: 15px;
-                padding: 2px 10px;
-
-                &:hover {
-                  color: @linkFontColor-hover
-                }
-
-                &:active {
-                  color: @linkFontColor-active;
-                }
-
-                &.selected {
-                  background: @highlightClickableBackgroundColor-active;
-                  border-color: @selected;
-                  color: @linkFontColor-active;
-                  cursor: default;
-                  font-style: italic;
-                  padding: 2px 10px;
-
-                  .highlight-clickable-text:hover,
-                  .highlight-clickable-text:active {
-                    background: none;
-                    cursor: default;
-                  }
-                }
+              .tab-text {
+                //background: @highlightClickableBackgroundColor-hover;
+                color: @linkFontColor-hover;
+                //border-radius: 8px;
+                //margin: -1px -5px;
+                //padding: 1px 5px;
               }
             }
 
-            .template-options {
-              flex: 1 1 auto;
-              
-              .options-block {
-                border-color: @sectionBackgroundColor @sectionBackgroundColor @selected @selected;
-                border-style: solid;
-                border-width: 1px;
-                margin-right: 20px;
-                padding: 0 0 20px 20px;  
-                
-                .options-column {
-                  display: inline-block;
-                  margin-right: 50px;
-                  vertical-align: top;
-                }
+            &:active {
+              background: @highlightClickableBackgroundColor-active;
+              border-color: @linkFontColor-active;
+
+              .tab-text {
+              //background: @highlightClickableBackgroundColor-active;
+              color: @linkFontColor-active;
               }
             }
-          }
 
-          .past-reports-container {
-            flex: 1 1 auto;
-            min-width: 500px;
+            &.selected {
+              background: @sectionBackgroundColor;
+              border-color: fade(@veryLightBlue, 50%); //@pelcoBlue-25percent;
+              border-radius: 8px 8px 4px 4px;
+              cursor: default;
+              margin-bottom: -1px;
+              padding-bottom: 6px;
 
-            .past-reports-table {
-              td:last-child {
-                width: 14px;
-              } 
+              .tab-text{
+                background: @sectionBackgroundColor;
+                color: @linkFontColor-active;
+              }
             }
           }
         }
@@ -259,83 +225,16 @@
   }
 }
 
-.cameras-thumbnails-icon,
-.cameras-table-icon {
-  img {
-    width: 16px;
-    margin: 0 0 -3px 5px;
-    cursor: pointer;
-  }
-}
+.list-thumbnails-toggle {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
+  margin-top: -4px;
+  margin-right: 0;
 
-.thumbnail {
-  .highlight-clickable-icon {
+  img {
     height: 14px;
     width: 14px;
-    position: relative;
-    top: 3px;
-
-    img {
-      width: 14px;
-    }
+    vertical-align: top;
   }
-}
-
-// probably move the tabs stuff to elements/tabs.less
-.tab-row {
-  border-bottom: 1px solid @pelcoBlue-25percent;  //@tabBorderColor
-  margin-left: -4px;
-
-  .tab {
-    border-color: @sectionBorderColor;  //@tabBorderColor
-    border-radius: 8px 8px 4px 4px;
-    border-style: solid;
-    border-width: 1px 1px 0 1px;
-    color: @tertiaryDarkOnLightFontColor; //@tabFontColor
-    cursor: pointer;
-    display: inline-block;
-    font-size: @smallFontSize;
-    padding: 6px 8px 3px 8px;
-    margin: 0 10px 2px 0;
-    text-transform: uppercase;
-
-    &:hover {
-      background: @highlightClickableBackgroundColor-hover; //@tabBackgroundColor-hover 
-      border-color: @linkFontColor-hover; //@tabBorderColor-hover
-      color: @linkFontColor-hover;  //@tabFontColor-hover
-    }
-
-    &:active {
-      background: @highlightClickableBackgroundColor-active;  //@tabBackgroundColor-active
-      border-color: @linkFontColor-active;  //@tabBorderColor-active;
-      color: @linkFontColor-active; //@tabFontColor-active;
-    }
-
-    &.selected {
-      background: @sectionBackgroundColor;  //@tabBackgroundColor-active
-      border-color: @pelcoBlue-25percent; //@tabBorderColor-active;
-      border-radius: 8px 8px 4px 4px;
-      color: @mediumBlue; //@tabFontColor-active;
-      cursor: default;
-      margin-bottom: -1px;
-      padding-bottom: 6px;
-    }
-  }
-}
-
-#firmware-alert {
-  position: fixed;
-  top: -1000px;
-  height: 0%;
-  
-  &:target {
-    position: fixed;
-    top: 0px;
-    height: 100%;
-    transition: top .4s ease-out;
-  }
-}
-
-li.active {
-  color: red;
 }

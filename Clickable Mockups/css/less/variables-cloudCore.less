@@ -64,16 +64,18 @@
 
 @emphasisLightOnDarkFontColor: #eee;
 @defaultLightOnDarkFontColor: #aaa;
+@secondaryLightOnDarkFontColor: #909090;
+@tertiaryLightOnDarkFontColor: #777;
 
 
 /***   BODY  ***/
-@bodyBackgroundColor: #fff;
+@bodyBackgroundColor: #fff; //#fefefe;
 
 
 /***   HEADER   ***/
-@headerBackgroundColor: @pelcoBlue;
-@headerBackgroundImage: linear-gradient(to right, #fff, @pelcoBlue);
-@headerBorderColor: @pelcoBlue;
+@headerBackgroundColor: #2b2b2b;
+//@headerBackgroundImage: linear-gradient(to right, #555, #444);
+//@headerBorderColor: @pelcoBlue;
 
 
 /***   NAV   ***/
@@ -87,21 +89,21 @@
 
 
 /***   MAIN   ***/
-@mainBackgroundColor: @bodyBackgroundColor;
+@mainBackgroundColor: #444; //@bodyBackgroundColor;
 
 
 /***   SECTION   ***/
-@sectionBorderColor: #e5e5e5;
-@sectionBackgroundColor: #fff;
-@sectionHeaderBackgroundColor: #f5f5f5;
-@sectionHeaderFontColor: @secondaryDarkOnLightFontColor;
+@sectionBorderColor: #222; //#e5e5e5;
+@sectionBackgroundColor: #3c3c3c;
+@sectionHeaderBackgroundColor: #333; //#f5f5f5; //#e5e5e5;
+@sectionHeaderFontColor: @secondaryLightOnDarkFontColor;
 
 
 /***   ELEMENTS (alphabetical)   ***/
   // BUTTONS
   @buttonBackgroundColor: @pelcoBlue;
   @buttonBorderColor: @buttonBackgroundColor;
-  @buttonFontColor: @emphasisLightOnDarkFontColor;
+  @buttonFontColor: #ddd;
   
   @buttonBackgroundColor-hover: @mediumBlue;
   @buttonBorderColor-hover: @pelcoBlue;
@@ -117,14 +119,14 @@
   
   
   // FORMS
-  @textInputBackgroundColor: #fbfdfe;
+  @textInputBackgroundColor: #333; //#fbfdfe;
   @textInputBorderColor: @sectionBorderColor;
-  @textInputFontColor: @defaultDarkOnLightFontColor;
+  @textInputFontColor: @defaultLightOnDarkFontColor;
   
   // LINKS
-  @linkFontColor: @pelcoBlue;
+  @linkFontColor: fade(@lightBlue, 80%); //@pelcoBlue;
   @linkFontColor-hover: @mediumBlue;
-  @linkFontColor-active: @darkBlue;  
+  @linkFontColor-active: @veryLightBlue;  
   @linkFontColor-disabled: @disabledDarkOnLightFontColor;
   
   @highlightClickableBackgroundColor-hover: fade(@pelcoBlue, 7%);

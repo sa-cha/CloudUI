@@ -5,27 +5,43 @@ body {
   font: 14px/1.36 'Open Sans', sans-serif;
 }
 header {
-  background: linear-gradient(to right, #fff, #007dc5);
+  background: #434a4f;
+  border-bottom: 1px solid #222;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  height: 51px;
+  height: 50px;
+}
+header .triangles {
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  right: 55px;
+  transform: rotate(180deg);
 }
 header .branding {
   position: absolute;
   top: 8px;
   left: 20px;
 }
-header .branding .logo {
-  width: 70px;
+header .branding .pelco-wordmark {
+  height: 26px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
 }
-header .branding .name {
-  margin-left: 15px;
-  width: 140px;
-  opacity: 0.8;
-  position: relative;
-  top: -4px;
+header .branding .cloud-logo {
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  left: 135px;
+}
+header .branding .cloud-name {
+  height: 28px;
+  position: absolute;
+  top: 4px;
+  left: 220px;
 }
 header .user {
   position: absolute;
@@ -34,9 +50,8 @@ header .user {
   right: 20px;
 }
 nav {
-  background: #f5f5f5;
+  background: rgba(52, 77, 94, 0.25);
   position: fixed;
-  top: 51px;
   right: 0;
   left: 0;
   height: 36px;
@@ -57,22 +72,22 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  background: #e5e5e5;
+  background: #aaa;
   cursor: pointer;
 }
 nav ul li a:active {
-  background: #fff;
+  background: #fafafb;
   color: #007dc5;
   cursor: pointer;
 }
 nav ul li a.active {
-  background: #fff;
+  background: #fafafb;
   color: #007dc5;
 }
 main {
-  background: #fff;
+  background: #fafafb;
   position: fixed;
-  top: 87px;
+  top: 51px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -85,11 +100,11 @@ main > div {
 }
 section {
   background: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #aaa;
   margin: 5px;
 }
 section .section-header {
-  background: #f5f5f5;
+  background: rgba(52, 77, 94, 0.25);
   color: #666;
   font-size: 12.5px;
   padding: 5px 12px;
@@ -191,29 +206,26 @@ button.disabled,
   text-align: center;
 }
 .button-row-centered button,
-.button-row-centered .button,
-.button-row-centered .button-muted {
+.button-row-centered .button {
   margin: 0 5px;
 }
 .button-row-left {
   text-align: left;
 }
 .button-row-left button,
-.button-row-left .button,
-.button-row-left .button-muted {
+.button-row-left .button {
   margin-right: 10px;
 }
 .button-row-right {
   text-align: right;
 }
 .button-row-right button,
-.button-row-right .button,
-.button-row-right .button-muted {
+.button-row-right .button {
   margin-left: 10px;
 }
 input[type=date] {
   background: #fbfdfe;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #aaa;
   color: #333;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 2px 8px;
@@ -224,7 +236,7 @@ input[type=password],
 input[type=text],
 textarea {
   background: #fbfdfe;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #aaa;
   color: #333;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 3px 8px;
@@ -250,7 +262,7 @@ textarea::-ms-input-placeholder {
 }
 select {
   background: #fbfdfe;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #aaa;
   color: #333;
   font: 14px/1.36 'Open Sans', sans-serif;
   padding: 2px 6px;
@@ -284,7 +296,7 @@ select {
   text-align: left;
 }
 .paging .jump-to-page {
-  background: #fff;
+  background: #fafafb;
   border: none;
   color: inherit;
   font-size: 12.5px;
@@ -387,7 +399,7 @@ a:active {
   z-index: 100;
 }
 #modal .modal-dialog {
-  background: #fff;
+  background: #fafafb;
   border: 3px solid #007dc5;
   margin: auto;
   padding: 20px;
@@ -443,7 +455,7 @@ table {
 /* .grid-group is based on existing pattern in VX.
  * It's a complex table with table actions on left and details about current selection on right. */
 .grid-group {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #aaa;
   display: flex;
   flex-flow: row nowrap;
   margin: 5px;
@@ -454,8 +466,8 @@ table {
   overflow: auto;
 }
 .grid-group .table-actions .pane-header {
-  background: #f5f5f5;
-  border-right: 1px solid #fff;
+  background: rgba(52, 77, 94, 0.25);
+  border-right: 1px solid #fafafb;
   color: #666;
   font-size: 12.5px;
   margin-bottom: 15px;
@@ -463,7 +475,7 @@ table {
   text-transform: uppercase;
 }
 .grid-group .table-actions .action-group-header {
-  background: #f5f5f5;
+  background: rgba(52, 77, 94, 0.25);
   color: #666;
   font-size: 12.5px;
   margin: 15px 15px 15px 0;
@@ -517,7 +529,7 @@ table {
   flex: 3 1 auto;
   display: flex;
   flex-flow: column nowrap;
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid #aaa;
   min-width: 500px;
   position: relative;
 }
@@ -529,8 +541,8 @@ table {
   width: 100%;
 }
 .grid-group .table-container .grid-flexbox .grid th {
-  background: #f5f5f5;
-  border-right: 1px solid #fff;
+  background: rgba(52, 77, 94, 0.25);
+  border-right: 1px solid #fafafb;
   color: #666;
   font-size: 12.5px;
   font-weight: normal;
@@ -552,7 +564,7 @@ table {
   right: 8px;
 }
 .grid-group .table-container .grid-flexbox .grid tbody tr {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #aaa;
 }
 .grid-group .table-container .grid-flexbox .grid tbody tr td {
   padding: 4px 10px;
@@ -571,10 +583,10 @@ table {
 }
 .grid-group .table-container .table-counts {
   flex: 0 0 auto;
-  background: #f5f5f5;
+  background: rgba(52, 77, 94, 0.25);
   border-width: 0 1px;
   border-style: solid;
-  border-color: #fff;
+  border-color: #fafafb;
   color: #666;
   padding: 2px 0 3px 0;
   position: sticky;
@@ -605,7 +617,7 @@ table {
 }
 .grid-group .current-selection {
   flex: 1 1 auto;
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid #aaa;
   max-width: 400px;
   min-width: 250px;
   overflow: auto;
@@ -616,8 +628,8 @@ table {
   }
 }
 .grid-group .current-selection .pane-header {
-  background: #f5f5f5;
-  border-left: 1px solid #fff;
+  background: rgba(52, 77, 94, 0.25);
+  border-left: 1px solid #fafafb;
   color: #666;
   font-size: 12.5px;
   margin-bottom: 15px;
@@ -645,7 +657,7 @@ table {
   margin-left: 12px;
 }
 .grid-group .current-selection .details-group-header {
-  background: #f5f5f5;
+  background: rgba(52, 77, 94, 0.25);
   color: #666;
   font-size: 12.5px;
   margin: 15px 0 15px 15px;
@@ -967,19 +979,41 @@ table {
 #device-overview .entity-details .flex-container .label-and-value-list .change-site {
   margin-left: 25px;
 }
-#login-page {
-  background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
-  background-size: 820px;
+#login-page .background {
+  z-index: -10;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+#login-page .background img {
+  width: 1000px;
+  margin: 0 auto;
+}
+#login-page .branding {
+  position: fixed;
+  top: 115px;
+  text-align: center;
+  width: 100%;
 }
 #login-page .branding .logo {
   display: block;
-  width: 400px;
+  width: 380px;
   margin: auto;
 }
 #login-page .branding .name {
   display: block;
-  width: 350px;
-  margin: 50px auto;
+  text-align: center;
+  margin-top: 60px;
+}
+#login-page .branding .name .pelco {
+  height: 40px;
+  margin-right: 10px;
+}
+#login-page .branding .name .cloud {
+  height: 40px;
+}
+#login-page main {
+  overflow: hidden;
 }
 #login-page .credentials {
   text-align: center;
@@ -1171,7 +1205,7 @@ table {
   cursor: pointer;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-header {
-  border-color: transparent transparent #e5e5e5 transparent;
+  border-color: transparent transparent #aaa transparent;
   border-style: solid;
   border-width: 1px;
   display: block;
@@ -1276,44 +1310,12 @@ table {
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .sample-alerts-table td:nth-of-type(3) {
   white-space: nowrap;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail {
-  display: inline-block;
-  height: 250px;
-  width: 350px;
-  margin: 0 30px 30px 0;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .thumbnail img {
-  max-width: 350px;
-  margin-bottom: 5px;
-  vertical-align: text-bottom;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff {
-  display: flex;
-  flex-flow: column nowrap;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .report-templates {
-  flex: 0 0 auto;
-  width: 250px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container {
-  flex: 1 1 auto;
-  min-width: 500px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports-stuff .past-reports-container .past-reports-table td:last-child {
-  width: 14px;
-}
-.cameras-summary-tab .cameras-list-grid-toggle {
-  display: none;
-}
-.cameras-summary-tab.selected .cameras-list-grid-toggle {
-  display: inline;
-}
-.tab-row {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row {
   border-bottom: 1px solid rgba(0, 125, 197, 0.25);
   margin-left: -4px;
 }
-.tab-row .tab {
-  border-color: #e5e5e5;
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab {
+  border-color: #aaa;
   border-radius: 8px 8px 4px 4px;
   border-style: solid;
   border-width: 1px 1px 0 1px;
@@ -1325,22 +1327,41 @@ table {
   margin: 0 10px 2px 0;
   text-transform: uppercase;
 }
-.tab-row .tab:hover {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:hover {
   background: rgba(0, 125, 197, 0.07);
   border-color: #00629c;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:hover .tab-text {
   color: #00629c;
 }
-.tab-row .tab:active {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:active {
   background: rgba(0, 125, 197, 0.14);
   border-color: #0c5480;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab:active .tab-text {
   color: #0c5480;
 }
-.tab-row .tab.selected {
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab.selected {
   background: #fff;
   border-color: rgba(0, 125, 197, 0.25);
   border-radius: 8px 8px 4px 4px;
-  color: #00629c;
   cursor: default;
   margin-bottom: -1px;
   padding-bottom: 6px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .tab-row .tab.selected .tab-text {
+  background: #fff;
+  color: #00629c;
+}
+.list-thumbnails-toggle {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
+  margin-top: -4px;
+  margin-right: 0;
+}
+.list-thumbnails-toggle img {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
 }

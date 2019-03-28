@@ -280,7 +280,7 @@ table {
     vertical-align: top;
     
     &:first-child {
-      color: @tertiaryDarkOnLightFontColor;
+      color: @tertiaryDarkOnLightFontColor; //should be generalized in variables.less
       font-size: @smallFontSize;
       text-transform: uppercase;
       padding-top: 7px;
@@ -296,8 +296,8 @@ table {
       border: none;
       
       th {
-        color: @pelcoBlue;
-        opacity: .7;
+        color: @pelcoBlue-50percent; //@compactListHeaderCellFontColor
+        //opacity: .7;
         font-size: @smallFontSize;
         font-weight: 400;
         padding: 3px 15px 3px 5px;
@@ -309,7 +309,7 @@ table {
 
   tbody {
     tr {
-      border: 1px solid #f5f5f5;
+      border: 1px solid #f5f5f5;  //@compactListRowBorderColor
       
       td {
         font-size: @smallFontSize;
@@ -325,7 +325,7 @@ table {
   width: 100%;
 
   th {
-    color: @tertiaryDarkOnLightFontColor;
+    color: @tertiaryDarkOnLightFontColor; //@looseListHeaderCellFontColor
     font-size: @smallFontSize;
     font-weight: 400;
     padding: 0 10px 7px;
@@ -341,6 +341,6 @@ table {
   }
 
   .explain-blank-cell {
-    color: @tertiaryDarkOnLightFontColor;
+    color: @tertiaryDarkOnLightFontColor;  //should be generalized in variables.less
   }
 }
