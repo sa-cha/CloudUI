@@ -1,0 +1,41 @@
+.tab-row {
+  border-bottom: 1px solid @tabRowBorderColor;
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  .tab {
+    border-color: @tabBorderColor;
+    border-radius: 8px 8px 4px 4px;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    color: @tabFontColor;
+    cursor: pointer;
+    display: inline-block;
+    font-size: @tabFontSize;
+    padding: 6px 8px 3px 8px;
+    margin: 0 10px 2px 0;
+    text-transform: uppercase;
+
+    &:hover {
+      background: @tabBackgroundColor-hover;
+      border-color: @tabBorderColor-hover;
+      color: @tabFontColor-hover;
+    }
+
+    &:active {
+      background: @tabBackgroundColor-active;
+      border-color: @tabBorderColor-active;
+      color: @tabFontColor-active;
+    }
+
+    &.selected {
+      background: @tabBackgroundColor-selected;
+      border-color: @tabBorderColor-selected;
+      color: @tabFontColor-selected;
+      cursor: default;
+      margin-bottom: -1px;
+      padding-bottom: 6px;
+    }
+  }
+}

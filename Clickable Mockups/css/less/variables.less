@@ -12,6 +12,11 @@
 @lightBlue: #3bf;        //VX-active_c1
 
 @pelcoBlue: #007dc5;     //VX-active_a
+@pelcoBlue-7percent:  fade(@pelcoBlue, 7%);
+@pelcoBlue-14percent:  fade(@pelcoBlue, 14%);
+@pelcoBlue-25percent:  fade(@pelcoBlue, 25%);
+@pelcoBlue-50percent:  fade(@pelcoBlue, 25%);
+@pelcoBlue-75percent:  fade(@pelcoBlue, 75%);
 
 @mediumBlue: #00629c;    //VX-active_b1
 @darkBlue: #0c5480;      //VX-active_b2
@@ -23,7 +28,9 @@
 @marketingDarkBlue: #105c92;       //new from Marketing
 @marketingExtraDarkBlue: #003d68;  //new from Marketing
 
-@selected: fade(@pelcoBlue, 14%);
+@hoverHighlightColor: @pelcoBlue-7percent;
+@selectedHighlightColor: @pelcoBlue-14percent;
+
 
   // STATUSES
   @goodGreen: #37b57e;       //VX-level_b1
@@ -32,6 +39,9 @@
   @alertOrange: #eb6524;     //VX-level_b9
   @alarmRed: #d83237;        //VX-alert_a
   //@disabled: #888;         //tentative
+
+  // OTHER
+  @destroyRed: fade(@alarmRed, 90%);  // for intentionally destructive - less alarming than alarmRed
   
 
 /***   FONTS   ***/
@@ -103,7 +113,7 @@
   @buttonFontColor-hover: #fff;
   
   @buttonBackgroundColor-active: @darkBlue;    
-  @buttonBorderColor-active: @selected;
+  @buttonBorderColor-active: @selectedHighlightColor;
   @buttonFontColor-active: #fff;
   
   @buttonBackgroundColor-disabled: none;
@@ -122,8 +132,8 @@
   @linkFontColor-active: @darkBlue;  
   @linkFontColor-disabled: @disabledDarkOnLightFontColor;
   
-  @highlightClickableBackgroundColor-hover: fade(@pelcoBlue, 7%);
-  @highlightClickableBackgroundColor-active: @selected;
+  @highlightClickableBackgroundColor-hover: @hoverHighlightColor;
+  @highlightClickableBackgroundColor-active: @selectedHighlightColor;
   
   
   // MODALS
@@ -132,6 +142,12 @@
   @modalDialogBorderColor: @pelcoBlue;
   @modalTitleFontColor: @pelcoBlue;
   
+
+  // SCROLLBARS
+  @scrollbarThumbColor: #bbb;
+  @scrollbarTrackColor: #f5f5f5;
+
+
   // TABLES
   @gridGroupBorderColor: @sectionBorderColor;
   @gridTableHeaderCellBackgroundColor: @sectionHeaderBackgroundColor;
@@ -142,9 +158,27 @@
   @gridTableRowBackgroundColor-hover: #fafafa;
   @gridTableRowFontColor-hover: @emphasisDarkOnLightFontColor;
   
-  @gridTableRowBackgroundColor-selected: @selected;
+  @gridTableRowBackgroundColor-selected: @selectedHighlightColor;
   @gridTableRowFontColor-selected: @emphasisDarkOnLightFontColor;
   
   @tableJumpToPageInputBackgroundColor: @mainBackgroundColor;
   @tableJumpToPageInputFontSize: @smallFontSize;
-  
+
+
+  // TABS
+  @tabBorderColor: @sectionBorderColor;
+  @tabFontColor: @tertiaryDarkOnLightFontColor;
+  @tabFontSize: @smallFontSize;
+  @tabRowBorderColor: @pelcoBlue-25percent;
+
+  @tabBackgroundColor-hover: @highlightClickableBackgroundColor-hover;
+  @tabBorderColor-hover: @linkFontColor-hover;
+  @tabFontColor-hover: @linkFontColor-hover;
+
+  @tabBackgroundColor-active: @highlightClickableBackgroundColor-active;
+  @tabBorderColor-active: @linkFontColor-active;
+  @tabFontColor-active: @linkFontColor-active;
+
+  @tabBackgroundColor-selected: @sectionBackgroundColor;
+  @tabBorderColor-selected: @tabRowBorderColor;
+  @tabFontColor-selected: @mediumBlue;

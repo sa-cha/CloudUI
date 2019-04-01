@@ -7,14 +7,20 @@
 }
 
 ::-webkit-scrollbar-corner {
-  background: #f5f5f5;
+  background: @scrollbarTrackColor;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border: 1px solid #f5f5f5;
+  background: @scrollbarThumbColor;
+  border: 1px solid @scrollbarTrackColor;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: @scrollbarTrackColor;
+}
+
+textarea {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
 }

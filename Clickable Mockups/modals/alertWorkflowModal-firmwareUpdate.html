@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Alert Workflow Modal (firmware update)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
+  <script src="scripts/alertWorkflowModal.js"></script>
+</head>
+<body onload="cancelNoteInput()">
+  <div id="modal" class="alert-workflow-modal">
+    <div class="modal-dialog medium">
+      <div class="modal-title">
+        <img class="severity-icon" src="../img/icons/summary-note-attentionOrange.svg">
+        Note: Newer firmware available</div>
+      <div class="modal-body">
+        <div class="alert-details">
+            Newer firmware available for Camera 4.
+            <a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="inline-icon info-link after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a>
+        </div>
+        <br>
+        <table class="compact-list alert-history">
+          <tbody>
+            <tr>
+              <td>2019-03-25 13:06 MST</td>
+              <td>Note added by sara.chan@se.com
+                <br>
+                <span class="caption">Boss says not to run update yet.</span>
+              </td>
+            </tr>
+            <tr>
+              <td>2019-03-25 13:03 MST</td>
+              <td>Acknowledged by sara.chan@se.com</td>
+            </tr>
+            <tr>
+              <td>2019-03-24 14:00 MST</td>
+              <td>Newer firmware available</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class="note-input">
+          <textarea></textarea>
+          <div class="note-cancel-save-buttons">
+            <div class="cancel-note" title="Cancel note" onclick="cancelNoteInput()"><img src="../img/icons/cancel-note-destroyRed.svg"></div>
+            <div class="save-note" title="Save note" onclick="saveNoteInput()"><img src="../img/icons/save-note-goodGreen.svg"></div>
+          </div>
+        </div>
+       
+      </div>
+      <div class="modal-buttons">
+        <a class="button-muted add-note-button" href="#" onclick="showNoteInput()">Add Note</a>
+        <!-- 
+          ** "Acknowldege" BUTTON IS HIDDEN BECAUSE MOCKUP SHOWS
+          ** THAT ALERT HAS ALREADY BEEN ACKNOWLEDGED
+        -->
+        <!-- <a class="button acknowledge-button" href="#" onclick="acknowledge()">Acknowledge</a> -->
+        <!--
+          ** "Close" BUTTON HAS CLASS .button-muted WHEN "Acknowledge" BUTTON IS SHOWN
+          ** "Close" BUTTON HAS CLASS .button WHEN "Acknowledge" BUTTON IS HIDDEN
+        -->
+        <a class="button close-button" href="../devices/vxSystemOverview.html">Close</a>
+      </div>      
+    </div>
+  </div>
+</body>
+</html>

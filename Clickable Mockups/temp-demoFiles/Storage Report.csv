@@ -1,0 +1,8 @@
+Title,Default Storage Report,,,,,,,,,,,,,
+Requested At,2019-04-01T01:19:35 (UTC-06:00),,,,,,,,,,,,,
+VX System,Sara (127.0.0.1),,,,,,,,,,,,,
+Report Initiator Client ID,"10.252.67.118,10.0.0.48",,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Storage Name,Host Device Name,Storage IP,Storage Type,Storage State,Failover Enabled,Retention Time (hours),Camera Assignments(Camera Name),Camera Assignments(Camera IP),Camera Assignments(Camera Number),Camera Assignments(Camera State),Camera Assignments(Storage ID),Camera Assignments(Camera ID),Host Device ID,Storage ID
+,Recorder 1,10.0.0.101,vsm,online,FALSE,0,Camera 2,10.0.0.12,,online,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7:Video Source:video,e6ad1756-682a-4e75-9115-c5385127a4a6,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9
+,Recorder 2,10.0.0.102,vxs,online,FALSE,0,Camera 3,10.0.0.13,,online,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9,cc3e1fdf-dcf9-3dc2-801f-7aab9dd6fdfb:audio,f3ca3997-682a-4e75-9115-c5385127a4a6,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9

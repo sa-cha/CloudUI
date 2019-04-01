@@ -33,62 +33,89 @@
         width: 370px;
         overflow: auto;
 
-        .area-header {
-          background: @gridTableHeaderCellBackgroundColor;
-          color: @linkFontColor;
-          font-size: @smallFontSize;
-          margin: 15px 0;
-          padding: 2px 10px;
-          text-transform: uppercase;
-          width: 300px;
-          position: relative;
-          
-          &:hover {
-            background: @highlightClickableBackgroundColor-hover;
-            color: @linkFontColor-hover;
-            cursor: pointer;
-          }
-          
-          .header-to-drill-in-arrow {
-            display: none;
-          }
-          
-          &.selected {
-            background: @highlightClickableBackgroundColor-active;
-            color: @linkFontColor-active;
-            width: 335px;
-            transition: width .3s linear;
+        .area {
+          cursor: pointer;
+
+          .area-header {
+            border-color: transparent transparent @sectionBorderColor transparent;
+            border-style: solid;
+            border-width: 1px;
+            color: @linkFontColor;
+            font-size: @smallFontSize;
+            margin-top: 15px;
+            padding: 2px 10px;
+            text-transform: uppercase;
+            width: 305px;
+            position: relative;
             
             .header-to-drill-in-arrow {
-              display: inline-block;
-              opacity: 0.14;
-              position: absolute;
-              top: 0;
-              right: -10px;
+              display: none;
             }
           }
-        }
 
-        .area-summary {
-          padding: 0 15px 20px 10px;
-          
-          .summary-icon {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            margin-right: 15px;
-            vertical-align: top;
+          .area-summary {
+            border: 1px solid transparent;
+            padding: 15px 10px;            
+            width: 305px;
+            
+            .summary-icon {
+              display: inline-block;
+              height: 40px;
+              width: 40px;
+              margin-right: 15px;
+              vertical-align: top;
+            }
+            
+            .summary-metrics {
+              display: inline-block;
+            }
           }
-          
-          .summary-metrics {
-            display: inline-block;
+
+          &:hover {
+            .area-header {
+              background: @highlightClickableBackgroundColor-hover;
+              border-color: @selectedHighlightColor;
+              color: @linkFontColor-hover;
+              font-style: italic;
+            }
+
+            .area-summary {
+              border-color: transparent @selectedHighlightColor @selectedHighlightColor @selectedHighlightColor;
+            }
+          }
+
+          &:active {
+            .area-header {
+              background: @highlightClickableBackgroundColor-active;
+              color: @linkFontColor-active;
+            }
+          }
+
+          &.selected {
+            cursor: default;
+
+            .area-header {
+              background: @highlightClickableBackgroundColor-active;
+              border-color: @sectionBackgroundColor @sectionBackgroundColor @sectionBackgroundColor transparent;
+              color: @linkFontColor-active;
+              width: 334px;
+              transition: width .3s linear;
+
+              .header-to-drill-in-arrow {
+                display: inline-block;
+                opacity: 0.14;
+                position: absolute;
+                top: 0;
+                right: -10px;
+              }
+            }
           }
         }
       }
 
       .selected-health-area-drill-in {
         flex: 1 1 auto;
-        border: 15px solid @highlightClickableBackgroundColor-active;
+        border: 15px solid @selectedHighlightColor;
         margin: -15px -15px -15px -5px;
         padding: 15px;
         overflow: auto;
@@ -96,26 +123,162 @@
         // setting width to 300px makes overflow-x work as expected down to screen width of 768px
         width: 300px;
 
-        .chart-label {
-          color: @tertiaryDarkOnLightFontColor;
-          display: inline-block;
-          font-size: @smallFontSize;
-          margin: 0 5px 15px 0;
-          text-transform: uppercase;
-        }
-
         // specifically for VX license summary table - odd table that benefits from looking like it has multiple <thead>s
         .look-like-thead {
           border: none;
 
           td {
-            color: @pelcoBlue;
-            opacity: .7;
+            color: @pelcoBlue-75percent;
             font-size: @smallFontSize;
             font-weight: 400;
             padding: 20px 15px 3px 5px;
             text-align: left;
             vertical-align: top;
+          }
+        }
+
+        .licenses-alerts-table,
+        .cameras-alerts-table,
+        .storage-alerts-table,
+        .system-alerts-table {
+          td:first-child {
+            width: 14px;
+          }
+
+          td:nth-of-type(2),
+          td:nth-of-type(3) {
+            white-space: nowrap;
+          }
+        }
+
+        .cameras-grid-icon,
+        .cameras-list-icon {
+          img {
+            height: 16px;
+            width: 16px;
+            margin: 0 0 -3px 5px;
+            cursor: pointer;
+          }
+        }
+
+        .camera-tile {
+          display: inline-block;
+          height: 220px;
+          width: 300px;
+          margin: 0 30px 30px 0;
+
+          .thumbnail {
+            max-height: 200px;
+            max-width: 300px;
+            margin-bottom: 5px;
+            vertical-align: text-bottom;
+          }
+        }
+
+        // reports layout very tentative
+        .reports {
+          display: flex;
+          flex-flow: column nowrap;
+
+          .run-reports {
+            flex: 0 0 auto;
+            display: flex;
+            flex-flow: row nowrap;
+
+            .report-templates {
+              flex: 0 0 auto;
+              padding-left: 20px;
+              width: 200px;
+
+              .template {
+                border-bottom: 1px solid @sectionBackgroundColor;
+                color: @linkFontColor;
+                cursor: pointer;
+                margin-bottom: 15px;
+                padding: 2px 10px;
+
+                &:hover {
+                  color: @linkFontColor-hover
+                }
+
+                &:active {
+                  color: @linkFontColor-active;
+                }
+
+                &.selected {
+                  background: @highlightClickableBackgroundColor-active;
+                  border-color: @selectedHighlightColor;
+                  color: @linkFontColor-active;
+                  cursor: default;
+                  font-style: italic;
+                  padding: 2px 10px;
+
+                  .highlight-clickable-text:hover,
+                  .highlight-clickable-text:active {
+                    background: none;
+                    cursor: default;
+                  }
+                }
+              }
+            }
+
+            .report-options {
+              flex: 1 1 auto;
+              
+              .template-options {
+                border-color: @sectionBackgroundColor @sectionBackgroundColor @selectedHighlightColor @selectedHighlightColor;
+                border-style: solid;
+                border-width: 1px;                
+                margin-right: 20px;
+                padding: 0 0 20px 20px;  
+                
+                .options-column {
+                  display: inline-block;
+                  font-size: @smallFontSize;
+                  margin-right: 50px;
+                  vertical-align: top;
+
+                  .options-column-heading {
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+            }
+          }
+
+          .past-reports {
+            flex: 1 1 auto;
+            min-width: 500px;
+
+            .past-reports-table {
+              td:last-child {
+                width: 14px;
+              } 
+            }
+          }
+        }
+
+        // alert config layout very tentative
+        .alert-rules {
+          .compact-list {
+            margin-bottom: 15px;
+
+            tr {
+              border: none;
+            }
+
+            td:first-child{
+              width: 210px;
+              vertical-align: middle;
+            }
+
+            .email-recipients {
+              width: 450px;
+            }
+
+            .text-recipients {
+              width: 300px;
+            }
           }
         }
       }

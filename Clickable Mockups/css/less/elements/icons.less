@@ -12,8 +12,11 @@
     margin-right: 5px;
   }
 
-  &.info-link {
+  .compact-list & {
     height: 14px;
     width: 14px;
+    top: 1px;
+    // take img out of line-height calculation, so rows in .compact-list aren't taller when containing an icon
+    vertical-align: inherit;
   }
 }

@@ -1,0 +1,54 @@
+#modal.alert-workflow-modal {
+  .modal-title {
+    .severity-icon {
+      height: 20px;
+      width: 20px;
+      margin-right: 3px;
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  .modal-body {
+    .alert-history {
+      td:first-child {
+        width: 150px;
+      }
+    }
+
+    .note-input {
+      textarea {
+        min-height: 50px;
+        height: 50px;
+        max-height: 300px;
+        max-width: 582px;
+        min-width: 582px;
+      }
+    }
+
+    .note-cancel-save-buttons {
+      margin-top: -5px;
+      text-align: right;
+
+      .cancel-note,
+      .save-note {
+        cursor: pointer;
+        display: inline-block;
+        border: 1px solid @textInputBorderColor;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+
+        img {
+          height: 14px;
+          width: 14px;
+          vertical-align: middle;
+        }
+      }
+
+      .cancel-note {
+        margin-right: -5px;
+      }
+    }
+  }
+}

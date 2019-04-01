@@ -40,7 +40,7 @@ a {
   margin: -6px;
   padding: 6px;
   border-radius: 14px;
-  
+
   &:hover {
     background: @highlightClickableBackgroundColor-hover;
 
@@ -51,9 +51,50 @@ a {
   
   &:active {
     background: @highlightClickableBackgroundColor-active;
-    
+
     img {
       filter: @filterPelcoBlueToDarkBlue;
+    }
+  }
+
+  &.not-blue {
+    &:hover,
+    &:active {
+      img {
+        filter: none;
+      }
+    }
+  }
+
+  &.after-text {
+    margin-left: 5px;
+  }
+
+  &.before-text {
+    margin-right: 5px;
+  }
+
+  &.info-link {
+    height: 14px;
+    width: 14px;
+
+    img {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  .compact-list & {
+    height: 14px;
+    width: 14px;
+    margin-top: -4px;
+    // take img out of line-height calculation, so rows in .compact-list aren't taller when containing an icon
+    vertical-align: inherit;
+    
+    img {
+      height: 14px;
+      width: 14px;
+      vertical-align: top;
     }
   }
 }

@@ -11,13 +11,18 @@
 </head>
 <body onload="drillIntoArea0()">
   <header>
-      <div class="branding">
-        <img class="logo" src="../img/branding/vx_like_cloud.svg">
-        <img class="name" src="../img/branding/name_pelcoBlue.svg">
-      </div>
-      <div class="user"><a class="button" href="../login.html">Log Out</a></div>
+    <div class="branding">
+      <img class="pelco" src="../img/branding/temp-pelco-wordmark-white.svg">
+      <img class="logo" src="../img/branding/temp-cloud-logo-white.svg">
+      <img class="name" src="../img/branding/temp-cloud-wordmark-white.svg">
+    </div>
+    <div class="user"><a class="button" href="../login.html">Log Out</a></div>
   </header>
 
+  <!--
+    ** NAV TEMPORARILY HIDDEN BY display:none IN base.less
+  -->
+  <!--
   <nav>
     <ul>
       <li><a href="../userDashboard.html">DASHBOARD</a></li>
@@ -25,6 +30,7 @@
       <li><a href="../admin/cloudAdmin.html">ADMIN</a></li>
     </ul>
   </nav>
+  -->
 
   <main>
     <div class="entity-overview vx-system-overview">
@@ -61,19 +67,19 @@
               <table class="label-and-value-list">                
                 <tr>
                   <td>System Type</td>
-                  <td>VxProfessional</td>
+                  <td>VxEnterprise</td>
                 </tr>
               </table>
               <table class="label-and-value-list">
                 <tr>
                   <td>Version</td>
-                  <td>3.0.0</td>
+                  <td>3.3.0</td>
                 </tr>
               </table>
               <table class="label-and-value-list">
                 <tr>
                   <td>Agent</td>
-                  <td>Agent Friendly Name</td>
+                  <td>Demo Agent</td>
                 </tr>
               </table>
             </div>
@@ -85,50 +91,89 @@
             <div class="section-header">VX System Health</div>
             <div class="section-content">
               <div class="health-area-summaries">
-                <div class="area-header" onclick="drillIntoArea0()">
-                  Licenses
-                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
-                </div>
-                <div class="area-summary">
-                  <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
-                  <div class="summary-metrics">
-                    80% (8/10) channels in use
-                    <br>
-                    0 license alerts in last 30 days
+                <div class="area" onclick="drillIntoArea0()">
+                  <div class="area-header">
+                    Licenses
+                    <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
                   </div>
-                </div>
-                <div class="area-header" onclick="drillIntoArea1()">
-                  Cameras
-                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
-                </div>
-                <div class="area-summary">
-                  <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
-                  <div class="summary-metrics">
-                    5 cameras online, 0 offline
-                    <br>
-                    0 camera alerts in last 30 days
-                  </div>
-                </div>
-                <div class="area-header" onclick="drillIntoArea2()">
-                  Storage
-                  <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
-                </div>
-                <div class="area-summary">
+                  <div class="area-summary">
                     <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
                     <div class="summary-metrics">
-                      2 storage nodes online, 0 offline
+                      8% (5/64) video channels in use
                       <br>
-                      0 storage alerts in last 30 days
+                      0 new alerts in last 30 days
                     </div>
+                  </div>
+                </div>
+                <div class="area" onclick="drillIntoArea1()">
+                  <div class="area-header">
+                    Cameras
+                    <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                  </div>
+                  <div class="area-summary">
+                    <img class="summary-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+                    <div class="summary-metrics">
+                      5 cameras online, 0 offline
+                      <br>
+                      1 new alert in last 30 days
+                    </div>
+                  </div>  
+                </div>
+                <div class="area" onclick="drillIntoArea2()">
+                  <div class="area-header">
+                    Storage
+                    <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                  </div>
+                  <div class="area-summary">
+                      <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
+                      <div class="summary-metrics">
+                        2 recorders online, 0 offline
+                        <br>
+                        0 new alerts in last 30 days
+                      </div>
+                  </div>
+                </div>
+                <div class="area" onclick="drillIntoArea3()">
+                  <div class="area-header">
+                    Software & Network
+                    <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                  </div>
+                  <div class="area-summary">
+                    <img class="summary-icon" src="../img/icons/summary-good-goodGreen.svg">
+                    <div class="summary-metrics">
+                      2 VX servers online, 0 offline
+                      <br>
+                      0 new alerts from last 30 days
+                    </div>
+                  </div>
+                </div>
+                <div class="area" onclick="drillIntoArea4()">
+                  <div class="area-header">
+                    Tools
+                    <img class="header-to-drill-in-arrow" src="../img/icons/header-to-drill-in-arrow-pelcoBlue.svg">
+                  </div>
+                  <div class="area-summary">
+                    <img class="summary-icon" src="../img/icons/tools-pelcoBlue.svg">
+                    <div class="summary-metrics">
+                      Reports
+                      <br>                  
+                      Firmware updater
+                      <br>
+                      Alert rules
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="selected-health-area-drill-in">
                 <div class="area-drill-in">
-                  <div class="chart-label">License</div>
-                    <select class="licenses-chart-selector" onchange="changeLicensesChartType()">
-                      <option value="licensesSummary">summary</option>
-                      <option value="licensesAlerts">alerts in last 30 days</option>
-                    </select>
+                  <div class="tab-row">
+                    <div class="tab licenses-summary-tab" onclick="showLicensesSummaryTable()">
+                      License Summary
+                    </div>
+                    <div class="tab licenses-alerts-tab" onclick="showLicensesAlertsTable()">
+                      License Alerts in Last 30 Days
+                    </div>
+                  </div>                  
                   <div class="chart">
                     <br>
                     <table class="compact-list licenses-summary-table">
@@ -148,8 +193,8 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>2021-08-31 15:00 MST
-                            <a href="supExpirationInfoModal.html" title="How is expiration calculated?"><img class="inline-icon info-link after-text highlight-clickable-icon" src="../img/icons/info-circle-pelcoBlue.svg"></a>
+                          <td>2020-03-01 12:00 MST
+                            <a href="../modals/supExpirationInfoModal.html" title="How is expiration calculated?" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a>
                           </td>
                           <td></td>
                           <td></td>
@@ -166,39 +211,89 @@
                           <td>Activation ID</td>
                         </tr>
                         <tr>
-                          <td>P2-1C-ADD</td>
-                          <td>VxPro Channels</td>                            
-                          <td>10</td>
-                          <td>8</td>
-                          <td>2</td>
+                          <td>E2-1C-ADD</td>
+                          <td>VxE Channels</td>                            
+                          <td>64</td>
+                          <td>5</td>
+                          <td>59</td>
                           <td>no expiration</td>
-                          <td>2018-01-15 12:00 MST</td>
-                          <td>5532-d244-15cd-26f2-e2b7-d04</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d08</td>
                         </tr>
                         <tr>
-                          <td>P2-PRO-SW</td>
-                          <td>VxPro Software</td>                            
+                          <td>E2-COR-SVR</td>
+                          <td>Core hardware</td>                            
                           <td>1</td>
                           <td>1</td>
                           <td>0</td>
                           <td>no expiration</td>
-                          <td>2018-01-15 12:00 MST</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d01</td>
+                        </tr>
+                        <tr>
+                          <td>E2-COR-SW</td>
+                          <td>Core software</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d02</td>
+                        </tr>
+                        <tr>
+                          <td>E2-MGW-SVR</td>
+                          <td>Media Gateway hardware</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d06</td>
+                        </tr>
+                        <tr>
+                          <td>E2-MGW-SW</td>
+                          <td>Media Gateway software</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d07</td>
+                        </tr>
+                        <tr>
+                          <td>E2-VSM-SVR</td>
+                          <td>Vx-NSM5200</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2019-03-01 12:00 MST</td>
                           <td>5532-d244-15cd-26f2-e2b7-d03</td>
                         </tr>
                         <tr>
-                          <td>P2-PRO-SVR</td>
-                          <td>VxPro Hardware</td>                            
+                          <td>E2-VXS-SVR</td>
+                          <td>VxStorage hardware</td>                            
                           <td>1</td>
                           <td>1</td>
                           <td>0</td>
                           <td>no expiration</td>
-                          <td>2018-01-15 12:00 MST</td>
-                          <td>5532-d244-15cd-26f2-e2b7-d02</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d04</td>
+                        </tr>
+                        <tr>
+                          <td>E2-VXS-SW</td>
+                          <td>VxStorage software</td>                            
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>no expiration</td>
+                          <td>2019-03-01 12:00 MST</td>
+                          <td>5532-d244-15cd-26f2-e2b7-d05</td>
                         </tr>
                       </tbody>
                       <tbody class="free-licenses">
                         <tr class="look-like-thead">
-                          <td colspan="2">Free Features</td>
+                          <td colspan="2">Demo Features</td>
                           <td>Channels</td>
                           <td>In Use</td>
                           <td>Remaining</td>
@@ -207,37 +302,34 @@
                           <td></td>
                         </tr>
                         <tr>
-                          <td>P2-LITE</td>
-                          <td>VxPro 4 channels, 1 year</td>                      
-                          <td>expired</td>
-                          <td>-</td>
-                          <td>-</td>                        
-                          <td>2018-12-01 23:00 MST</td>
-                          <td>2017-12-01 23:00 MST</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td>P2-EVAL</td>
-                          <td>VxPro unlimited, 60 days</td>                            
+                          <td>E2-EVAL</td>
+                          <td>VxE unlimited demo, 60 days</td>                            
                           <td>expired</td>
                           <td>-</td>
                           <td>-</td>
-                          <td>2018-01-30 23:00 MST</td>
-                          <td>2017-12-01 23:00 MST</td>
+                          <td>2019-03-02 23:00 MST</td>
+                          <td>2019-01-01 23:00 MST</td>
                           <td></td>
                         </tr>
                       </tbody>
                     </table>
                     <table class="compact-list licenses-alerts-table">
-                      <!--TEMP FILLER CONTENT-->
                       <thead>
                         <tr>
+                          <th></th>
                           <th>Timestamp</th>
                           <th>Severity</th>
-                          <th>Cause</th>
+                          <th>Status</th>
+                          <th>Alert Type</th>
                           <th>Details</th>
                         </tr>
                       </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td class="no-alerts">0 alerts in last 30 days</td>
+                        <tr>
+                      </tbody>
                     </table>
                   </div>
                   <br>
@@ -245,27 +337,583 @@
                   <a class="highlight-clickable-text" href="http://support.pelco.com" target="_blank">Get VX licensing guide at support.pelco.com</a>
                 </div>
                 <div class="area-drill-in">
-                  <!--TEMP FILLER CONTENT-->
-                  <em>
-                    SHOW CAMERA DEETS ... PROBABLY A SIMILAR SELECT LIKE FOR LICENSES:
-                    <select>
-                      <option>summary</option>
-                      <option>alerts in last 30 days</option>
-                    </select>
-                    THAT CONTROLS WHAT TYPE OF TABLE TO SHOW
-                  </em>
+                  <div class="tab-row">                  
+                    <div class="tab cameras-summary-tab" onclick="showCamerasSummaryTable()">
+                      Camera Summary 
+                    </div> 
+                    <div class="tab cameras-summary-tab-and-toggle selected">
+                      Camera Summary
+                        <span class="cameras-grid-icon" title="Switch to thumbnail grid view" onclick="showCamerasThumbnails()">
+                          <img src="../img/icons/grid-pelcoBlue.svg">
+                        </span>
+                        <span class="cameras-list-icon" title="Switch to list view" onclick="showCamerasTable()">
+                          <img src="../img/icons/list-pelcoBlue.svg">
+                        </span> 
+                    </div>                      
+                    <div class="tab cameras-alerts-tab" onclick="showCamerasAlertsTable()">
+                      Camera Alerts in Last 30 Days
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <br>
+                    <table class="compact-list cameras-summary-table">
+                      <thead>
+                        <tr>
+                          <th>Camera Name</th>
+                          <th>Vendor</th>
+                          <th>Model</th>
+                          <th>Version</th>
+                          <th>IP Address</th>
+                          <th>State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Camera 1
+                            <a title="Camera offline" class="highlight-clickable-icon not-blue after-text" href="../modals/alertWorkflowModal-cameraOffline.html"><img src="../img/icons/alarm-alarmRed.svg"></a>
+                          </td>
+                          <td>Pelco</td>
+                          <td>IME219</td>
+                          <td>2.2.3.0</td>
+                          <td>10.0.0.11</td>
+                          <td><img title="Offline" class="inline-icon before-text" src="../img/icons/offline-alarmRed.svg">Offline</td>
+                        </tr>
+                        <tr>
+                          <td>Camera 2</td>
+                          <td>Pelco</td>
+                          <td>IME219</td>
+                          <td>2.2.3.0</td>
+                          <td>10.0.0.12</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                        <tr>
+                          <td>Camera 3</td>
+                          <td>Pelco</td>
+                          <td>IME219</td>
+                          <td>2.2.3.0</td>
+                          <td>10.0.0.13</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                        <tr>
+                          <td>Camera 4</td>
+                          <td>Pelco</td>
+                          <td>IME219</td>
+                          <td>2.2.0.0</td>
+                          <td>10.0.0.14</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                        <tr>
+                          <td>Camera 5</td>
+                          <td>Pelco</td>
+                          <td>IME219</td>
+                          <td>2.2.3.0</td>
+                          <td>10.0.0.15</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="cameras-thumbnails-grid">
+                      <div class="camera-tile">
+                        <img class="thumbnail" src="../temp-demoFiles/1.png">
+                        <br>
+                        <div class="camera-name">Camera 1
+                          <a title="Camera offline" class="inline-icon highlight-clickable-icon not-blue after-text" href="../modals/alertWorkflowModal-cameraOffline.html"><img src="../img/icons/alarm-alarmRed.svg"></a>
+                        </div>
+                      </div>
+                      <div class="camera-tile">
+                        <img class="thumbnail" src="../temp-demoFiles/2.png">
+                        <div class="camera-name">Camera 2</div>
+                      </div>
+                      <div class="camera-tile">
+                        <img class="thumbnail" src="../temp-demoFiles/3.png">
+                        <div class="camera-name">Camera 3</div>
+                      </div>
+                      <div class="camera-tile">
+                        <img class="thumbnail" src="../temp-demoFiles/4.png">
+                        <div class="camera-name">Camera 4</div>
+                      </div>
+                      <div class="camera-tile">
+                        <img class="thumbnail" src="../temp-demoFiles/5.png">
+                        <div class="camera-name">Camera 5</div>
+                      </div>
+                    </div>
+                    <table class="compact-list cameras-alerts-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Timestamp</th>
+                          <th>Severity</th>
+                          <th>Status</th>
+                          <th>Alert Type</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a title="Pop out alert details" href="../modals/alertWorkflowModal-cameraOffline.html" class="highlight-clickable-icon"><img src="../img/icons/popout-pelcoBlue.svg"></a></td>
+                          <td>2019-03-31 11:35 MST</td>
+                          <td><a title="Pop out alert details" href="../modals/alertWorkflowModal-cameraOffline.html" class="highlight-clickable-icon not-blue before-text"><img src="../img/icons/alarm-alarmRed.svg"></a>
+                            Alarm
+                          </td>
+                          <td>New</td>
+                          <td>Camera offline</td>
+                          <td>Camera 1 offline.<a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
+                        </tr>
+                        <tr>
+                          <td><a title="Pop out alert details" href="../modals/alertWorkflowModal-firmwareUpdate.html" class="highlight-clickable-icon"><img src="../img/icons/popout-pelcoBlue.svg"></a></td>
+                          <td>2019-03-24 14:23 MST</td>
+                          <td><a title="Pop out alert details" href="../modals/alertWorkflowModal-firmwareUpdate.html" class="highlight-clickable-icon not-blue before-text"><img src="../img/icons/note-acknowledged.svg"></a>
+                            Note
+                          </td>
+                          <td>Acknowledged</td>
+                          <td>Newer firmware available</td>
+                          <td>Newer firmware available for Camera 4.<a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="highlight-clickable-icon after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <div class="area-drill-in">
-                    <!--TEMP FILLER CONTENT-->
-                    <em>
-                      SHOW STORAGE DEETS ... PROBABLY A SIMILAR SELECT LIKE FOR LICENSES:
-                      <select>
-                        <option>summary</option>
-                        <option>alerts in last 30 days</option>
-                      </select>
-                      THAT CONTROLS WHAT TYPE OF TABLE TO SHOW
-                    </em>
+                  <div class="tab-row">
+                    <div class="tab storage-summary-tab" onclick="showStorageSummaryTable()">
+                      Storage Summary
+                    </div>
+                    <div class="tab storage-alerts-tab" onclick="showStorageAlertsTable()">
+                      Storage Alerts in Last 30 Days
+                    </div>
                   </div>
+                  <div class="chart">
+                    <br>
+                    <table class="compact-list storage-summary-table">
+                      <thead>
+                        <tr>
+                          <th>Recorder Name</th>
+                          <th>Model</th>
+                          <th>Version</th>
+                          <th>Path</th>
+                          <th>Total Space (GB)</th>
+                          <th>IP Address</th>
+                          <th>State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Recorder 1</td>
+                          <td>NSM5200</td>
+                          <td>02.04.04.0008</td>
+                          <td>D:\NSM</td>
+                          <td>1000</td>
+                          <td>10.0.0.101</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                        <tr>
+                          <td>Recorder 2</td>
+                          <td>VideoXpert Storage</td>
+                          <td>3.1.1.10</td>
+                          <td>D:\VxS</td>
+                          <td>2000</td>
+                          <td>10.0.0.102</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="compact-list storage-alerts-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Timestamp</th>
+                          <th>Severity</th>
+                          <th>Status</th>
+                          <th>Alert Type</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td class="no-alerts">0 alerts in last 30 days</td>
+                        <tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="area-drill-in">
+                  <div class="tab-row">
+                    <div class="tab servers-summary-tab selected" onclick="showServersSummaryTable()">
+                      VX Servers Summary
+                    </div>
+                    <div class="tab system-alerts-tab" onclick="showSystemAlertsTable()">
+                      System Alerts in Last 30 Days
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <br>
+                    <table class="compact-list servers-summary-table">
+                      <thead>
+                        <tr>
+                          <th>Server Name</th>
+                          <th>Model</th>
+                          <th>Version</th>
+                          <th>CPU Usage (%)</th>
+                          <th>RAM Usage (%)</th>
+                          <th>IP Address</th>
+                          <th>State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>FC VX System</td>
+                          <td>Core</td>
+                          <td>3.3.0</td>
+                          <td>25</td>
+                          <td>37</td>
+                          <td>10.0.0.5</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                        <tr>
+                          <td>FC Media Gateway</td>
+                          <td>Media Gateway</td>
+                          <td>3.1.0.76</td>
+                          <td>22</td>
+                          <td>35</td>
+                          <td>10.0.0.7</td>
+                          <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="compact-list system-alerts-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Timestamp</th>
+                          <th>Severity</th>
+                          <th>Status</th>
+                          <th>Alert Type</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td colspan="5" class="no-alerts">0 alerts in last 30 days</td>
+                        <tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="area-drill-in">
+                <!--
+                  ** EVERYTHING IN THIS .area-drill-in <div> IS VERY TENTATIVE.
+                  ** INCLUDED ONLY SO THAT THIS STUFF CAN BE HARDCODED IN UI FOR ISC WEST DEMO.
+                -->
+                  <div class="tab-row">
+                    <div class="tab reports-tab" onclick="showReports()">
+                      Reports
+                    </div>
+                    <div class="tab firmware-updater-tab" onclick="showFirmwareUpdater()">
+                      Firmware Updater
+                    </div>
+                    <div class="tab alert-rules-tab" onclick="showAlertRules()">
+                      Alert Rules
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <br>
+                    <div class="reports">
+                      <br>
+                      <div class="run-reports">
+                        <div class="report-templates">
+                          <div class="template" onclick="cameraReport()"><span class="highlight-clickable-text">Camera Report</span></div>
+                          <div class="template" onclick="storageReport()"><span class="highlight-clickable-text">Storage Report</span></div>
+                          <div class="template" onclick="quickLogs()"><span class="highlight-clickable-text">Quick Logs</span></div>
+                          <div class="template" onclick="healthAlertsReport()"><span class="highlight-clickable-text">Health Alerts Report</span></div>
+                        </div>
+                        <br>
+                        <div class="report-options">
+                          <div class="template-options">
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Camera Name<br>
+                              <input type="checkbox" checked> Camera ID<br>  
+                              <input type="checkbox" checked> Host Device Name<br>
+                              <input type="checkbox" checked> Host Device ID<br>  
+                              <input type="checkbox" checked> Camera IP Address<br> 
+                              <input type="checkbox" checked> Camera State<br>
+                              <input type="checkbox" checked> Camera Number<br>
+                              <input type="checkbox" checked> Camera Recording<br>
+                            </div>
+                            <div class="options-column">
+                              <div class="options-column-heading">Stream Configuration</div>
+                              <input type="checkbox" checked> Encoding ID<br>
+                              <input type="checkbox" checked> Bitrate<br>
+                              <input type="checkbox" checked> Compression Standard<br>
+                              <input type="checkbox" checked> Frame Rate<br>
+                              <input type="checkbox" checked> Resolution<br>
+                            </div>
+                            <div class="options-column">
+                              <div class="options-column-heading">Storage Assignments</div>
+                              <input type="checkbox" checked> Storage Name<br>
+                              <input type="checkbox" checked> Storage IP Address<br>
+                              <input type="checkbox" checked> Storage State<br>
+                              <input type="checkbox" checked> Storage Type<br>
+                              <input type="checkbox" checked> Storage ID<br>
+                            </div>
+                            <br>
+                            <br>
+                            <a class="button" href="../temp-demoFiles/Camera Report.csv" download>Run Camera Report</a>
+                          </div>
+                          <div class="template-options">
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Storage Type<br>
+                              <input type="checkbox" checked> Storage Name<br>
+                              <input type="checkbox" checked> Storage ID<br> 
+                              <input type="checkbox" checked> Host Device Name<br> 
+                              <input type="checkbox" checked> Host Device ID<br>
+                              <input type="checkbox" checked> Storage IP Address<br>
+                              <input type="checkbox" checked> Storage State<br>  
+                            </div>
+                            <div class="options-column">                              
+                              <input type="checkbox" checked> Failover Enabled<br>
+                              <input type="checkbox" checked> Retention Time<br> 
+                            </div>
+                            <div class="options-column">
+                              <div class="options-column-heading">Camera Assignments</div>
+                              <input type="checkbox" checked> Camera Name<br>
+                              <input type="checkbox" checked> Camera ID<br>
+                              <input type="checkbox" checked> Camera IP Address<br>
+                              <input type="checkbox" checked> Camera State<br>
+                              <input type="checkbox" checked> Camera Number<br>
+                            </div>
+                            <br>
+                            <br>
+                            <a class="button" href="../temp-demoFiles/Storage Report.csv" download>Run Storage Report</a>
+                          </div>
+                          <div class="template-options">
+                            <div class="options-column">
+                              <input type="checkbox" checked> VxCore Logs<br>
+                              <input type="checkbox" checked> VxStorage Logs<br>
+                              <input type="checkbox" checked> Media Gateway Logs<br>
+                              <input type="checkbox" checked> Accessory Server<br>
+                            </div>
+                            <br>
+                            <br>
+                            <a class="button" href="../temp-demoFiles/TSR20181126123804_72TTXM2.zip" download>Get Quick Logs</a>
+                          </div>
+                          <div class="template-options">
+                            Compile list of all system heath alerts
+                            <div class="options-column">                              
+                              <input type="checkbox"> Daily<br>
+                              <input type="checkbox"> Weekly<br>
+                            </div>
+                            <br><br>
+                            <form class="label-and-input-list">
+                              <div class="row">
+                                <label>Email to</label>
+                                <input type="text" placeholder="comma-separated list" style="width:600px;">
+                              </div>
+                            </form>                   
+                            <br><br>        
+                            <button>Save Health Alerts Report Settings</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <!--
+                        ** CUTTING THIS OUT OF DEMO
+                      <div class="past-reports">
+                        <table class="compact-list past-reports-table">
+                          <thead>
+                            <tr>
+                              <th>Past Reports</th>
+                              <th>Time Completed</th>
+                              <th>Run By</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Camera Report</td>
+                              <td>2019-03-30 10:33 MST</td>
+                              <td>sara.chan@se.com</td>      
+                              <td><a class="highlight-clickable-icon" title="Download copy"><img src="../img/icons/download-pelcoBlue.svg"></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      -->  
+                    </div>
+                    <div class="firmware-updater">
+                        <span>Firmware updates are available only for supported models of Pelco cameras.</span>
+                      <br><br>
+                      <table class="compact-list">
+                        <thead>
+                          <tr>
+                            <th>Camera Name</th>
+                            <th>Model</th>
+                            <th>Current Version</th>
+                            <th>Available Update</th>
+                            <th>Last Update</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Camera 1</td>
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:27 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 2</td>                     
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:22 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 3</td>                    
+                            <td>IME219</td>
+                            <td>2.2.0.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:25 MST</td>
+                          </tr>
+                          <tr>
+                            <td>Camera 4</td>                           
+                            <td>IME219</td>
+                            <td>2.2.0.0</td>
+                            <td>2.2.3.0<a title="Run update" class="highlight-clickable-icon after-text"><img src="../img/icons/run-update-pelcoBlue.svg"></a></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Camera 5</td>                           
+                            <td>IME219</td>
+                            <td>2.2.3.0</td>
+                            <td></td>
+                            <td><img title="Successful" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">2019-03-21 13:26 MST</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="alert-rules">
+                      <table class="compact-list license-alert-rules">
+                        <thead>
+                          <tr>
+                            <th>License Alerts</th>
+                            <th>Email Notification To</th>
+                            <th>Text Notificaiton To</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>License Expired</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>License Expiring Soon</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>License Failure</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="compact-list camera-alert-rules">
+                        <thead>
+                          <tr>
+                            <th>Camera Alerts</th>
+                            <th>Email Notification To</th>
+                            <th>Text Notificaiton To</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Camera offline</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Newer firmware available</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="compact-list storage-alert-rules">
+                        <thead>
+                          <tr>
+                            <th>Storage Alerts</th>
+                            <th>Email Notification To</th>
+                            <th>Text Notificaiton To</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Recorder offline</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Volume offline</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Recording gap</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Data loss</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Newer VxS software available</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="compact-list system-alert-rules">
+                        <thead>
+                          <tr>
+                            <th>System Alerts</th>
+                            <th>Email Notification To</th>
+                            <th>Text Notificaiton To</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Server offline</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Time sync</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Duplicate IP address</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                          <tr>
+                            <td>Newer VX server software available</td>
+                            <td><input type="text" class="email-recipients" placeholder="comma-separated list"></td>
+                            <td><input type="text" class="text-recipients" placeholder="comma-separated list"></td>
+                          </tr>
+                        </tbody>                        
+                      </table>
+                      <br>
+                      <button>Save Alert Rules Settings</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
