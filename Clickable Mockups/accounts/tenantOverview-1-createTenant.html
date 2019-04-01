@@ -31,71 +31,60 @@
   -->
 
   <main>
-    <div id="tenant-overview">
+    <div class="entity-overview tenant-overview">
       <div class="page-title">Create New Tenant</div>
       <div class="page-subtitle">Cloud >
         <a class="breadcrumb" href="accountsList.html">Accounts</a> >
-        <a class="breadcrumb" href="accountOverview-3-regularView.html">[Account Name]</a> > 
+        <a class="breadcrumb" href="accountOverview-3-regularView.html">Test Account</a> > 
         <a class="breadcrumb" href="tenantsList.html">Tenants</a> >
         New Tenant
       </div>
       <div class="overview">
-        <section class="tenant-details">
+        <section class="entity-details">          
           <div class="section-header">Tenant Details</div>
           <div class="section-content">
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Account *</label>
-                <span class="never-editable">[Account Name]</span>
+            <div class="flex-container">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Account *</label>
+                  <span class="never-editable">Test Account</span>
+                </div>
+                <div class="row">
+                  <label>Tenant Name *</label>
+                  <input type="text">
+                </div>        
               </div>
-              <div class="row">
-                <label>Tenant Name *</label>
-                <input type="text">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Contact Name *</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Contact Email *</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Contact Mobile</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Secondary Phone</label>
+                  <input type="text">
+                </div>
               </div>
-              <div class="row">
-                <label>Camera Limit </label>
-                <input type="number">
-              </div>
-              <div class="row">
-                <label>Tenant Expiration </label>
-                <!--
-                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="date">,
-                  ** BUT THIS IS A SIMPLE HACK TO MOCKUP HOW
-                  ** THE DATE FORMAT SHOULD LOOK WITHOUT INJECTING JS
-                -->
-                <input type="text" placeholder="YYYY-MM-DD">
-              </div>
-            </div>
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Contact Name *</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label>Contact Email *</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label>Contact Mobile *</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label>Secondary Phone</label>
-                <input type="text">
-              </div>
-            </div>
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Address Line 1</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label>Address Line 2</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label>Address Line 3</label>
-                <input type="text">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Address Line 1</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Address Line 2</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Address Line 3</label>
+                  <input type="text">
+                </div>
               </div>
             </div>
           </div>

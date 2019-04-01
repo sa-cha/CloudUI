@@ -31,121 +31,157 @@
   -->
 
   <main>
-    <div id="account-overview">
-      <div class="page-title">[Account Name]</div>
+    <div class="entity-overview account-overview">
+      <div class="page-title">Test Account</div>
       <div class="page-subtitle">Cloud >
         <a class="breadcrumb" href="accountsList.html">Accounts</a> >
-        [Account Name]
+        Test Account
       </div>
-      <a href="../modals/deleteSafeguardsModal-account-1-confirmIntent.html" class="delete-account highlight-clickable-icon" title="Delete Account">
+      <a href="../modals/deleteSafeguardsModal-account-1-confirmIntent.html" class="delete-entity highlight-clickable-icon" title="Delete Account">
         <img src="../img/icons/delete-pelcoBlue.svg">
       </a>
       <div class="overview">
-        <section class="account-details">
-          <div class="section-header">Account Details</div>
-          <div class="section-content">
-            <table class="label-and-value-list">
-              <tr>
-                <td>Account Name</td>
-                <td>[Account Name]</td>
-              </tr>
-              <tr>
-                <td>License Limit</td>
-                <td>[#####]</td>
-              </tr>
-              <tr>
-                <td>License Expiration</td>
-                <td>[YYYY-MM-DD]
-                  <!--
-                    ** SHOW class="expired" ICON IF TENANT EXPIRATION DATE HAS PAST
-                  -->                  
-                  <img class="expired" title="Expired" src="..\img\icons\expired-attentionOrange.svg">
-                </td>
-              </tr>
-              <tr>
-                <td>Support Level</td>
-                <td>Tier [#]</td>
-              </tr>
-            </table>
-            <table class="label-and-value-list">
-              <tr>
-                <td>Contact Name</td>
-                <td>[Contact Name]</td>
-              </tr>
-              <tr>
-                <td>Contact Email</td>
-                <td>[Contact Email]</td>
-              </tr>
-              <tr>
-                <td>Contact Mobile</td>
-                <td>[Contact Mobile]</td>
-              </tr>
-              <tr>
-                <td>Secondary Phone</td>
-                <td>[Secondary Phone]</td>
-              </tr>
-            </table>
-            <table class="label-and-value-list">
-              <tr>
-                <td>Address Line 1</td>
-                <td>[Address Line 1]</td>
-              </tr>
-              <tr>
-                <td>Address Line 2</td>
-                <td>[Address Line 2]</td>
-              </tr>
-              <tr>
-                <td>Address Line 3</td>
-                <td>[Address Line 3]</td>
-              </tr>
-            </table>            
+        <section class="entity-details">
+        <!-- NOTE: contents of .entity-details will be different per entity type (account, tenant, site, device, etc) -->
+          <div class="section-header">
+            <span class="click-to-collapse">
+              Account Details
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              Account Details
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+              -->
           </div>
-          <a href="accountOverview-4-editAccountDetails.html" class="edit-account-details highlight-clickable-icon" title="Edit Account Details">
+          <div class="section-content">
+            <div class="flex-container">
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Account Name</td>
+                  <td>Test Account</td>
+                </tr>
+                <tr>
+                  <td>License Limit</td>
+                  <td>300</td>
+                </tr>
+                <tr>
+                  <td>License Expiration</td>
+                  <td>2020-01-01
+                    <!--
+                      ** SHOW EXPIRED ICON IF TENANT EXPIRATION DATE HAS PAST
+                    -->      
+                    <!--            
+                    <img class="inline-icon after-text" title="Expired" src="..\img\icons\expired-attentionOrange.svg">
+                    -->
+                  </td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Contact Name</td>
+                  <td>Arthur Morgan</td>
+                </tr>
+                <tr>
+                  <td>Contact Email</td>
+                  <td>a.morgan@rdr.com</td>
+                </tr>
+                <tr>
+                  <td>Contact Mobile</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Secondary Phone</td>
+                  <td></td>
+                </tr>
+              </table>
+              <table class="label-and-value-list">
+                <tr>
+                  <td>Address Line 1</td>
+                  <td>2620 E Prospect Rd</td>
+                </tr>
+                <tr>
+                  <td>Address Line 2</td>
+                  <td>Fort Collins, CO 80525</td>
+                </tr>
+                <tr>
+                  <td>Address Line 3</td>
+                  <td></td>
+                </tr>
+              </table>            
+            </div>
+          </div>
+          <a href="accountOverview-4-editAccountDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Account Details">
             <img src="../img/icons/edit-pelcoBlue.svg">
           </a>
         </section>
-        <div class="status-sections-flex-container">
-          <section class="counts">
-            <div class="section-header">Counts</div>
-            <div class="section-content">
-              <a class="highlight-clickable-text" href="tenantsList.html">[#] Tenants</a>
-              <br>
-              <br>
-             
-              <div class="has-no-tenants">
-                At least one cloud tenant must be created in order to add cameras and other devices.
+        <div class="entity-dashboard">
+        <!-- NOTE: contents of .entity-dashboard will be different per device type; could be single or multiple sections -->
+          <div class="account-dashboard">
+            <section class="alerts">
+              <div class="section-header">Alerts</div>
+              <div class="section-content">
+                <!--TEMP PLACEHOLDER IDEAS-->
+                <div style="font-size:12.5px; color:#aaa;">ACCOUNT STANDING</div>
                 <br>
+                <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px;" src="../img/icons/summary-good-goodGreen.svg">
+                <div style="display:inline-block;">Service subscriptions up to date</div>
+                <br><br><br>
+                <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
                 <br>
-                <div class="create-tenant">
-                  <a class="button" href="tenantOverview-1-createTenant.html">Create Tenant</a>
+                <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:0 15px;">
+                  3
+                  <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
                 </div>
+                <div style="display:inline-block;">
+                    VX Systems with active health alarms:<br>
+                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Tenant 1</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">My VX</a><br>
+                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">FC VX System</a><br>
+                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Another VX System</a> 
+                </div>
+                <!--END OF TEMP PLACEHOLDER CONTENT-->
               </div>
-              
-              <em><br><br>
-                ** IF ACCOUNT HAS 0 TENANTS, ABOVE PROMPT IS SHOWN (div class="has-no-tenants").
-                ** IF ACCOUNT HAS 1 OR MORE TENANTS, COUNTS/LINKS FOR SITES AND CAMERAS IS SHOWN (div class="has-tenants").
-              </em>
-              
-              <!--
-              <div class="has-tenants">
-                [#] Sites
-                <br>
-                <br>
-                [#] Cameras
+            </section>
+            <div class="services-tenants-admin">
+              <section class="services">
+                <div class="section-header">Services</div>
+                <div class="section-content">
+                  <!--TEMP PLACEHOLDER IDEAS-->
+                  VX Maintenance 
+                  <br><br>
+                  [future - Clip Share] 
+                  <br><br>
+                  [future - Extended Storage]
+                  <!--END OF TEMP PLACEHOLDER CONTENT-->
+                </div>
+              </section>
+              <div class="tenants-admin">
+                <section class="tenants">
+                  <div class="section-header">Tenants / License Counts TBD</div>
+                  <div class="section-content">
+                    <!--TEMP PLACEHOLDER IDEAS-->
+                    <a class="highlight-clickable-text" href="tenantsList.html">4 Tenants</a>
+                    <!--END OF TEMP PLACEHOLDER CONTENT-->
+                  </div>
+                </section>
+                <section class="admin-links">
+                  <div class="section-header">Account Admin Links</div>
+                  <div class="section-content">
+                    <!--TEMP PLACEHOLDER IDEAS-->
+                    <a class="highlight-clickable-text" href="#">1 Account User</a>
+                    <br><br>
+                    <a class="highlight-clickable-text" href="#">View Audit Log</a>
+                    <!--END OF TEMP PLACEHOLDER CONTENT-->
+                  </div>
+                </section>
               </div>
-              -->
             </div>
-          </section>
-          <section class="alerts">
-            <div class="section-header">Alerts</div>
-            <div class="section-content">
-              <em></em>
-            </div>
-          </section>
-          <section class="events">
-            <div class="section-header">Events</div>
-            <div class="section-content"></div>
-          </section>
+          </div>
         </div>
       </div>
     </div>    

@@ -31,79 +31,62 @@
   -->
 
   <main>
-    <div id="account-overview">
-      <div class="page-title">[Account Name]</div>
+    <div class="entity-overview account-overview">
+      <div class="page-title">Test Account</div>
       <div class="page-subtitle">Cloud >
         <a class="breadcrumb" href="accountsList.html">Accounts</a> >
-        [Account Name]
+        Test Account
       </div>
       <div class="overview">
-        <section class="account-details">
+        <section class="entity-details">
           <div class="section-header">Account Details</div>
           <div class="section-content">
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Account Name *</label>
-                <input type="text" value="[auto-fill current value]">
+            <div class="flex-container">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Account Name *</label>
+                  <input type="text" value="Test Account">
+                </div>
+                <div class="row">
+                  <label>License Limit *</label>
+                  <input type="number" value="300">
+                </div>
+                <div class="row">
+                  <label>License Expiration *</label>
+                  <input type="text" placeholder="YYYY-MM-DD" value="2020-01-01">
+                </div>
               </div>
-              <div class="row">
-                <label>License Limit *</label>
-                <!--
-                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="number">,
-                  ** BUT THIS IS A SIMPLE HACK TO INDICATE IN MOCKUP
-                  ** THAT THE CURRENT VALUE SHOULD BE SHOWn IN INPUT
-                -->
-                <input type="text" value="[auto-fill current value]">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Contact Name *</label>
+                  <input type="text" value="Arthur Morgan">
+                </div>
+                <div class="row">
+                  <label>Contact Email *</label>
+                  <input type="text" value="a.morgan@rdr.com">
+                </div>
+                <div class="row">
+                  <label>Contact Mobile</label>
+                  <input type="text">
+                </div>
+                <div class="row">
+                  <label>Secondary Phone</label>
+                  <input type="text">
+                </div>
               </div>
-              <div class="row">
-                <label>License Expiration *</label>
-                <!--
-                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="date">,
-                  ** BUT THIS IS A SIMPLE HACK TO MOCKUP HOW
-                  ** THE DATE FORMAT SHOULD LOOK WITHOUT INJECTING JS
-                -->
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Support Level *</label>
-                <select>
-                  <option>[auto-select current tier]</option>
-                  <option>Tier 1</option>
-                  <option>Tier 2</option>
-                  <option>Tier 3</option>
-                </select>
-              </div>
-            </div>
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Contact Name *</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Contact Email *</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Contact Mobile *</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Secondary Phone</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-            </div>
-            <div class="label-and-input-list">
-              <div class="row">
-                <label>Address Line 1</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Address Line 2</label>
-                <input type="text" value="[auto-fill current value]">
-              </div>
-              <div class="row">
-                <label>Address Line 3</label>
-                <input type="text" value="[auto-fill current value]">
+              <div class="label-and-input-list">
+                <div class="row">
+                  <label>Address Line 1</label>
+                  <input type="text" value="2620 E Prospect Rd">
+                </div>
+                <div class="row">
+                  <label>Address Line 2</label>
+                  <input type="text" value="Fort Collins, CO 80525">
+                </div>
+                <div class="row">
+                  <label>Address Line 3</label>
+                  <input type="text">
+                </div>
               </div>
             </div>
           </div>

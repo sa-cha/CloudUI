@@ -1,99 +1,50 @@
-#account-overview {
-  display: flex;
-  flex-flow: column nowrap;
-  
-  .page-title,
-  .page-subtitle {
-    flex: 0;
-  }
-  
-  .delete-account {
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    top: 12px;
-    right: 10px;
-  }
-  
-  .overview {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    
-    .account-details {
-      flex: 0 0 auto;
-      position: relative;  //so that child .edit-account-details can be position:absolute
-      
-      .section-content {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-right: 60px;
+// THE accountOverview.html PAGE USES entityOverview.less FOR ITS GENERAL LAYOUT
+// THE FOLLOWING STYLES ARE SPECIFIC TO AN ACCOUNT OVERVIEW
+.entity-overview.account-overview {
+  .entity-details {
+    .flex-container {
+      .label-and-input-list,
+      .label-and-value-list {
+        flex: 1 1 auto;
+        margin-right: 20px;
         
-        .label-and-input-list,
-        .label-and-value-list {
-          flex: 1 1 auto;
-          margin-right: 20px;
-          
-          label,
-          td:first-child {
-            width: 135px;
-          }
-          
-          .expired {
-            height: 19px;
-            width: 16px;
-            margin-left: 5px;
-            vertical-align: text-bottom;
-          }
+        label,
+        td:first-child {
+          width: 135px;
         }
-      }
-      
-      .form-error {
-        color: @alertOrange;
-        text-align: center;
-      }
-      
-      .button-row-centered {
-        margin: 15px 0;
-      }
-      
-      .edit-account-details {
-        height: 16px;
-        width: 16px;
-        position: absolute;
-        top: 42px;
-        right: 15px;
       }
     }
+  }
 
-    .status-sections-flex-container {
+  // account dashboard layout and contents still very tentative
+  .account-dashboard {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    .alerts {
+      flex: 1 1 auto;
+      min-width: 420px;
+    }
+
+    .services-tenants-admin {
       flex: 1 1 auto;
       display: flex;
-      flex-flow: row wrap;
-      
-      .counts {
-        flex: 0;
-        min-width: 200px;
-        
-        .has-no-tenants {
-          font-size: @smallFontSize;
-          font-style: italic;
-          
-          .create-tenant {
-            text-align: center;
-          }
+      flex-flow: column wrap;
+
+      .services {
+        flex: 1 1 auto;
+      }
+
+      .tenants-admin {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+
+        .tenants,
+        .admin-links {
+          flex: 1 1 auto;
         }
-      }
-      
-      .alerts {
-        flex: 1 1 auto;
-        min-width: 400px;
-      }
-      
-      .events {
-        flex: 1 1 auto;
-        min-width: 400px;
       }
     }
   }
