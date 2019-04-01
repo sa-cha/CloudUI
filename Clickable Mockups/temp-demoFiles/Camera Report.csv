@@ -1,0 +1,11 @@
+Title,Default Camera Report,,,,,,,,,,,,,,,,,
+Requested At,2019-03-30 10:33 MST,,,,,,,,,,,,,,,,,
+VX System,Sara (127.0.0.1),,,,,,,,,,,,,,,,,
+Report Initiator Client ID,10.220.233.211,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+Camera Name,Host Device Name,Camera IP,Camera Number,Camera State,Camera Recording,Stream Configuration(Encoding ID),Stream Configuration(Bit Rate (bit/s)),Stream Configuration(Compression Standard),Stream Configuration(Frame Rate),Stream Configuration(Resolution),Storage Assignments(Storage Name),Storage Assignments(Storage IP),Storage Assignments(Storage State),Storage Assignments(Storage Type),Storage Assignments(Camera ID),Storage Assignments(Storage ID),Host Device ID,Camera ID
+Camera 1,Camera 1,10.0.0.11,,online,FALSE,primary,2406396,h264,14,3360x1344,,,,,,,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7:Video Source:video
+Camera 2,Camera 2,10.0.0.12,,online,FALSE,secondary,5000000,jpeg,14,672x600,,,,,,,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7:Video Source:video
+Camera 3,Camera 3,10.0.0.13,,online,FALSE,,,,,,,10.0.0.102,online,vxs,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7:Video Source:video,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7:Video Source:video
+Camera 4,Camera 4,10.0.0.14,,online,FALSE,primary,65802,g711,,,,,,,,,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7,cc3e1fdf-dcf9-3dc2-801f-7aab9dd6fdfb:audio
+Camera 5,Camera 5,10.0.0.15,,online,FALSE,,,,,,,10.0.0.102,online,vxs,cc3e1fdf-dcf9-3dc2-801f-7aab9dd6fdfb:audio,c94a1c4d-e5b5-4e9f-b490-93891bec9cc9,516716a1-fd04-3ec0-bbfa-0eb19cdf23d7,cc3e1fdf-dcf9-3dc2-801f-7aab9dd6fdfb:audio

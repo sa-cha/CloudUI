@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: @headerBackgroundImage;
+  background: @headerBackgroundColor;
   //border-bottom: 1px solid @headerBorderColor;
   position: fixed;
   top: 0;
@@ -18,17 +18,26 @@ header {
     position: absolute;
     top: 8px;
     left: 20px;
+
+    .pelco {
+      height: 25px;
+      position: absolute;
+      top: 6px;
+      left: 0px;
+    }
     
     .logo {
       width: 70px;
+      position: absolute;
+      top: 0px;
+      left: 135px;
     }
     
     .name {
-      margin-left: 15px;
-      width: 140px;
-      opacity: .8;
-      position: relative;
-      top: -4px;
+      height: 28px;
+      position: absolute;
+      top: 4px;
+      left: 220px;
     }
   }
   
@@ -41,6 +50,7 @@ header {
 }
 
 nav {
+  display: none;  //temporarily hide nav
   background: @navBackgroundColor;
   position: fixed;
   top: 51px;
@@ -86,7 +96,7 @@ nav {
 main {
   background: @mainBackgroundColor;
   position: fixed;
-  top: 87px;
+  top: 61px;  // move up from 87px when nav is hidden
   right: 0;
   bottom: 0;
   left: 0;
@@ -135,12 +145,14 @@ p {
   font: @largeFontSize/@defaultLineHeight @defaultFontFamily;
   font-weight: 600;
   margin: 5px 15px;
+  width: 95%;
 }
 
 .page-subtitle {
   color: @secondaryDarkOnLightFontColor;
   font: @smallFontSize/@defaultLineHeight @defaultFontFamily;
   margin: 5px 15px; 
+  width: 95%;
 }
 
 .caption {

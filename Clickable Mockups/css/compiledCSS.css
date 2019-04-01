@@ -5,7 +5,7 @@ body {
   font: 14px/1.36 'Open Sans', sans-serif;
 }
 header {
-  background: linear-gradient(to right, #fff, #007dc5);
+  background: #007dc5;
   position: fixed;
   top: 0;
   right: 0;
@@ -17,15 +17,23 @@ header .branding {
   top: 8px;
   left: 20px;
 }
+header .branding .pelco {
+  height: 25px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
 header .branding .logo {
   width: 70px;
+  position: absolute;
+  top: 0px;
+  left: 135px;
 }
 header .branding .name {
-  margin-left: 15px;
-  width: 140px;
-  opacity: 0.8;
-  position: relative;
-  top: -4px;
+  height: 28px;
+  position: absolute;
+  top: 4px;
+  left: 220px;
 }
 header .user {
   position: absolute;
@@ -34,6 +42,7 @@ header .user {
   right: 20px;
 }
 nav {
+  display: none;
   background: #f5f5f5;
   position: fixed;
   top: 51px;
@@ -72,7 +81,7 @@ nav ul li a.active {
 main {
   background: #fff;
   position: fixed;
-  top: 87px;
+  top: 61px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -113,11 +122,13 @@ p {
   font: 16px/1.36 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 5px 15px;
+  width: 95%;
 }
 .page-subtitle {
   color: #666;
   font: 12.5px/1.36 'Open Sans', sans-serif;
   margin: 5px 15px;
+  width: 95%;
 }
 .caption {
   font-size: 12.5px;
@@ -191,21 +202,24 @@ button.disabled,
   text-align: center;
 }
 .button-row-centered button,
-.button-row-centered .button {
+.button-row-centered .button,
+.button-row-centered .button-muted {
   margin: 0 5px;
 }
 .button-row-left {
   text-align: left;
 }
 .button-row-left button,
-.button-row-left .button {
+.button-row-left .button,
+.button-row-left .button-muted {
   margin-right: 10px;
 }
 .button-row-right {
   text-align: right;
 }
 .button-row-right button,
-.button-row-right .button {
+.button-row-right .button,
+.button-row-right .button-muted {
   margin-left: 10px;
 }
 input[type=date] {
@@ -301,9 +315,11 @@ select {
 .inline-icon.before-text {
   margin-right: 5px;
 }
-.inline-icon.info-link {
+.compact-list .inline-icon {
   height: 14px;
   width: 14px;
+  top: 1px;
+  vertical-align: inherit;
 }
 a {
   color: #007dc5;
@@ -355,6 +371,35 @@ a:active {
 .highlight-clickable-icon:active img {
   filter: hue-rotate(1deg) saturate(83%) brightness(69%);
 }
+.highlight-clickable-icon.not-blue:hover img,
+.highlight-clickable-icon.not-blue:active img {
+  filter: none;
+}
+.highlight-clickable-icon.after-text {
+  margin-left: 5px;
+}
+.highlight-clickable-icon.before-text {
+  margin-right: 5px;
+}
+.highlight-clickable-icon.info-link {
+  height: 14px;
+  width: 14px;
+}
+.highlight-clickable-icon.info-link img {
+  height: 14px;
+  width: 14px;
+}
+.compact-list .highlight-clickable-icon {
+  height: 14px;
+  width: 14px;
+  margin-top: -4px;
+  vertical-align: inherit;
+}
+.compact-list .highlight-clickable-icon img {
+  height: 14px;
+  width: 14px;
+  vertical-align: top;
+}
 #modal {
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
@@ -394,7 +439,8 @@ a:active {
   text-align: right;
 }
 #modal .modal-dialog .modal-buttons button,
-#modal .modal-dialog .modal-buttons .button {
+#modal .modal-dialog .modal-buttons .button,
+#modal .modal-dialog .modal-buttons .button-muted {
   margin: 0 0 0 10px;
 }
 ::-webkit-scrollbar {
@@ -410,6 +456,9 @@ a:active {
 }
 ::-webkit-scrollbar-track {
   background: #f5f5f5;
+}
+textarea::-webkit-scrollbar {
+  width: 12px;
 }
 table {
   border-collapse: collapse;
@@ -693,6 +742,82 @@ table {
 .loose-list .explain-blank-cell {
   color: #aaa;
 }
+.tab-row {
+  border-bottom: 1px solid rgba(0, 125, 197, 0.25);
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.tab-row .tab {
+  border-color: #e5e5e5;
+  border-radius: 8px 8px 4px 4px;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  color: #aaa;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12.5px;
+  padding: 6px 8px 3px 8px;
+  margin: 0 10px 2px 0;
+  text-transform: uppercase;
+}
+.tab-row .tab:hover {
+  background: rgba(0, 125, 197, 0.07);
+  border-color: #00629c;
+  color: #00629c;
+}
+.tab-row .tab:active {
+  background: rgba(0, 125, 197, 0.14);
+  border-color: #0c5480;
+  color: #0c5480;
+}
+.tab-row .tab.selected {
+  background: #fff;
+  border-color: rgba(0, 125, 197, 0.25);
+  color: #00629c;
+  cursor: default;
+  margin-bottom: -1px;
+  padding-bottom: 6px;
+}
+#modal.alert-workflow-modal .modal-title .severity-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 3px;
+  position: relative;
+  top: 4px;
+}
+#modal.alert-workflow-modal .modal-body .alert-history td:first-child {
+  width: 150px;
+}
+#modal.alert-workflow-modal .modal-body .note-input textarea {
+  min-height: 50px;
+  height: 50px;
+  max-height: 300px;
+  max-width: 582px;
+  min-width: 582px;
+}
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons {
+  margin-top: -5px;
+  text-align: right;
+}
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note,
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .save-note {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note img,
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .save-note img {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+}
+#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note {
+  margin-right: -5px;
+}
 #account-overview {
   display: flex;
   flex-flow: column nowrap;
@@ -946,8 +1071,8 @@ table {
   margin-left: 25px;
 }
 #login-page {
-  background: url('../img/branding/extra_clouds.svg') 50% 130px no-repeat fixed;
-  background-size: 820px;
+  background: url('../img/branding/temp-extra-clouds.svg') 50% 85px no-repeat fixed;
+  background-size: 1050px;
 }
 #login-page .branding .logo {
   display: block;
@@ -956,7 +1081,7 @@ table {
 }
 #login-page .branding .name {
   display: block;
-  width: 350px;
+  width: 450px;
   margin: 50px auto;
 }
 #login-page .credentials {
@@ -1143,49 +1268,68 @@ table {
   width: 370px;
   overflow: auto;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-header {
-  background: #f5f5f5;
-  color: #007dc5;
-  font-size: 12.5px;
-  margin: 15px 0;
-  padding: 2px 10px;
-  text-transform: uppercase;
-  width: 300px;
-  position: relative;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-header:hover {
-  background: rgba(0, 125, 197, 0.07);
-  color: #00629c;
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area {
   cursor: pointer;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-header .header-to-drill-in-arrow {
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-header {
+  border-color: transparent transparent #e5e5e5 transparent;
+  border-style: solid;
+  border-width: 1px;
+  color: #007dc5;
+  font-size: 12.5px;
+  margin-top: 15px;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  width: 305px;
+  position: relative;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-header .header-to-drill-in-arrow {
   display: none;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-header.selected {
-  background: rgba(0, 125, 197, 0.14);
-  color: #0c5480;
-  width: 335px;
-  transition: width 0.3s linear;
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-summary {
+  border: 1px solid transparent;
+  padding: 15px 10px;
+  width: 305px;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-header.selected .header-to-drill-in-arrow {
-  display: inline-block;
-  opacity: 0.14;
-  position: absolute;
-  top: 0;
-  right: -10px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-summary {
-  padding: 0 15px 20px 10px;
-}
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-summary .summary-icon {
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-summary .summary-icon {
   display: inline-block;
   height: 40px;
   width: 40px;
   margin-right: 15px;
   vertical-align: top;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area-summary .summary-metrics {
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area .area-summary .summary-metrics {
   display: inline-block;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area:hover .area-header {
+  background: rgba(0, 125, 197, 0.07);
+  border-color: rgba(0, 125, 197, 0.14);
+  color: #00629c;
+  font-style: italic;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area:hover .area-summary {
+  border-color: transparent rgba(0, 125, 197, 0.14) rgba(0, 125, 197, 0.14) rgba(0, 125, 197, 0.14);
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area:active .area-header {
+  background: rgba(0, 125, 197, 0.14);
+  color: #0c5480;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area.selected {
+  cursor: default;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area.selected .area-header {
+  background: rgba(0, 125, 197, 0.14);
+  border-color: #fff #fff #fff transparent;
+  color: #0c5480;
+  width: 334px;
+  transition: width 0.3s linear;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .health-area-summaries .area.selected .area-header .header-to-drill-in-arrow {
+  display: inline-block;
+  opacity: 0.14;
+  position: absolute;
+  top: 0;
+  right: -10px;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in {
   flex: 1 1 auto;
@@ -1195,22 +1339,131 @@ table {
   overflow: auto;
   width: 300px;
 }
-.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .chart-label {
-  color: #aaa;
-  display: inline-block;
-  font-size: 12.5px;
-  margin: 0 5px 15px 0;
-  text-transform: uppercase;
-}
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .look-like-thead {
   border: none;
 }
 .entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .look-like-thead td {
-  color: #007dc5;
-  opacity: 0.7;
+  color: rgba(0, 125, 197, 0.75);
   font-size: 12.5px;
   font-weight: 400;
   padding: 20px 15px 3px 5px;
   text-align: left;
   vertical-align: top;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .licenses-alerts-table td:first-child,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .cameras-alerts-table td:first-child,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .storage-alerts-table td:first-child,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .system-alerts-table td:first-child {
+  width: 14px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .licenses-alerts-table td:nth-of-type(2),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .cameras-alerts-table td:nth-of-type(2),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .storage-alerts-table td:nth-of-type(2),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .system-alerts-table td:nth-of-type(2),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .licenses-alerts-table td:nth-of-type(3),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .cameras-alerts-table td:nth-of-type(3),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .storage-alerts-table td:nth-of-type(3),
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .system-alerts-table td:nth-of-type(3) {
+  white-space: nowrap;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .cameras-grid-icon img,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .cameras-list-icon img {
+  height: 16px;
+  width: 16px;
+  margin: 0 0 -3px 5px;
+  cursor: pointer;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .camera-tile {
+  display: inline-block;
+  height: 220px;
+  width: 300px;
+  margin: 0 30px 30px 0;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .camera-tile .thumbnail {
+  max-height: 200px;
+  max-width: 300px;
+  margin-bottom: 5px;
+  vertical-align: text-bottom;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates {
+  flex: 0 0 auto;
+  padding-left: 20px;
+  width: 200px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template {
+  border-bottom: 1px solid #fff;
+  color: #007dc5;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 2px 10px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template:hover {
+  color: #00629c;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template:active {
+  color: #0c5480;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template.selected {
+  background: rgba(0, 125, 197, 0.14);
+  border-color: rgba(0, 125, 197, 0.14);
+  color: #0c5480;
+  cursor: default;
+  font-style: italic;
+  padding: 2px 10px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template.selected .highlight-clickable-text:hover,
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-templates .template.selected .highlight-clickable-text:active {
+  background: none;
+  cursor: default;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-options {
+  flex: 1 1 auto;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-options .template-options {
+  border-color: #fff #fff rgba(0, 125, 197, 0.14) rgba(0, 125, 197, 0.14);
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 20px;
+  padding: 0 0 20px 20px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-options .template-options .options-column {
+  display: inline-block;
+  font-size: 12.5px;
+  margin-right: 50px;
+  vertical-align: top;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .run-reports .report-options .template-options .options-column .options-column-heading {
+  margin-bottom: 5px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .past-reports {
+  flex: 1 1 auto;
+  min-width: 500px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .reports .past-reports .past-reports-table td:last-child {
+  width: 14px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .alert-rules .compact-list {
+  margin-bottom: 15px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .alert-rules .compact-list tr {
+  border: none;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .alert-rules .compact-list td:first-child {
+  width: 210px;
+  vertical-align: middle;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .alert-rules .compact-list .email-recipients {
+  width: 450px;
+}
+.entity-overview.vx-system-overview .vx-system-health .section-content .selected-health-area-drill-in .alert-rules .compact-list .text-recipients {
+  width: 300px;
 }

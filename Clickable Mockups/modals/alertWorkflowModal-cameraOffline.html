@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MOCKUP - Alert Workflow Modal (camera offline)</title>
+  <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
+  <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
+  <script src="scripts/alertWorkflowModal.js"></script>
+</head>
+<body onload="cancelNoteInput()">
+  <div id="modal" class="alert-workflow-modal">
+    <div class="modal-dialog medium">
+      <div class="modal-title">
+        <img class="severity-icon" src="../img/icons/summary-alarm-alarmRed.svg">
+        Alarm: Camera Offline</div>
+      <div class="modal-body">
+        <div class="alert-details">
+            Camera 1 offline.
+            <a title="Additional info at support.pelco.com" target="_blank" href="https://support.pelco.com" class="inline-icon info-link after-text"><img src="../img/icons/info-circle-pelcoBlue.svg"></a>
+        </div>
+        <br>
+        <table class="compact-list alert-history">
+          <tbody>
+            <tr>
+              <td>2019-03-31 11:35 MST</td>
+              <td>Camera offline</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class="note-input">
+          <textarea></textarea>
+          <div class="note-cancel-save-buttons">
+            <div class="cancel-note" title="Cancel note" onclick="cancelNoteInput()"><img src="../img/icons/cancel-note-destroyRed.svg"></div>
+            <div class="save-note" title="Save note" onclick="saveNoteInput()"><img src="../img/icons/save-note-goodGreen.svg"></div>
+          </div> 
+        </div>
+      </div>
+      <div class="modal-buttons">
+        <a class="button-muted add-note-button" href="#" onclick="showNoteInput()">Add Note</a>
+        <a class="button acknowledge-button" href="#" onclick="acknowledge()">Acknowledge</a>
+        <!--
+          ** "Close" BUTTON HAS CLASS .button-muted WHEN "Acknowledge" BUTTON IS SHOWN
+          ** "Close" BUTTON HAS CLASS .button WHEN "Acknowledge" BUTTON IS HIDDEN
+        -->
+        <a class="button-muted close-button" href="../devices/vxSystemOverview.html">Close</a>
+      </div>      
+    </div>
+  </div>
+</body>
+</html>
