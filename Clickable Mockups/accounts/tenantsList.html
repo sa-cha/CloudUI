@@ -31,11 +31,11 @@
   -->
 
   <main>
-    <div id="tenants-list">
-      <div class="page-title">[Account Name]'s Tenants</div>
+    <div class="entities-list tenants-list">
+      <div class="page-title">Test Account's Tenants</div>
       <div class="page-subtitle">Cloud > 
         <a class="breadcrumb" href="accountsList.html">Accounts</a> > 
-        <a class="breadcrumb" href="accountOverview-3-regularView.html">[Account Name]</a> > 
+        <a class="breadcrumb" href="accountOverview-3-regularView.html">Test Account</a> > 
         Tenants
       </div>
 
@@ -90,34 +90,7 @@
                   <option><</option>
                 </select>
                 <input type="number">              
-              </div>
-              <br>
-              <div class="number">
-                <label>Camera Limit</label>
-                <br>
-                <select>
-                  <option>=</option>
-                  <option>></option>
-                  <option><</option>
-                </select>
-                <input type="number">
-              </div>
-              <br>
-              <div class="date">
-                <label>Tenant Expiration</label>
-                <br>
-                <select>
-                  <option>=</option>
-                  <option>></option>
-                  <option><</option>
-                </select>
-                <!--
-                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="date">,
-                  ** BUT THIS IS A SIMPLE HACK TO MOCKUP HOW
-                  ** THE DATE FORMAT SHOULD LOOK WITHOUT INJECTING JS
-                -->
-                <input type="text" placeholder="YYYY-MM-DD">
-              </div>
+              </div>           
             </div>
           </div>
           <div class="action-group-header">
@@ -144,74 +117,51 @@
               </div>
               <div class="row">
                 <input type="checkbox" checked>
-                <label>Site Count</label>
-              </div>
-              <div class="row">
-                <input type="checkbox" checked>
                 <label>Camera Count</label>
-              </div>
-              <div class="row">
-                <input type="checkbox" checked>
-                <label>Camera Limit</label>
-              </div>
-              <div class="row">
-                <input type="checkbox" checked>
-                <label>Tenant Expiration</label>
               </div>
             </div>
           </div>
         </div>
 
         <div class="table-container">
-          <table class="grid">
-            <thead>
-              <tr>
-                <th class="sort">
-                  Tenant Name 
-                  <img class="sort-order-icon" src="../img/icons/sort-descending-pelcoBlue.svg">
-                </th>
-                <th>Site Count</th>
-                <th>Camera Count</th>
-                <th>Camera Limit</th>
-                <th>Tenant Expiration</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 1</a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 2</a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="selected">
-                <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 3</a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 4</a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>         
-            </tbody>
-          </table>
+          <div class="grid-flexbox">
+            <table class="grid">
+              <thead>
+                <tr>
+                  <th class="sort">
+                    Tenant Name 
+                    <img class="sort-order-icon" src="../img/icons/sort-descending-pelcoBlue.svg">
+                  </th>
+                  <th>Camera Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 1</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 2</a></td>
+                  <td></td>
+                </tr>
+                <tr class="selected">
+                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Test Tenant</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 4</a></td>
+                  <td></td>
+                </tr>         
+              </tbody>
+            </table>
+          </div>
           <div class="table-counts">
             <div class="row-count">4 of 4 shown</div>
             <div class="paging">
               <span class="previous-page highlight-clickable-text"><</span>
-              page <input type="text" class="jump-to-page" value="1">
+              page 
+              <span>1</span>
+              <!-- <input type="text" class="jump-to-page" value="1"> SERVER DOES NOT SUPPORT JUMP-TO-PAGE YET -->
               of
               <span>1</span>
               <span class="next-page highlight-clickable-text">></span>
@@ -230,9 +180,6 @@
             </div>
           </div>
           <div class="details-group">
-            <a class="highlight-clickable-text" href="sitesList.html">[#] Sites</a>
-            <br>
-            <br>
             <a class="highlight-clickable-text" href="#">[#] Cameras</a>
           </div>
           <div class="details-group-header">

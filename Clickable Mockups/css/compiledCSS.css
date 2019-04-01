@@ -818,91 +818,42 @@ table {
 #modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note {
   margin-right: -5px;
 }
-#account-overview {
-  display: flex;
-  flex-flow: column nowrap;
-}
-#account-overview .page-title,
-#account-overview .page-subtitle {
-  flex: 0;
-}
-#account-overview .delete-account {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 12px;
-  right: 10px;
-}
-#account-overview .overview {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: column nowrap;
-}
-#account-overview .overview .account-details {
-  flex: 0 0 auto;
-  position: relative;
-}
-#account-overview .overview .account-details .section-content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding-right: 60px;
-}
-#account-overview .overview .account-details .section-content .label-and-input-list,
-#account-overview .overview .account-details .section-content .label-and-value-list {
+.entity-overview.account-overview .entity-details .flex-container .label-and-input-list,
+.entity-overview.account-overview .entity-details .flex-container .label-and-value-list {
   flex: 1 1 auto;
   margin-right: 20px;
 }
-#account-overview .overview .account-details .section-content .label-and-input-list label,
-#account-overview .overview .account-details .section-content .label-and-value-list label,
-#account-overview .overview .account-details .section-content .label-and-input-list td:first-child,
-#account-overview .overview .account-details .section-content .label-and-value-list td:first-child {
+.entity-overview.account-overview .entity-details .flex-container .label-and-input-list label,
+.entity-overview.account-overview .entity-details .flex-container .label-and-value-list label,
+.entity-overview.account-overview .entity-details .flex-container .label-and-input-list td:first-child,
+.entity-overview.account-overview .entity-details .flex-container .label-and-value-list td:first-child {
   width: 135px;
 }
-#account-overview .overview .account-details .section-content .label-and-input-list .expired,
-#account-overview .overview .account-details .section-content .label-and-value-list .expired {
-  height: 19px;
-  width: 16px;
-  margin-left: 5px;
-  vertical-align: text-bottom;
-}
-#account-overview .overview .account-details .form-error {
-  color: #eb6524;
-  text-align: center;
-}
-#account-overview .overview .account-details .button-row-centered {
-  margin: 15px 0;
-}
-#account-overview .overview .account-details .edit-account-details {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 42px;
-  right: 15px;
-}
-#account-overview .overview .status-sections-flex-container {
+.entity-overview.account-overview .account-dashboard {
   flex: 1 1 auto;
   display: flex;
   flex-flow: row wrap;
 }
-#account-overview .overview .status-sections-flex-container .counts {
-  flex: 0;
-  min-width: 200px;
-}
-#account-overview .overview .status-sections-flex-container .counts .has-no-tenants {
-  font-size: 12.5px;
-  font-style: italic;
-}
-#account-overview .overview .status-sections-flex-container .counts .has-no-tenants .create-tenant {
-  text-align: center;
-}
-#account-overview .overview .status-sections-flex-container .alerts {
+.entity-overview.account-overview .account-dashboard .alerts {
   flex: 1 1 auto;
-  min-width: 400px;
+  min-width: 420px;
 }
-#account-overview .overview .status-sections-flex-container .events {
+.entity-overview.account-overview .account-dashboard .services-tenants-admin {
   flex: 1 1 auto;
-  min-width: 400px;
+  display: flex;
+  flex-flow: column wrap;
+}
+.entity-overview.account-overview .account-dashboard .services-tenants-admin .services {
+  flex: 1 1 auto;
+}
+.entity-overview.account-overview .account-dashboard .services-tenants-admin .tenants-admin {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.entity-overview.account-overview .account-dashboard .services-tenants-admin .tenants-admin .tenants,
+.entity-overview.account-overview .account-dashboard .services-tenants-admin .tenants-admin .admin-links {
+  flex: 1 1 auto;
 }
 #accounts-list {
   display: flex;
@@ -1056,6 +1007,13 @@ table {
   display: flex;
   flex-flow: row wrap;
 }
+.entity-overview .overview .entity-details .form-error {
+  color: #eb6524;
+  text-align: center;
+}
+.entity-overview .overview .entity-details .button-row-centered {
+  margin: 15px 0;
+}
 .entity-overview .overview .entity-dashboard {
   flex: 1 1 auto;
   display: flex;
@@ -1186,13 +1144,6 @@ table {
 .entity-overview.tenant-overview .entity-details .flex-container .label-and-input-list td:first-child,
 .entity-overview.tenant-overview .entity-details .flex-container .label-and-value-list td:first-child {
   width: 135px;
-}
-.entity-overview.tenant-overview .entity-details .form-error {
-  color: #eb6524;
-  text-align: center;
-}
-.entity-overview.tenant-overview .entity-details .button-row-centered {
-  margin: 15px 0;
 }
 .entity-overview.tenant-overview .tenant-dashboard {
   flex: 1 1 auto;
