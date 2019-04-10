@@ -388,6 +388,7 @@ a:active {
 .highlight-clickable-icon.info-link img {
   height: 14px;
   width: 14px;
+  vertical-align: top;
 }
 .compact-list .highlight-clickable-icon {
   height: 14px;
@@ -786,7 +787,18 @@ table {
   position: relative;
   top: 4px;
 }
-#modal.alert-workflow-modal .modal-body .alert-history td:first-child {
+#modal.alert-workflow-modal .modal-body .alert-history {
+  border: 1px solid #f5f5f5;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#modal.alert-workflow-modal .modal-body .alert-history table tr {
+  border-width: 1px 0 0 0;
+}
+#modal.alert-workflow-modal .modal-body .alert-history table tr:first-child {
+  border: none;
+}
+#modal.alert-workflow-modal .modal-body .alert-history table tr td:first-child {
   width: 150px;
 }
 #modal.alert-workflow-modal .modal-body .note-input textarea {
@@ -796,12 +808,12 @@ table {
   max-width: 582px;
   min-width: 582px;
 }
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons {
+#modal.alert-workflow-modal .modal-body .note-input .note-cancel-save-buttons {
   margin-top: -5px;
   text-align: right;
 }
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note,
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .save-note {
+#modal.alert-workflow-modal .modal-body .note-input .note-cancel-save-buttons .cancel-note,
+#modal.alert-workflow-modal .modal-body .note-input .note-cancel-save-buttons .save-note {
   cursor: pointer;
   display: inline-block;
   border: 1px solid #e5e5e5;
@@ -809,14 +821,11 @@ table {
   width: 20px;
   text-align: center;
 }
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note img,
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .save-note img {
+#modal.alert-workflow-modal .modal-body .note-input .note-cancel-save-buttons .cancel-note img,
+#modal.alert-workflow-modal .modal-body .note-input .note-cancel-save-buttons .save-note img {
   height: 14px;
   width: 14px;
   vertical-align: middle;
-}
-#modal.alert-workflow-modal .modal-body .note-cancel-save-buttons .cancel-note {
-  margin-right: -5px;
 }
 .entity-overview.account-overview .entity-details .flex-container .label-and-input-list,
 .entity-overview.account-overview .entity-details .flex-container .label-and-value-list {
@@ -1027,10 +1036,6 @@ table {
 }
 #device-overview .entity-details .flex-container .label-and-value-list .change-site {
   margin-left: 25px;
-}
-#login-page {
-  background: url('../img/branding/temp-extra-clouds.svg') 50% 85px no-repeat fixed;
-  background-size: 1050px;
 }
 #login-page .branding .logo {
   display: block;
