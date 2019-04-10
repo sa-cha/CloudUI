@@ -11,9 +11,23 @@
 
   .modal-body {
     .alert-history {
-      td:first-child {
-        width: 150px;
-      }
+      border: 1px solid #f5f5f5;
+      max-height: 400px;
+      overflow-y: auto;
+
+      table {
+        tr {
+          border-width: 1px 0 0 0;
+
+          &:first-child {
+            border: none;
+          }
+        
+          td:first-child {
+            width: 150px;
+          }
+        }       
+      } 
     }
 
     .note-input {
@@ -24,30 +38,30 @@
         max-width: 582px;
         min-width: 582px;
       }
-    }
 
-    .note-cancel-save-buttons {
-      margin-top: -5px;
-      text-align: right;
+      .note-cancel-save-buttons {
+        margin-top: -5px;
+        text-align: right;
 
-      .cancel-note,
-      .save-note {
-        cursor: pointer;
-        display: inline-block;
-        border: 1px solid @textInputBorderColor;
-        height: 20px;
-        width: 20px;
-        text-align: center;
+        .cancel-note,
+        .save-note {
+          cursor: pointer;
+          display: inline-block;
+          border: 1px solid @textInputBorderColor;
+          height: 20px;
+          width: 20px;
+          text-align: center;
 
-        img {
-          height: 14px;
-          width: 14px;
-          vertical-align: middle;
+          img {
+            height: 14px;
+            width: 14px;
+            vertical-align: middle;
+          }
         }
-      }
 
-      .cancel-note {
-        margin-right: -5px;
+        // .cancel-note {
+        //   margin-right: -5px;
+        // }
       }
     }
   }
