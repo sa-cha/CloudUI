@@ -388,7 +388,6 @@ a:active {
 .highlight-clickable-icon.info-link img {
   height: 14px;
   width: 14px;
-  vertical-align: top;
 }
 .compact-list .highlight-clickable-icon {
   height: 14px;
@@ -843,9 +842,20 @@ table {
   display: flex;
   flex-flow: row wrap;
 }
-.entity-overview.account-overview .account-dashboard .alerts {
+.entity-overview.account-overview .account-dashboard .cloud-services {
   flex: 1 1 auto;
   min-width: 420px;
+  display: flex;
+  flex-flow: column wrap;
+}
+.entity-overview.account-overview .account-dashboard .cloud-services .vx-system-health-monitoring {
+  flex: 2 1 auto;
+}
+.entity-overview.account-overview .account-dashboard .cloud-services .clip-share {
+  flex: 1 1 auto;
+}
+.entity-overview.account-overview .account-dashboard .cloud-services .extended-storage {
+  flex: 1 1 auto;
 }
 .entity-overview.account-overview .account-dashboard .services-tenants-admin {
   flex: 1 1 auto;
@@ -1155,17 +1165,29 @@ table {
   display: flex;
   flex-flow: row wrap;
 }
-.entity-overview.tenant-overview .tenant-dashboard .alerts {
+.entity-overview.tenant-overview .tenant-dashboard .cloud-services {
   flex: 1 1 auto;
   min-width: 420px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.entity-overview.tenant-overview .tenant-dashboard .cloud-services .vx-system-health-monitoring {
+  flex: 1 1 auto;
+  max-height: 300px;
+}
+.entity-overview.tenant-overview .tenant-dashboard .cloud-services .clip-share {
+  flex: 1 1 auto;
+}
+.entity-overview.tenant-overview .tenant-dashboard .cloud-services .extended-storage {
+  flex: 1 1 auto;
 }
 .entity-overview.tenant-overview .tenant-dashboard .agents {
   flex: 1 1 auto;
-  min-width: 550px;
+  min-width: 630px;
 }
 .entity-overview.tenant-overview .tenant-dashboard .admin-links {
   flex: 1 1 auto;
-  min-width: 250px;
+  max-width: 250px;
 }
 #tenants-list {
   display: flex;

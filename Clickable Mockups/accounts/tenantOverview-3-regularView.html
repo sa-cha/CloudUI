@@ -6,6 +6,8 @@
   <title>MOCKUP - Tenant (regular view)</title>
   <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
   <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
+  <script src="scripts/tenantOverview.js"></script>
 </head>
 <body>
   <header>
@@ -45,7 +47,7 @@
       <div class="overview">
         <section class="entity-details">
           <div class="section-header">
-            <span class="click-to-collapse">
+            <span class="click-to-collapse" onclick="collapseTenantDetails()">
                 Tenant Details
                 <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
               </span>
@@ -53,14 +55,14 @@
                 ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
                 ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
               -->
-              <!--
-              <span class="click-to-expand"">
+              
+              <span class="click-to-expand" style="display:none;" onclick="expandTenantDetails()">
                 Tenant Details
                 <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
               </span>
-                -->
+               
           </div>
-          <div class="section-content">
+          <div class="section-content" id="tenantDetails">
             <div class="flex-container">
               <table class="label-and-value-list">
                 <tr>
@@ -104,38 +106,88 @@
                   <td></td>
                 </tr>
               </table>
-            </div>          
+            </div>
+            <a href="tenantOverview-4-editTenantDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Tenant Details">
+              <img src="../img/icons/edit-pelcoBlue.svg">
+            </a>          
           </div>
-          <a href="tenantOverview-4-editTenantDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Tenant Details">
-            <img src="../img/icons/edit-pelcoBlue.svg">
-          </a>
         </section>
+
         <div class="entity-dashboard">
         <!-- NOTE: contents of .entity-dashboard will be different per entity type -->
           <div class="tenant-dashboard">
-            <section class="alerts">
-              <div class="section-header">Alerts</div>
-              <div class="section-content">
-                <!--TEMP PLACEHOLDER IDEAS-->
-                <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
-                <br>
-                <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:0 15px;">
-                  1
-                  <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
+            <div class="cloud-services">
+              <section class="vx-system-health-monitoring">
+                <div class="section-header">VX System Health Monitoring</div>
+                <div class="section-content">
+                  <!--
+                  <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
+                  <br>
+                  -->
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:-10px 15px 0 15px;">
+                      1
+                      <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
+                    </div>
+                    <div style="display:inline-block;">
+                      VX Systems with new Alarms:<br>
+                      <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">TEST System</a>
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#eb6524; vertical-align:top; margin:-10px 15px 0 15px;">
+                      2
+                      <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-warning-alertOrange.svg">
+                    </div>
+                    <div style="display:inline-block;">
+                      VX Systems with new Warnings:<br>
+                      <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Fort Collins VMS</a><br>
+                      <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">TEST System</a>
+                    </div>
+                  </div>     
+                </div>              
+              </section>
+              <section>
+                <div class="section-header" class="clip-share">Clip Share</div>
+                <div class="section-content">
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#007dc5; vertical-align:top; margin:-10px 15px 0 15px;">
+                      10 Clips
+                    </div>
+                    <div style="display:inline-block;">
+                      8 clips viewed by recipent<br>
+                      2 clips not yet viewed by recipient
+                    </div>
+                  </div>
                 </div>
-                <div style="display:inline-block;">
-                    VX Systems with active health alarms:<br>
-                    <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Fort Collins VMS</a>
+              </section>
+              <section class="extended-storage">
+                <div class="section-header">Extended Storage</div>
+                <div class="section-content">
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#007dc5; vertical-align:top; margin:-10px 15px 0 15px;">
+                      5 TB
+                    </div>
+                    <div style="display:inline-block;">
+                      2.5 TB (50%) in use<br>
+                      2.5 TB (50%) available
+                    </div>
+                  </div>
                 </div>
-                <!--END OF TEMP PLACEHOLDER CONTENT-->            
-              </div>              
-            </section>
+              </section>
+            </div>
+            
             <section class="agents">
               <div class="section-header">VX Systems / Agents</div>
               <div class="section-content">
                 <table class="loose-list">
                   <thead>
                     <tr>
+                      <th colspan="5" style="font-size:44px; color:#007dc5; padding-bottom:20px; text-transform:none;">4 VX Systems</th>
+                    </tr>
+                    <tr>
+                      <th style="width: 0px;"></th>
                       <th>VX System</th>
                       <th>Agent</th>
                       <th>Last Connection</th>
@@ -144,27 +196,38 @@
                   </thead>
                   <tbody>
                     <tr>
+                      <td></td>
                       <td><span class="caption explain-blank-cell">none connected</span></td>
                       <td>My New Agent</td>
                       <td><span class="caption explain-blank-cell">not yet activated</span></td>
                       <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
                     </tr>
                     <tr>
+                      <td><span class="inline-icon" title="0 new alerts"><img src="../img/icons/online-goodGreen.svg"></span></td>
                       <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">Another VX System</a></td>
                       <td>X Agent</td>
-                      <td>2019-01-30 08:41 MST</td>
+                      <td>2019-04-18 08:41 MST</td>
                       <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
                     </tr>
                     <tr>
+                      <td><span class="inline-icon" title="1 new warning"><img src="../img/icons/warning-alertOrange.svg"></span></td>
                       <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">Fort Collins VMS</a></td>
                       <td>Fort Collins Agent</td>
-                      <td>2019-01-30 08:40 MST</td>
+                      <td>2019-04-18 08:40 MST</td>
                       <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
                     </tr>
                     <tr>
+                      <td><span class="inline-icon" title="1 new alarm, 1 new warning"><img src="../img/icons/alarm-alarmRed.svg"></span></td>
+                      <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">TEST System</a></td>
+                      <td>Test Agent</td>
+                      <td>2019-04-18 08:39 MST</td>
+                      <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
+                    </tr>
+                    <tr>
+                      <td><span class="inline-icon" title="0 new alerts, 1 acknowledged alarm condition"><img src="../img/icons/alarm-acknowledged.svg"></span></td>
                       <td><a class="highlight-clickable-text" href="../devices/vxSystemOverview.html">Third VX System</a></td>
                       <td>Agent 123</td>
-                      <td>2019-01-30 08:38 MST</td>
+                      <td>2019-04-18 08:38 MST</td>
                       <td><a class="inline-icon highlight-clickable-icon" title="Delete agent" href="../modals/deleteSafeguardsModal-agent-confirmIntent.html"><img src="../img/icons/delete-pelcoBlue.svg"></a></td>
                     </tr>
                   </tbody>

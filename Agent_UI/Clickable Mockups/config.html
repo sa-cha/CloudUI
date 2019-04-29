@@ -10,50 +10,45 @@
 <body>
 
   <header>
-      <div class="user"><a class="button" href="login.html">Log Out</a></div>
+    <!-- PLACEHOLDER STUFF UNTIL WE GET BRANDING FROM MARKETING -->
+    <span style="color:white;">NAME / BRANDING / AUTH MECHANISM TBD</span>
   </header>
 
   <main>
     <div id="config">
       <section class="cloud-connection">
-        <div class="section-header">Cloud Connection</div>
+        <div class="section-header">Pelco Breeze Connection</div>
         <div class="section-content">
           <table class="label-and-value-list">
             <tr>
-              <td>Connection Status</td>
-              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Successful"> Last connection 2019-01-16 12:00 MST</td>
+              <td>Last Connection</td>
+              <td><img class="inline-icon before-text" src="img/icons/success-circle-goodGreen.svg" title="Succeeded">2019-04-22 12:00 MST</td>
             </tr>
             <tr>
-              <td>Account > Tenant</td>
-              <td>KGB > Vlad's Place</td>
+              <td>Account Name</td>
+              <td>Pelco Account</td>
+            </tr>
+            <tr>
+              <td>Tenant Name</td>
+              <td>Pelco Tenant</td>
             </tr>
             <tr>
               <td>Agent Name</td>
-              <td>Philip Jennings</td>
+              <td>Fort Collins Agent</td>
             </tr>
           </table>
-          <table class="label-and-value-list">
-            <tr>
-              <td>Activation Key</td>
-              <td>Current activation key stored on agent</td>
-            </tr>
-          </table>
-          <a href="editActivationKeyModal.html" class="edit-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit activation key"></a>
+          <a href="editActivationKeyModal.html" class="edit-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit cloud connection settings"></a>
         </div>
       </section>
 
       <section class="vx-connection">
         <div class="section-header">VX Connection</div>
         <div class="section-content">
-          <table class="label-and-value-list">
+          <table class="label-and-value-list">            
             <tr>
-              <td>Connection Status</td>
-              <td><img class="inline-icon before-text" src="img/icons/fail-circle-alarmRed.svg" title="Failed"> Password required</td>
-            </tr>
-            <tr>
-              <td>Core IP Address:Port</td>
-              <td>127.0.0.1:443</td>
-            </tr>
+              <td>Last Connection</td>
+              <td><img class="inline-icon before-text" src="img/icons/fail-circle-alarmRed.svg" title="Failed">2019-04-22 12:00 MST Password required to attempt connection.</td>
+            </tr>      
             <tr>
               <td>Username</td>
               <td>cloud_agent</td>
@@ -66,11 +61,28 @@
               <td>Poll Interval</td>
               <td>60 seconds</td>
             </tr>
+            <tr>
+              <td>Core IP Address</td>
+              <td>127.0.0.1</td>
+            </tr>
+            <tr>
+              <td>VX System Name</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>VX System Type</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>VX System Version</td>
+              <td></td>
+            </tr>
           </table>
           <a href="editVxSettingsModal.html" class="edit-icon highlight-clickable-icon"><img src="img/icons/edit-pelcoBlue.svg" title="Edit VX connection settings"></a>
         </div>
       </section>
-    </div>    
+      <div class="agent-version">Agent version 0.0.0.0</div>
+    </div>
   </main>
 </body>
 </html>

@@ -22,9 +22,24 @@
     display: flex;
     flex-flow: row wrap;
 
-    .alerts {
+    .cloud-services {
       flex: 1 1 auto;
       min-width: 420px;
+      // may need max height and auto overflow for .section-content inside this flexbox
+      display: flex;
+      flex-flow: column wrap;
+
+      .vx-system-health-monitoring {
+        flex: 2 1 auto;
+      }
+
+      .clip-share {
+        flex: 1 1 auto;
+      }
+
+      .extended-storage {
+        flex: 1 1 auto;
+      }
     }
 
     .services-tenants-admin {

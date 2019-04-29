@@ -1,6 +1,25 @@
 
 // THIS FILE EXISTS ONLY TO MAKE THE MOCKUP CLICKABLE
 
+function collapseSystemDetails() {
+    var collapser = document.getElementsByClassName("click-to-collapse");
+    collapser[0].style.display = "none";
+
+    var expander = document.getElementsByClassName("click-to-expand");
+    expander[0].style.display = "inline-block";
+
+    document.getElementById("systemDetails").style.display = "none";
+}
+
+function expandSystemDetails() {
+    var collapser = document.getElementsByClassName("click-to-collapse");
+    collapser[0].style.display = "inline-block";
+
+    var expander = document.getElementsByClassName("click-to-expand");
+    expander[0].style.display = "none";
+
+    document.getElementById("systemDetails").style.display = "block";
+}
 
 // first health area selected by default on page load
 function drillIntoArea0() {

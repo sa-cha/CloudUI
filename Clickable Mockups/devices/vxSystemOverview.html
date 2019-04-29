@@ -34,20 +34,20 @@
 
   <main>
     <div class="entity-overview vx-system-overview">
-      <div class="page-title">Fort Collins VMS</div>
+      <div class="page-title">TEST System</div>
       <div class="page-subtitle">Cloud > 
         <a class="breadcrumb" href="../accounts/accountsList.html">Accounts</a> > 
-        <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Account Name</a> > 
+        <a class="breadcrumb" href="../accounts/accountOverview-3-regularView.html">Test Account</a> > 
         <a class="breadcrumb" href="../accounts/tenantsList.html">Tenants</a> >
-        <a class="breadcrumb" href="../accounts/tenantOverview-3-regularView.html">Tenant Name</a> > 
-        Fort Collins VMS
+        <a class="breadcrumb" href="../accounts/tenantOverview-3-regularView.html">Test Tenant</a> > 
+        TEST System
       </div>
 
       <div class="overview">
         <section class="entity-details">
         <!-- NOTE: contents of .entity-details will be different per entity type (account, tenant, site, device, etc) -->
           <div class="section-header">
-            <span class="click-to-collapse">
+            <span class="click-to-collapse" onclick="collapseSystemDetails()">
               VX System Details
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
@@ -55,14 +55,14 @@
               ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
               ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
             -->
-            <!--
-            <span class="click-to-expand"">
-              System Details
+            
+            <span class="click-to-expand" style="display:none;" onclick="expandSystemDetails()">
+              VX System Details
               <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
             </span>
-             -->
+            
           </div>
-          <div class="section-content">
+          <div class="section-content" id="systemDetails">
             <div class="flex-container">
               <table class="label-and-value-list">                
                 <tr>
@@ -79,7 +79,7 @@
               <table class="label-and-value-list">
                 <tr>
                   <td>Agent</td>
-                  <td>Fort Collins Agent</td>
+                  <td>Test Agent</td>
                 </tr>
               </table>
             </div>
@@ -188,7 +188,7 @@
                           <td></td>
                         </tr>
                         <tr>
-                          <td>1 year</td>
+                          <td></td>
                           <td>SUP Active</td>
                           <td></td>
                           <td></td>
@@ -562,7 +562,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Fort Collins VMS</td>
+                          <td>TEST System</td>
                           <td>Core</td>
                           <td>3.3.0</td>
                           <td>25</td>
@@ -571,7 +571,7 @@
                           <td><img title="Online" class="inline-icon before-text" src="../img/icons/online-goodGreen.svg">Online</td>
                         </tr>
                         <tr>
-                          <td>FC Media Gateway</td>
+                          <td>Test MG</td>
                           <td>Media Gateway</td>
                           <td>3.3.0</td>
                           <td>22</td>
