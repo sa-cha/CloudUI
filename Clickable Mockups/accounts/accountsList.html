@@ -76,6 +76,7 @@
                 <label>Account Name</label><br>
                 <input type="text">
               </div>
+              <!--
               <br>
               <div class="number">
                 <label>Camera Count</label>
@@ -107,13 +108,9 @@
                   <option>></option>
                   <option><</option>
                 </select>
-                <!--
-                  ** PREFERABLE TO HAVE THE FOLLOWING AS <input type="date">,
-                  ** BUT THIS IS A SIMPLE HACK TO MOCKUP HOW
-                  ** THE DATE FORMAT SHOULD LOOK WITHOUT INJECTING JS
-                -->
                 <input type="text" placeholder="YYYY-MM-DD">
               </div>
+              -->
             </div>
           </div>
           <div class="action-group-header">
@@ -144,16 +141,18 @@
               </div>
               <div class="row">
                 <input type="checkbox" checked>
-                <label>Camera Count</label>
+                <label>System Count</label>
               </div>
               <div class="row">
                 <input type="checkbox" checked>
-                <label>License Limit</label>
+                <label>System Limit</label>
               </div>
+              <!--
               <div class="row">
                 <input type="checkbox" checked>
                 <label>License Expiration</label>
               </div>
+              -->
             </div>
           </div>
         </div>
@@ -168,39 +167,41 @@
                     <img class="sort-order-icon" src="../img/icons/sort-descending-pelcoBlue.svg">
                   </th>
                   <th>Tenant Count</th>
-                  <th>Camera Count</th>
-                  <th>License Limit</th>
+                  <th>System Count</th>
+                  <th>System Limit</th>
+                  <!--
                   <th>License Expiration</th>
+                  -->
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="accountOverview-3-regularView.html">Acme</a></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Normal" src="../img/icons/online-goodGreen.svg">
+                    <a class="highlight-clickable-text" href="accountOverview-3-regularView.html">Acme</a></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
                 </tr>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="accountOverview-3-regularView.html">ATT</a></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Normal" src="../img/icons/online-goodGreen.svg">
+                    <a class="highlight-clickable-text" href="accountOverview-3-regularView.html">ATT</a></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
                 </tr>
                 <tr class="selected">
-                  <td><a class="highlight-clickable-text" href="accountOverview-3-regularView.html">Test Account</a></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Alarm" src="../img/icons/alarm-alarmRed.svg">
+                    <a class="highlight-clickable-text" href="accountOverview-3-regularView.html">Test Account</a></td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="accountOverview-3-regularView.html">XYZ</a></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Normal" src="../img/icons/online-goodGreen.svg">
+                    <a class="highlight-clickable-text" href="accountOverview-3-regularView.html">XYZ</a></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
                 </tr>
               </tbody>
             </table>
@@ -222,7 +223,7 @@
         <div class="current-selection"> 
           <div class="pane-header">Selected Item</div>
           <div class="selection-title-and-actions">
-            <a class="selection-title highlight-clickable-text" href="accountOverview-3-regularView.html">[Selected Account Name]</a>
+            <a class="selection-title highlight-clickable-text" href="accountOverview-3-regularView.html">Test Account</a>
             <div class="selection-actions">
               <a class="delete-selection highlight-clickable-icon" title="Delete Selected Account" href="../modals/deleteSafeguardsModal-account-1-confirmIntent.html">
                 <img src="../img/icons/delete-pelcoBlue.svg">
@@ -230,14 +231,14 @@
             </div>
           </div>
           <div class="details-group">
-            <a class="highlight-clickable-text" href="tenantsList.html">[#] Tenants</a>
+            <a class="highlight-clickable-text" href="tenantsList.html">4 Tenants</a>
             <br>
             <br>
-            [#] Cameras
+            8 Systems
           </div>
           <div class="details-group-header">
             <span class="click-to-collapse">
-              License
+              Alerts
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
             <!--
@@ -252,15 +253,62 @@
             -->
           </div>
           <div class="details-group">
-            License Limit = [#]
+            <img class="inline-icon before-text" src="../img/icons/alarm-alarmRed.svg">
+            2 VX Systems with new Alarms
             <br>
-            License Expiration = [date]
+            <br>
+            <img class="inline-icon before-text" src="../img/icons/warning-alertOrange.svg">
+            4 VX Systems with new Warnings
+            <br>
+            <br>
+            <img class="inline-icon before-text" src="../img/icons/warning-alertOrange.svg">
+            1 new Warning for account
           </div>
+          <div class="details-group-header">
+            <span class="click-to-collapse">
+              Subscriptions
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              License
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <div class="details-group">
+            <div>VX System Health Monitoring
+              <div style="font-size:12.5px;">
+                Expires 2020-04-30 12:00 MST<br>
+                System limit = 10
+              </div>
+            </div>
+            <br>
+            <div>Clip Share
+              <div style="font-size:12.5px;">
+                Expires 2020-04-30 12:00 MST<br>
+                Clip store limit = 500 GB
+              </div>
+            </div>
+            <br>
+            <div>Extended Storage
+              <div style="font-size:12.5px;">
+                Expires <span style="color:#eb6524">2019-04-22 12:00 MST</span><img class="inline-icon after-text" src="../img/icons/warning-alertOrange.svg"><br>
+                Storage limit = 10 TB
+              </div>
+            </div>
+          </div>
+          <!--
           <div class="details-group-header">
             <span class="click-to-collapse">
               Contact
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
+          -->
             <!--
               ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
               ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
@@ -271,21 +319,19 @@
               <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
             </span>
             -->
+          <!--
           </div>
           <div class="details-group">
-            [Contact Name]
+            Arthur Morgan
             <br>
-            [Contact Email]
-            <br>
-            [Contact Mobile]
+            a.morgan@rdr.com
             <br>
             <br>
-            [Address Line 1]
+            2620 E Prospect Rd
             <br>
-            [Address Line 2]
-            <br>
-            [Address Line 3]
+            Fort Collins, CO 90525
           </div>
+          -->
         </div>
       </div>
     </div>

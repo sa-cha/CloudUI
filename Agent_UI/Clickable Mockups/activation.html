@@ -12,52 +12,35 @@
     <div id="activation">
       
       <div class="branding">
-        <img class="placeholder-image" src="img/branding/pelco_cloud_agent.svg">
+        <!-- PLACEHOLDER STUFF UNTIL WE GET BRANDING FROM MARKETING -->
+        <span style="display:block; height:200px; width:100%; text-align:center;">NAME / BRANDING / AUTH MECHANISM TBD</span>
       </div>
 
       <form class="activation-form">
-        <span class="step-number">1</span>
-        <span>Create admin account to secure agent configuration.</span>
-        <div class="label-and-input-list">
-          <div class="row">
-            <label>Username *</label>
-            <input type="text" placeholder="Username">
-          </div>
-          <div class="row">
-            <label>Password *</label>
-            <input type="password" placeholder="Password">
-          </div>
-          <div class="row">
-            <label>Verify Password *</label>
-            <input type="password" placeholder="Verify Password">
-          </div>
+        <div class="activation-key-instructions">
+          To get an agent activation key, create an agent under a Pelco Breeze tenant at 
+          <a href="https://breeze.pelco.com" class="highlight-clickable-text" target="_blank"> breeze.pelco.com</a>.
         </div>
-        <div class="activation-key">
-          <span class="step-number">2</span>
-          <span>Enter agent activation key.</span>
-          <span class="activation-key-info-icon inline-icon after-text info-icon" title="Click for more info"><img src="img/icons/info-circle-lightGray.svg"></span>
-          <!-- 
-            ** WHEN <span class="activation-key-info-icon"> IS CLICKED,
-            ** SHOW <div class="activation-key-info-text"> BELOW.
-          -->
-          <!--
-          <div class="activation-key-info-text">
-            To get an activation key, create an agent under a Pelco Cloud tenant at 
-            <a href="https://cloud.pelco.com" class="highlight-clickable-text" target="_blank">cloud.pelco.com</a>.
-          </div>
-          -->
-          <textarea placeholder="Activation Key"></textarea>
-        </div>
+        <br>      
+        <textarea class="activation-key-input" placeholder="Activation Key"></textarea>
+        <br> 
+        <!-- 
+          ** SHOW .validation-error IF KEY ENTERED CANNOT BE PARSED 
+        -->
         <!--
         <div class="caption validation-error">
-          Passwords entered do not match.<br>
-          All fields are required.<br>
-          <br>
+          <span>Invalid activation key format.</span>
         </div>
+        -->
+        <!--
+          ** "Activate Agent" BUTTON IS DISABLED IF TEXTAREA IS BLANK,
+          ** OR IF THE VALUE ENTERED COULD NOT BE PARSED.
+          ** ENABLE BUTTON WHEN THERE IS A CHANGE IN THE VALUE ENTERED IN TEXTAREA.
         -->
         <a class="button" href="config.html">Activate Agent</a>
       </form>
 
+      <div class="agent-version">Agent version 0.0.0.0</div>
     </div>
   </main>
 </body>

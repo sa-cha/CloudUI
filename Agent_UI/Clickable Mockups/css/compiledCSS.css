@@ -5,7 +5,7 @@ body {
   font: 14px/1.36 'Open Sans', sans-serif;
 }
 header {
-  background: linear-gradient(to right, #fff, #007dc5);
+  background: #007dc5;
   position: fixed;
   top: 0;
   right: 0;
@@ -127,6 +127,11 @@ p {
   color: #eb6524;
   text-align: center;
 }
+.agent-version {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
 /***   GRAYS   ***/
 /***   COLORS   ***/
 /***   FONTS   ***/
@@ -195,21 +200,24 @@ button.disabled,
   text-align: center;
 }
 .button-row-centered button,
-.button-row-centered .button {
+.button-row-centered .button,
+.button-row-centered .button-muted {
   margin: 0 5px;
 }
 .button-row-left {
   text-align: left;
 }
 .button-row-left button,
-.button-row-left .button {
+.button-row-left .button,
+.button-row-left .button-muted {
   margin-right: 10px;
 }
 .button-row-right {
-  text-align: left;
+  text-align: right;
 }
 .button-row-right button,
-.button-row-right .button {
+.button-row-right .button,
+.button-row-right .button-muted {
   margin-left: 10px;
 }
 input[type=date] {
@@ -401,46 +409,19 @@ table {
   text-transform: uppercase;
   padding-top: 7px;
 }
-#activation .branding .placeholder-image {
-  display: block;
-  width: 350px;
-  margin: auto;
-}
 #activation .activation-form {
   text-align: center;
 }
-#activation .activation-form .step-number {
-  background: #3bf;
-  border-radius: 10px;
-  color: #fff;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 0 5px 10px 0;
-  text-align: center;
-}
-#activation .activation-form .label-and-input-list {
-  margin: auto;
-}
-#activation .activation-form .label-and-input-list label {
-  text-align: right;
-}
-#activation .activation-form .activation-key {
-  margin: 40px 0;
-}
-#activation .activation-form .activation-key .activation-key-info-icon {
-  top: 3px;
-}
-#activation .activation-form .activation-key .activation-key-info-text {
-  margin-bottom: 10px;
-}
-#activation .activation-form .activation-key textarea {
+#activation .activation-form .activation-key-input {
   display: block;
+  font-size: 12.5px;
   margin: 5px auto 0 auto;
-  min-height: 150px;
-  max-height: 150px;
-  min-width: 580px;
-  max-width: 580px;
+  min-height: 210px;
+  min-width: 680px;
+  max-width: 680px;
+}
+#activation .activation-form .validation-error {
+  margin: -10px 0 20px 0;
 }
 #config {
   display: flex;
@@ -462,20 +443,16 @@ table {
 #config .vx-connection .section-content .label-and-value-list td:first-child {
   width: 165px;
 }
-.edit-activation-key-modal .enable-editing label {
-  font-size: 12.5px;
-  text-transform: uppercase;
-}
-.edit-activation-key-modal .enable-editing textarea {
+.edit-activation-key-modal .enable-editing .activation-key-input {
   display: block;
-  margin-top: 5px;
-  min-height: 150px;
-  max-height: 150px;
+  font-size: 12.5px;
+  min-height: 250px;
+  max-height: 400px;
   min-width: 580px;
   max-width: 580px;
 }
-.edit-activation-key-modal .show-test-results .label-and-value-list td:first-child {
-  width: 135px;
+.edit-activation-key-modal .enable-editing .validation-error {
+  margin-top: 10px;
 }
 .edit-vx-settings-modal .enable-editing .label-and-input-list label {
   width: 170px;
@@ -483,23 +460,6 @@ table {
 .edit-vx-settings-modal .enable-editing .label-and-input-list input[type=number] {
   width: 50px;
 }
-.edit-vx-settings-modal .enable-editing .label-and-input-list .caption {
+.edit-vx-settings-modal .enable-editing .label-and-input-list .password-instructions {
   padding-left: 5px;
-}
-.edit-vx-settings-modal .show-test-results .label-and-value-list td:first-child {
-  width: 180px;
-}
-#login .branding .placeholder-image {
-  display: block;
-  width: 350px;
-  margin: auto;
-}
-#login .credentials {
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  top: 350px;
-}
-#login .credentials .login-error {
-  color: #eb6524;
 }

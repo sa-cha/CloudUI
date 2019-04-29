@@ -6,6 +6,8 @@
   <title>MOCKUP - Account (regular view)</title>
   <link rel="stylesheet" href="../css/compiledCSS.css" charset="utf-8" />
   <link rel="icon" href="../img/branding/favicon.ico" />
+  <!-- SCRIPT INCLUDED ONLY TO ILLUSTRATE CLICKABLE FUNCTIONALITY IN MOCKUP -->
+  <script src="scripts/accountOverview.js"></script>
 </head>
 <body>
   <header>
@@ -44,7 +46,7 @@
         <section class="entity-details">
         <!-- NOTE: contents of .entity-details will be different per entity type (account, tenant, site, device, etc) -->
           <div class="section-header">
-            <span class="click-to-collapse">
+            <span class="click-to-collapse" onclick="collapseAccountDetails()">
               Account Details
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
@@ -52,35 +54,30 @@
               ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
               ** THIS CONTROLS SHOWING/HIDING <div class="section-content"> BELOW
             -->
-            <!--
-            <span class="click-to-expand">
+            
+            <span class="click-to-expand" style="display:none;" onclick="expandAccountDetails()">
               Account Details
               <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
             </span>
-              -->
+             
           </div>
-          <div class="section-content">
+          <div class="section-content" id="accountDetails">
             <div class="flex-container">
               <table class="label-and-value-list">
                 <tr>
                   <td>Account Name</td>
                   <td>Test Account</td>
                 </tr>
+                <!--
                 <tr>
                   <td>License Limit</td>
                   <td>300</td>
                 </tr>
                 <tr>
                   <td>License Expiration</td>
-                  <td>2020-01-01
-                    <!--
-                      ** SHOW EXPIRED ICON IF TENANT EXPIRATION DATE HAS PAST
-                    -->      
-                    <!--            
-                    <img class="inline-icon after-text" title="Expired" src="..\img\icons\expired-attentionOrange.svg">
-                    -->
-                  </td>
+                  <td>2020-01-01</td>
                 </tr>
+                -->
               </table>
               <table class="label-and-value-list">
                 <tr>
@@ -115,49 +112,142 @@
                 </tr>
               </table>            
             </div>
+            <a href="accountOverview-4-editAccountDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Account Details">
+              <img src="../img/icons/edit-pelcoBlue.svg">
+            </a>
           </div>
-          <a href="accountOverview-4-editAccountDetails.html" class="edit-entity-details highlight-clickable-icon" title="Edit Account Details">
-            <img src="../img/icons/edit-pelcoBlue.svg">
-          </a>
         </section>
+
         <div class="entity-dashboard">
         <!-- NOTE: contents of .entity-dashboard will be different per device type; could be single or multiple sections -->
           <div class="account-dashboard">
-            <section class="alerts">
-              <div class="section-header">Alerts</div>
-              <div class="section-content">
-                <!--TEMP PLACEHOLDER IDEAS-->
-                <div style="font-size:12.5px; color:#aaa;">ACCOUNT STANDING</div>
-                <br>
-                <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px;" src="../img/icons/summary-good-goodGreen.svg">
-                <div style="display:inline-block;">Service subscriptions up to date</div>
-                <br><br><br>
-                <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
-                <br>
-                <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:0 15px;">
-                  3
-                  <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
+            <div class="cloud-services">
+              <section class="vx-system-health-monitoring">
+                <div class="section-header">VX System Health Monitoring</div>
+                <div class="section-content">
+                  <!--
+                  <div style="font-size:12.5px; color:#aaa;">VX SYSTEM HEALTH MONITORING</div>
+                  <br>
+                  -->
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#d83237; vertical-align:top; margin:-10px 15px 0 15px;">
+                      2
+                      <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-alarm-alarmRed.svg">
+                    </div>
+                    <div style="display:inline-block;">
+                      VX Systems with active health alarms:<br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Tenant 1</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">My VX</a><br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">TEST System</a><br> 
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <div style="display:inline-block; font-size:44px; color:#eb6524; vertical-align:top; margin:-10px 15px 0 15px;">
+                      4
+                      <img style="height:40px; width:40px; vertical-align:top; margin:10px 0 0 10px;" src="../img/icons/summary-warning-alertOrange.svg">
+                    </div>
+                    <div style="display:inline-block;">
+                      VX Systems with new Warnings:<br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Tenant 1</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">My VX</a><br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Tenant 2</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Sara's VX</a><br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Fort Collins VMS</a><br>
+                      <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">TEST System</a><br>
+                    </div>
+                  </div>
                 </div>
-                <div style="display:inline-block;">
-                    VX Systems with active health alarms:<br>
-                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Tenant 1</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">My VX</a><br>
-                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">FC VX System</a><br>
-                    <a href="tenantOverview-3-regularView.html" class="highlight-clickable-text">Test Tenant</a> > <a href="../devices/vxSystemOverview.html" class="highlight-clickable-text">Another VX System</a> 
-                </div>
-                <!--END OF TEMP PLACEHOLDER CONTENT-->
-              </div>
-            </section>
+              </section>
+              <section class="clip-share">
+                  <div class="section-header">Clip Share</div>
+                  <div class="section-content">
+                    <div>
+                      <div style="display:inline-block; font-size:44px; color:#007dc5; vertical-align:top; margin:-10px 15px 0 15px;">
+                        42 Clips
+                      </div>
+                      <div style="display:inline-block;">
+                        8 clips viewed by recipent<br>
+                        34 clips not yet viewed by recipient
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="extended-storage">
+                  <div class="section-header">Extended Storage</div>
+                  <div class="section-content">
+                    <div> 
+                      <div style="display:inline-block; font-size:44px; color:#007dc5; vertical-align:top; margin:-10px 15px 0 15px;">
+                        10 TB
+                      </div>
+                      <div style="display:inline-block;">
+                        6.3 TB (63%) in use<br>
+                        3.7 TB (37%) available
+                    </div>
+                  </div>
+                </section>
+            </div>
+
             <div class="services-tenants-admin">
               <section class="services">
-                <div class="section-header">Services</div>
+                <div class="section-header">ACCOUNT SUBSCRIPTIONS</div>
                 <div class="section-content">
-                  <!--TEMP PLACEHOLDER IDEAS-->
-                  VX Maintenance 
-                  <br><br>
-                  [future - Clip Share] 
-                  <br><br>
-                  [future - Extended Storage]
-                  <!--END OF TEMP PLACEHOLDER CONTENT-->
+                  <div>
+                    <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px;" src="../img/icons/summary-good-goodGreen.svg">
+                    <div style="display:inline-block;">VX System Health Monitoring
+                      <div style="font-size:12.5px;">
+                        Expires 2020-04-30 12:00 MST<br>
+                        System/Agent limit = 10
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px;" src="../img/icons/summary-good-goodGreen.svg">
+                    <div style="display:inline-block;">Clip Share
+                      <div style="font-size:12.5px;">
+                          Expires 2020-04-30 12:00 MST<br>
+                          Clip store limit = 500 GB
+                        </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px;" src="../img/icons/summary-warning-alertOrange.svg">
+                    <div style="display:inline-block;">Extended Storage
+                      <div style="font-size:12.5px;">
+                        Expires <span style="color:#eb6524">2019-04-22 12:00 MST</span><br>
+                        Storage limit = 10 TB
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div>
+                    <img style="height:40px; width:40px; vertical-align:top; margin:0 15px 0 10px; opacity:0.6;" src="../img/icons/disabled-TEMP.svg">
+                    <div style="display:inline-block;">Latest Greatest Feature
+                      <div style="font-size:12.5px;">
+                        Not subscribed
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <table class="loose-list">
+                    <tr>
+                      <th>Service</th>
+                      <th>Expiration</th>
+                    </tr>
+                    <tr>
+                      <td>VX System Health Monitoring</td>
+                      <td>2020-04-30 12:00 MST</td>
+                    </tr>
+                    <tr>
+                      <td>Clip Share</td>
+                      <td>2020-04-30 12:00 MST</td>
+                    </tr>
+                    <tr>
+                      <td>Extended Storage</td>
+                      <td>2019-04-22 12:00 MST<img class="inline-icon after-text" title="Subscription expiring soon 2019-04-22 12:00 MST" src="../img/icons/warning-alertOrange.svg"></td>
+                      
+                    </tr>
+                  </table>
+                  -->
                 </div>
               </section>
               <div class="tenants-admin">
@@ -166,6 +256,9 @@
                   <div class="section-content">
                     <!--TEMP PLACEHOLDER IDEAS-->
                     <a class="highlight-clickable-text" href="tenantsList.html">4 Tenants</a>
+                    <br>
+                    <br>
+                    8 Systems
                     <!--END OF TEMP PLACEHOLDER CONTENT-->
                   </div>
                 </section>

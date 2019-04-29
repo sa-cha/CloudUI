@@ -1,26 +1,25 @@
 .edit-activation-key-modal {
   .enable-editing {
-    label {
-      font-size: @smallFontSize;
-      text-transform: uppercase;
-    }
-
-    textarea {
+    .activation-key-input {
       display: block;
-      margin-top: 5px;
+      font-size: @smallFontSize;
       // final size TBD, based on activation key length
-      min-height: 150px;
-      max-height: 150px;
+      min-height: 250px;
+      max-height: 400px;
       min-width: 580px;
       max-width: 580px;
     }
-  }
 
-  .show-test-results {
-    .label-and-value-list {
-      td:first-child {
-        width: 135px;
-      }
+    .validation-error {
+      margin-top: 10px;
     }
   }
+
+  // .show-test-results {
+  //   .label-and-value-list {
+  //     td:first-child {
+  //       width: 135px;
+  //     }
+  //   }
+  // }
 }

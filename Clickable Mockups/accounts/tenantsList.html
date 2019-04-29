@@ -80,6 +80,7 @@
                 <label>Tenant Name</label><br>
                 <input type="text">
               </div>
+              <!--
               <br>
               <div class="number">
                 <label>Camera Count</label>
@@ -90,7 +91,8 @@
                   <option><</option>
                 </select>
                 <input type="number">              
-              </div>           
+              </div>
+              -->        
             </div>
           </div>
           <div class="action-group-header">
@@ -117,7 +119,7 @@
               </div>
               <div class="row">
                 <input type="checkbox" checked>
-                <label>Camera Count</label>
+                <label>System Count</label>
               </div>
             </div>
           </div>
@@ -132,25 +134,29 @@
                     Tenant Name 
                     <img class="sort-order-icon" src="../img/icons/sort-descending-pelcoBlue.svg">
                   </th>
-                  <th>Camera Count</th>
+                  <th>System Count</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 1</a></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Alarm" src="../img/icons/alarm-alarmRed.svg">
+                    <a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 1</a></td>
+                  <td>1</td>
                 </tr>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 2</a></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Warning" src="../img/icons/warning-alertOrange.svg">
+                    <a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 2</a></td>
+                  <td>1</td>
                 </tr>
                 <tr class="selected">
-                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Test Tenant</a></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Alarm" src="../img/icons/alarm-alarmRed.svg">
+                    <a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Test Tenant</a></td>
+                  <td>4</td>
                 </tr>
                 <tr>
-                  <td><a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 4</a></td>
-                  <td></td>
+                  <td><img class="inline-icon before-text" title="Normal" src="../img/icons/online-goodGreen.svg">
+                    <a class="highlight-clickable-text" href="tenantOverview-3-regularView.html">Tenant 4</a></td>
+                  <td>2</td>
                 </tr>         
               </tbody>
             </table>
@@ -172,21 +178,52 @@
         <div class="current-selection"> 
           <div class="pane-header">Selected Item</div>
           <div class="selection-title-and-actions">
-            <a class="selection-title highlight-clickable-text" href="tenantOverview-3-regularView.html">[Selected Tenant Name]</a>
+            <a class="selection-title highlight-clickable-text" href="tenantOverview-3-regularView.html">Test Tenant</a>
             <div class="selection-actions">
               <a class="delete-selection highlight-clickable-icon" title="Delete Selected Tenant" href="../modals/deleteSafeguardsModal-tenant-1-confirmIntent.html">
                 <img src="../img/icons/delete-pelcoBlue.svg">
               </a>
             </div>
           </div>
+          <!--
           <div class="details-group">
             <a class="highlight-clickable-text" href="#">[#] Cameras</a>
           </div>
+          -->
+          <div class="details-group">
+            4 Systems
+          </div>
+          <div class="details-group-header">
+            <span class="click-to-collapse">
+              Alerts
+              <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
+            </span>
+            <!--
+              ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
+              ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
+            -->
+            <!--
+            <span class="click-to-expand">
+              License
+              <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
+            </span>
+            -->
+          </div>
+          <div class="details-group">
+            <img class="inline-icon before-text" src="../img/icons/alarm-alarmRed.svg">
+            1 VX System with new Alarms
+            <br>
+            <br>
+            <img class="inline-icon before-text" src="../img/icons/warning-alertOrange.svg">
+            2 VX Systems with new Warnings
+          </div>
+          <!--
           <div class="details-group-header">
             <span class="click-to-collapse">
               Contact
               <img class="collapse-icon" src="../img/icons/collapse-up-lightGray.svg">
             </span>
+          -->
             <!--
               ** WHEN <span class="click-to-collapse"> IS CLICKED, IT BECOMES HIDDEN AND <span class="click-to-expand"> IS SHOWN
               ** THIS CONTROLS SHOWING/HIDING <div class="details-group"> BELOW
@@ -197,6 +234,7 @@
               <img class="expand-icon" src="../img/icons/expand-down-lightGray.svg">
             </span>
             -->
+          <!--
           </div>
           <div class="details-group">
             [Contact Name]
@@ -212,6 +250,7 @@
             <br>
             [Address Line 3]
           </div>
+          -->
         </div>
       </div>
     </div>
